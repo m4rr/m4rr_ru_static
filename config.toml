@@ -4,16 +4,16 @@ title = "Marat Say"
 
 MetaDataFormat = "yaml"
 DefaultContentLanguage = "en"
-SectionPagesMenu = "main"
-Paginate = 10
+# SectionPagesMenu = "main"
+# Paginate = 10
 enableRobotsTXT = true
 # summaryLength = 50
 
 
-[sitemap]
-  changefreq = "weekly"
-  priority = 0.5
-  filename = "sitemap.xml"
+# [sitemap]
+#   changefreq = "weekly"
+#   priority = 0.5
+#   filename = "sitemap.xml"
 
 [params]
   # favicon = ""
@@ -21,6 +21,7 @@ enableRobotsTXT = true
   custom_scss = ["welcome.scss"]
   custom_js = ["js/gmap3.min.js", "js/map.js", "js/helpers.js"]
   # enableInlineShortcodes = true
+
   countries = 32
   cities = 256
 
