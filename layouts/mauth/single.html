@@ -2,7 +2,12 @@
 
 <div id="content">
   <div class="wrapper">
-    <a href="https://blog.m4rr.ru/all/moscow-metro-wi-fi-authorization/"><img src="mauth@2x.png" alt="Москва. Метро. Авторизация Wi-Fi" class='h1img' width="60"></a>
+    <a href="https://blog.m4rr.ru/all/moscow-metro-wi-fi-authorization/"><img src="/mauth/mauth@2x.png" alt="Москва. Метро. Авторизация Wi-Fi" class='h1img' width="60"></a>
+
+    {{ if .Content }}
+    {{ .Content }}
+    {{ else }}
+
     <h1>Москва. Метро. Авторизация Wi-Fi</h1>
     <p>
       Хватит смотреть рекламу в метро!<br />
@@ -21,6 +26,8 @@
     </p>
 
     {{ partialCached "likely.html" . }}
+
+    {{ end }}
   </div>
 </div>
 
