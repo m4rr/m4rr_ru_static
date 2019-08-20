@@ -1,0 +1,39 @@
+{{ define "mauth" }}
+
+<div id="content">
+  <div class="wrapper">
+    <a href="https://blog.m4rr.ru/all/moscow-metro-wi-fi-authorization/"><img src="mauth@2x.png" alt="Москва. Метро. Авторизация Wi-Fi" class='h1img' width="60"></a>
+    <h1>Москва. Метро. Авторизация Wi-Fi</h1>
+    <p>
+      Хватит смотреть рекламу в метро!<br />
+      Авторизуйся в метро за 1 тап<br />
+      и пользуйся интернетом свободно!
+    </p>
+
+    <a href="https://itunes.apple.com/ru/app/moskva.-metro.-avtorizacia/id1041801794?ls=1&mt=8" class='app-store-link'><img src="Download_on_the_App_Store_ru@2x.png" alt="mauth on the App Store" width="180"></a>
+
+    <p class="social">
+      <a href="http://twitter.com/m4rr">Твитер</a>
+      &nbsp;•&nbsp;
+      <a href="https://github.com/m4rr/mauth">Гитхаб</a>
+      &nbsp;•&nbsp;
+      <a href="https://blog.m4rr.ru/all/moscow-metro-wi-fi-authorization/">Подробности</a>
+    </p>
+
+    {{ partialCached "likely.html" . }}
+  </div>
+</div>
+
+<div class="disclaimer">
+  <p>
+    Используя приложение, вы принимаете на себя ответственность за взаимодействие с сервисом интернета в метро.<br />
+    <a href="https://github.com/m4rr/mauth">Открытый исходный код</a>.
+    <a href="privacy">Политика конфиденциальности</a>
+  </p>
+  <p>
+    Using this app, you are taking full responsibility for interaction with the internet service in the subway. This app is
+    <a href="https://github.com/m4rr/mauth">open source</a>.
+    <a href="privacy">Privacy Policy</a>
+  </p>
+</div>
+{{ end }}

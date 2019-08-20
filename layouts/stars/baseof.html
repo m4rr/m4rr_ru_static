@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  {{ $options := (dict "outputStyle" "compact" "targetPath" "stars.css") }}
+  {{ $style := resources.Get "stars.scss" | toCSS $options }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
+
+  <meta name="title" content="Rating Stars: 5 out of 5">
+  <meta name="description" content="The thing missed on Apple Watch. Rate music right on the Apple Watch or iPhone.">
+  <meta name="keywords" content="">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta charset="utf-8">
+
+  <title>Rating Stars: 5 out of 5</title>
+
+  <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    try { var pageTracker = _gat._getTracker("UA-1693337-1"); pageTracker._trackPageview(); }
+    catch(err) {}
+  </script>
+</head>
+<body>
+
+  {{- block "stars" . }}{{- end }}
+
+</body>
+</html>
