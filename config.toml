@@ -1,18 +1,19 @@
 baseURL = "https://m4rr.ru/"
 languageCode = "en-us"
-title = "Marat Say"
+title = "Marat Saytakov"
 
-MetaDataFormat = "yaml"
-DefaultContentLanguage = "en"
+metaDataFormat = "yaml"
+defaultContentLanguage = "en"
 # SectionPagesMenu = "main"
 # Paginate = 10
 enableRobotsTXT = true
 # summaryLength = 50
+disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS"]
 
-# [sitemap]
-#   changefreq = "weekly"
-#   priority = 0.5
-#   filename = "sitemap.xml"
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
 
 [params]
   description = "iOS Developer && Traveler"
