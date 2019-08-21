@@ -1,6 +1,6 @@
 FROM alpine:3.10.1 as BUILD
 
-ENV HUGO_VERSION=0.56.3
+ENV HUGO_VERSION=0.57.2
 
 RUN apk --no-cache add \
         curl \
@@ -20,7 +20,5 @@ FROM nginx:1.17.2-alpine
 
 COPY ./nginx.conf /etc/nginx/nginx.conf
 COPY --from=BUILD /src/public /usr/share/nginx/html
-
-RUN [ "echo", "!done!" ]
 
 EXPOSE 80
