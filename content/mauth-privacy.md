@@ -2,7 +2,8 @@
 title: "Privacy"
 date: 2019-08-20T07:33:07+03:00
 # draft: true
-# type: page
+kind: page
+type: mauth
 url: "/mauth/privacy/"
 ---
 # Политика конфиденциальности
