@@ -9,21 +9,19 @@ DefaultContentLanguage = "en"
 enableRobotsTXT = true
 # summaryLength = 50
 
-
 # [sitemap]
 #   changefreq = "weekly"
 #   priority = 0.5
 #   filename = "sitemap.xml"
 
 [params]
+  description = "iOS Developer && Traveler"
+  images = ["m4rr.ru-og-image.png"]
+  title = "Marat Saytakov"
+
   # favicon = ""
-  # description = "iOS Developer && Traveler"
   custom_scss = ["welcome.scss"]
   custom_js = ["js/gmap3.min.js", "js/map.js", "js/helpers.js"]
-  # enableInlineShortcodes = true
 
   countries = 32
   cities = 256
-
-# [permalinks]
-#   blog = ":section/:slug"
