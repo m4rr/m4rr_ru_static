@@ -73,7 +73,8 @@ nav {
 .wrapnav {
   background:transparent url('/images/trans.png') repeat center top;
 
-  padding: 10px;
+  padding: 10px 0px 10px 10px;
+  margin-bottom: 25px;
 
   overflow-y: hidden;
 
@@ -139,6 +140,18 @@ nav {
   top: 0;
   right: 0;
   bottom: 0;
+}
+
+.circle-annotation {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  // border: 2px solid #000;
+  box-shadow: 0 -0 0px 1px rgba(0, 0, 0, 0.1);
+  color: #FFF;
+  background-color: #c969e0;
+  text-align: center;
+  line-height: 32px;
 }
 
 .gm-style {

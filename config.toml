@@ -21,7 +21,7 @@ enableRobotsTXT = true
 
   # favicon = ""
   custom_scss = ["welcome.scss"]
-  custom_js = ["js/gmap3.min.js", "js/map.js", "js/helpers.js"]
+  custom_js = ["js/amaps.js", "js/helpers.js"]
 
   countries = 32
   cities = 256
