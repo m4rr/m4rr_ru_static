@@ -5,10 +5,10 @@ services:
     # command: bash -c "bundle exec puma -C ./config/puma.rb config.ru"
     restart: unless-stopped
     # volumes:
-    #   - railsocket:/tmp/
+      # - /src/public:/usr/share/nginx/html
     #   - .:/myapp
     ports:
-      - "3000:3000"
-    container_name: static_files
-    environment: &environment
+      - "80:80"
+    # container_name: static_files
+    environment: # &environment
       - VIRTUAL_HOST=m4rr.ru
