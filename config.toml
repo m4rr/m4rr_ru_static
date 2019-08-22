@@ -7,7 +7,7 @@ metaDataFormat = "yaml"
 defaultContentLanguage = "en"
 # SectionPagesMenu = "main"
 # Paginate = 10
-enableRobotsTXT = true
+# enableRobotsTXT = true
 # summaryLength = 50
 disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS"]
 
