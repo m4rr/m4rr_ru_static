@@ -83,7 +83,7 @@ nav {
 
 
   // width: 45%;
-  max-width: 500px;
+  max-width: 450px;
   min-width: 345px;
   height: 100%;
 
@@ -392,8 +392,12 @@ and (orientation : portrait) {
     display: flex;
     flex-direction: column;
   }
+  .wrapnav {
+    max-width: 100%;
+    min-width: 250px;
+  }
   nav {
-    margin-top: 100%;
+    margin-top: 60vh;
     position: relative;
 
     min-width: 100%;
