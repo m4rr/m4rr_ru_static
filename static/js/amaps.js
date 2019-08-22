@@ -1,5 +1,5 @@
 function mapInitialize() {
-  const tokenID = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlZIQzZQQVVTUTIifQ.eyJpc3MiOiJZNVA3QVg5VU0yIiwiaWF0IjoxNTY2NDQwMDY5LCJleHAiOjE2NjE0NzIwMDAsIm9yaWdpbiI6Imh0dHBzOi8vbTRyci5ydS8ifQ.sbfx27HNGCJibgJk3BZBlq11_Ft-MCuEZFFW5HlCgq0WgF8TtB-6VHkhALAwqNAW_Zpb8pyAx-uBn0cTruN1uA";
+  const tokenID = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlZIQzZQQVVTUTIifQ.eyJpc3MiOiJZNVA3QVg5VU0yIiwiaWF0IjoxNTY2NDQwMTU4LCJleHAiOjE2NjE0NzIwMDAsIm9yaWdpbiI6Imh0dHA6Ly9tNHJyLnJ1LyJ9.WAuTQV9hOz_20CxN6HTvZ-GWKIvzvZRCan5QCnt2p0LeUbjBaIvPVLDq6Jc-wufLXUVBbgx-ypBQEPeJ9u0YuQ";
 
   mapkit.init({
       authorizationCallback: function(done) {
