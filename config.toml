@@ -1,5 +1,5 @@
-# baseURL = "https://m4rr.ru/"
-baseURL = "http://localhost/"
+baseURL = "https://m4rr.ru/"
+# baseURL = "http://localhost/"
 languageCode = "en-us"
 title = "Marat Saytakov"
 
