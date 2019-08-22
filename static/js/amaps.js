@@ -1,5 +1,5 @@
 function mapInitialize() {
-  const tokenID = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlZIQzZQQVVTUTIifQ.eyJpc3MiOiJZNVA3QVg5VU0yIiwiaWF0IjoxNTY2NDM2NDQxLCJleHAiOjE3Mjk3MjgwMDAsIm9yaWdpbiI6Imh0dHBzOi8vbTRyci5ydS8ifQ.qgIH4VPIno7XcV8gKIn7OXftZM7eyMfI9mPCykGh_iIC7XR-yu_FSsQz2f0Qx7bVsgiAlUYZO8pl10JqpgipZA";
+  const tokenID = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlZIQzZQQVVTUTIifQ.eyJpc3MiOiJZNVA3QVg5VU0yIiwiaWF0IjoxNTY2NDM2OTE2LCJleHAiOjE3Mjk3MjgwMDAsIm9yaWdpbiI6ImxvY2FsaG9zdCJ9.xup5jCWkUubEYFjDiDFPpoQ1vhi5qK--1ZN7M_CGt0hE-hqVDRG-eQzZDY8DKeBE6gXzlFHInl32_la8Q6CaYA";
 
   mapkit.init({
       authorizationCallback: function(done) {
@@ -11,7 +11,6 @@ function mapInitialize() {
   $.getJSON("cities.json", function(json) {
     buildMap(json);
   });
-
 }
 
 var factory = function(coordinate, options) {
@@ -37,8 +36,7 @@ function buildMap(markers) {
 
     var options = {
       title: landmark.title_en,
-      color: color,
-      color2: color2
+      color: color
     };
 
     var annotation = new mapkit.Annotation(coo, factory, options);
