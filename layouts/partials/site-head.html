@@ -27,7 +27,7 @@
   {{/* $style := resources.Get "sass/welcome.scss" | toCSS $options | postCSS | minify | fingerprint }}
 
   {{ $options := (dict "outputStyle" "compact" "targetPath" "style.css") */}}
-  {{ $style := . | resources.Get | toCSS $options | postCSS | minify | fingerprint }}
+  {{ $style := . | resources.Get | toCSS $options | minify }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 {{ end }}
 
