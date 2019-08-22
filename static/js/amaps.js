@@ -7,7 +7,6 @@ function mapInitialize() {
       }
   });
 
-
   $.getJSON("cities.json", function(json) {
     buildMap(json);
   });
@@ -19,7 +18,7 @@ var factory = function(coordinate, options) {
       // parts = name.split(' ');        // ["John", "Appleseed"]
   // div.textContent = parts[0].charAt(0) + parts[1].charAt(0);    // "JA"
   div.className = "circle-annotation";
-  div.style.backgroundColor = options.color;
+  div.style.backgroundColor = options.data.color;
   // div.style.borderColor = options.color2;
   return div;
 };
@@ -32,11 +31,12 @@ function buildMap(markers) {
   var annotations = markers.map(function (landmark) {
     var coo = new mapkit.Coordinate(landmark.y, landmark.x);
     var color = '#'+Math.floor(Math.random()*16777215).toString(16);
-    var color2 = '#'+Math.floor(Math.random()*16777215).toString(16);
 
     var options = {
       title: landmark.title_en,
-      color: color
+      data: {
+        color: color
+      }
     };
 
     var annotation = new mapkit.Annotation(coo, factory, options);
@@ -49,11 +49,7 @@ function buildMap(markers) {
     return annotation;
   });
 
-
-
-
   map.showItems(annotations);
-
 
   var Cupertino = new mapkit.CoordinateRegion(
     new mapkit.Coordinate(50, 5),
@@ -62,6 +58,5 @@ function buildMap(markers) {
 
   map.region = Cupertino;
 }
-
 
 window.onload = mapInitialize;
