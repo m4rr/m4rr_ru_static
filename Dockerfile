@@ -1,7 +1,7 @@
 FROM alpine:3.8 as BUILD
 MAINTAINER remarr+docker@gmail.com
 
-ENV HUGO_VERSION 0.54.0
+ENV HUGO_VERSION 0.57.2
 ENV HUGO_BINARY hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
 
 ENV GLIBC_VERSION 2.27-r0
