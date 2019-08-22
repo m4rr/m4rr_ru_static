@@ -1,0 +1,24 @@
+{
+  "name": "m4rr_ru_static",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m4rr/m4rr_ru_static.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m4rr/m4rr_ru_static/issues"
+  },
+  "homepage": "https://github.com/m4rr/m4rr_ru_static#readme",
+  "dependencies": {
+    "autoprefixer": "^9.6.1",
+    "postcss-cli": "^6.1.3",
+    "yarn": "^1.17.3"
+  }
+}
