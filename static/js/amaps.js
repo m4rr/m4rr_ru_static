@@ -28,16 +28,16 @@ var factory = function(coordinate, options) {
 function buildMap(markers) {
   var MarkerAnnotation = mapkit.MarkerAnnotation;
 
-  // mapkit.init({
-  //   authorizationCallback: function (done) {
-  //     var xhr = new XMLHttpRequest();
-  //     xhr.open("GET", "/services/jwt");
-  //     xhr.addEventListener("load", function () {
-  //       done(this.responseText);
-  //     });
-  //     xhr.send();
-  //   }
-  // });
+  mapkit.init({
+    authorizationCallback: function (done) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "/services/jwt");
+      xhr.addEventListener("load", function () {
+        done(this.responseText);
+      });
+      xhr.send();
+    }
+  });
   var map = new mapkit.Map("map");
 
   var annotations = markers.map(function (landmark) {
