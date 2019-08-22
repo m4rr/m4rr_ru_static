@@ -72,11 +72,19 @@ nav {
   height: 100%;
 }
 
+$padding: 9px;
+
+
+// @import url('map-safe-area.css');
+
 .wrapnav {
   background:transparent url('/images/trans.png') repeat center top;
 
-  padding: 9px 9px 9px 9px;
-  margin-bottom: 25px;
+  margin-bottom: env(safe-area-inset-bottom);
+  padding: $padding;
+  // padding-left: env(safe-area-inset-left);
+  padding-left: m#{a}x(#{$padding}, env(safe-area-inset-left));
+  // padding-bottom: m#{a}x(25px, env(safe-area-inset-bottom));
 
   overflow-y: hidden;
 

@@ -7,7 +7,7 @@
   <title>Москва. Метро. Авторизация вайфай</title>
 
   {{ $options := (dict "outputStyle" "compact" "targetPath" "mauth.css") }}
-  {{ $style := resources.Get "mauth.scss" | toCSS $options }}
+  {{ $style := resources.Get "sass/mauth.scss" | toCSS $options }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 
   <link rel="stylesheet" href="likely.css">

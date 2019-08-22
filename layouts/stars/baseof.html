@@ -3,7 +3,7 @@
 <head>
 
   {{ $options := (dict "outputStyle" "compact" "targetPath" "stars.css") }}
-  {{ $style := resources.Get "stars.scss" | toCSS $options }}
+  {{ $style := resources.Get "sass/stars.scss" | toCSS $options }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 
   {{ template "_internal/opengraph.html" . }}

@@ -22,7 +22,7 @@ disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS"]
   title = "Marat Saytakov"
 
   # favicon = ""
-  custom_scss = ["welcome.scss"]
+  custom_scss = ["sass/welcome.scss"]
   custom_js = ["js/amaps.js", "js/helpers.js"]
 
   countries = 32
