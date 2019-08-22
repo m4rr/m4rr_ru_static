@@ -2,13 +2,8 @@ version: "3"
 services:
   static_files:
     build: .
-    # command: bash -c "bundle exec puma -C ./config/puma.rb config.ru"
     restart: unless-stopped
-    # volumes:
-      # - /src/public:/usr/share/nginx/html
-    #   - .:/myapp
     ports:
       - "80:80"
-    # container_name: static_files
     environment: # &environment
       - VIRTUAL_HOST=m4rr.ru
