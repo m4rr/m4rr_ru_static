@@ -5,7 +5,7 @@
 
 $font-stack: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-$margin: 20px 30px 15px 30px;
+$margin: 20px 15px 15px 16px;
 
 $dimmed-color: #99a;
 // $link: #7b68ee; // Умеренный аспидно-синий
@@ -15,6 +15,7 @@ $hover: #ff6800; // Яркий оранжевый
   --text-color: #556;
   --back-color: rgb(255, 255, 255, 0.7);
   --link-color: #7b68ee;
+  --hr-color: #ddd;
 }
 
 @media (prefers-dark-interface), (prefers-color-scheme: dark) {
@@ -22,6 +23,7 @@ $hover: #ff6800; // Яркий оранжевый
     --text-color: white;
     --back-color: rgba(0, 0, 0, 0.7);
     --link-color: rgb(102, 187, 255);
+    --hr-color: #666;
   }
 }
 
@@ -72,19 +74,26 @@ nav {
   height: 100%;
 }
 
+  li .travel-map {
+    &:after {
+      content: " →"
+    }
+  }
+
 .wrapnav {
   background:transparent url('/images/trans.png') repeat center top;
 
   padding: 9px;
   padding-left: m#{a}x(9px, env(safe-area-inset-left, 9px));
+  // padding-bottom: -10px;
   margin-bottom: m#{a}x(20px, env(safe-area-inset-bottom, 20px));
 
   overflow-y: hidden;
 
 
   // width: 45%;
-  max-width: 450px;
-  min-width: 345px;
+  max-width: 400px;
+  min-width: 300px;
   height: 100%;
 
   // position: absolute;
@@ -103,9 +112,6 @@ nav {
   //         flex: 2;
 
           // box-sizing: border-box;
-
-
-
 }
 
 @supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
@@ -167,18 +173,33 @@ h1 {
   font-size: 30px;
   font-weight: bold;
   margin: $margin;
-  margin-top: 30px;
+  margin-top: 20px;
+
+  img {
+    margin-left: 5px;
+    // bottom: -5px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid var(--hr-color);
+    vertical-align: -50%;
+  }
 }
 
 h2 {
   font-weight: bold;
   margin: $margin;
-  margin-top: 0px;
+  margin-top: -10px;
 }
 
 space {
   display: block;
-  margin: 40px;
+  margin: 18px;
+}
+
+hr {
+  border: 1px solid var(--hr-color);
+  border-width: 1px 0 0 0;
+  margin: $margin;
 }
 
 strong, b {
@@ -227,6 +248,10 @@ p {
         left: 0;
       }
     }
+  }
+
+  &.last {
+    // margin-bottom: 3px;
   }
 }
 
@@ -323,7 +348,7 @@ i.icon-paper-plane {
   word-spacing: 0;
 
   margin: $margin;
-  margin-left: 21px; /* compensation of following `a` padding */
+  margin-left: 15px; /* compensation of following `a` padding */
   overflow-x: hidden;
   overflow-y: hidden;
   // background-color: red;
@@ -334,7 +359,7 @@ i.icon-paper-plane {
   }
 
   a {
-    padding: 5px;
+    padding: 10px;
     color: $dimmed-color;
 
     &.disabled {
@@ -397,7 +422,7 @@ and (orientation : portrait) {
     min-width: 250px;
   }
   nav {
-    margin-top: 60vh;
+    margin-top: 53vh;
     position: relative;
 
     min-width: 100%;
@@ -405,6 +430,9 @@ and (orientation : portrait) {
     min-height: 100%;
     width: 100%;
   }
+  li .travel-map {&:after {
+    content: " ↑"
+  }}
   .body {
     position: fixed;
     top: 0;
