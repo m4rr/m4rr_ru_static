@@ -377,19 +377,18 @@ i.icon-paper-plane {
   }
 }
 
-
-
-
 /* global `a` config */
 a {
   color: var(--link-color);;
   text-decoration: none;
 
-  &.globe:hover, &.globe.hover {
-    text-decoration: none;
-    // animation-name: tada;
-    animation-play-state: running;
-    animation: spin 10s linear infinite;
+  &.globe {
+    display: inline-block;
+
+    &:hover {
+      text-decoration: none;
+      animation: heartBeat 1s linear infinite;
+    }
   }
 
   &:hover, .hover {
@@ -498,36 +497,57 @@ and (orientation : portrait) {
 }
 
 
-
-@keyframes tada {
-  from {
-    transform: scale3d(1, 1, 1);
+@-webkit-keyframes heartBeat {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 
-  10%,
-  20% {
-    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  14% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
   }
 
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  28% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 
-  40%,
-  60%,
-  80% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  42% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
   }
 
-  to {
-    transform: scale3d(1, 1, 1);
+  70% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
 
-@keyframes spin {
-  100% {transform: rotate(1turn); }
+@keyframes heartBeat {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  14% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+
+  28% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  42% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+
+  70% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
 
