@@ -1,7 +1,7 @@
 # Specify filepatterns you want git to ignore.
 
-public/*
-resources/*
+public/
+resources/
 
 hugo
 

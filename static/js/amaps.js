@@ -7,19 +7,15 @@ function mapInitialize() {
       }
   });
 
-  $.getJSON("cities.json", function(json) {
+  $.getJSON("/js/cities.json", function(json) {
     buildMap(json);
   });
 }
 
 var factory = function(coordinate, options) {
   var div = document.createElement("div");
-      // name = options.title,           // "John Appleseed"
-      // parts = name.split(' ');        // ["John", "Appleseed"]
-  // div.textContent = parts[0].charAt(0) + parts[1].charAt(0);    // "JA"
   div.className = "circle-annotation";
   div.style.backgroundColor = options.data.color;
-  // div.style.borderColor = options.color2;
   return div;
 };
 
@@ -43,7 +39,6 @@ function buildMap(markers) {
     // annotation.color = color;
     annotation.title = landmark.title_en;
     annotation.subtitle = landmark.title_ru;
-    // annotation.selected = "true";
     // annotation.glyphText = "✈️";
 
     return annotation;

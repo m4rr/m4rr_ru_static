@@ -57,7 +57,7 @@ html, body, {
 
 nav {
   overflow: scroll;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: var(--back-color);
 
   box-shadow: 0 -0 0px 1px rgba(0, 0, 0, 0.1);
 
@@ -74,19 +74,16 @@ nav {
   height: 100%;
 }
 
-  li .travel-map {
-    &:after {
-      content: " →"
-    }
+span.travel-map {
+  &:after {
+    content: " →"
   }
+}
 
 .wrapnav {
-  background:transparent url('/images/trans.png') repeat center top;
+  // background:transparent url('/images/trans.png') repeat center top;
 
   padding: 9px;
-  padding-left: m#{a}x(9px, env(safe-area-inset-left, 9px));
-  // padding-bottom: -10px;
-  margin-bottom: m#{a}x(20px, env(safe-area-inset-bottom, 20px));
 
   overflow-y: hidden;
 
@@ -112,6 +109,13 @@ nav {
   //         flex: 2;
 
           // box-sizing: border-box;
+}
+
+@supports(padding: unquote('max(0px)')) {
+  .wrapnav {
+    padding-left:  unquote('max(9px, env(safe-area-inset-left, 9px))');
+    margin-bottom: m#{a}x(20px, env(safe-area-inset-bottom, 20px));
+  }
 }
 
 @supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
@@ -232,7 +236,7 @@ p {
     strong {
       a {
         color: inherit;
-        &:hover, &.hover { /* birman hover, used via js */
+        &:hover, &.hover {
           color: $hover;
           text-decoration: none;
         }
@@ -374,12 +378,21 @@ i.icon-paper-plane {
 }
 
 
+
+
 /* global `a` config */
 a {
   color: var(--link-color);;
   text-decoration: none;
 
-  &:hover, .hover { /* birman hover */
+  &.globe:hover, &.globe.hover {
+    text-decoration: none;
+    // animation-name: tada;
+    animation-play-state: running;
+    animation: spin 10s linear infinite;
+  }
+
+  &:hover, .hover {
     color: $hover; // ff2d55
     text-decoration: underline;
   }
@@ -391,7 +404,7 @@ a {
     padding: 0px 9px 2px 9px;
     margin-left: -9px;
 
-    &.hover { /* birman hover */
+    &.hover {
       color: $hover;
       text-decoration: underline;
     }
@@ -430,7 +443,7 @@ and (orientation : portrait) {
     min-height: 100%;
     width: 100%;
   }
-  li .travel-map {&:after {
+  span.travel-map {&:after {
     content: " ↑"
   }}
   .body {
@@ -486,30 +499,35 @@ and (orientation : portrait) {
 
 
 
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
 
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
 
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
 
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
 
-
-
-// Map
-
-.cluster {
-  font: bold 14px/30px $font-stack;
-  position: relative; z-index: 10; color: white; background: url('images/marker_cluster.svg') no-repeat 50%; background-size: cover; text-align: center;
+  to {
+    transform: scale3d(1, 1, 1);
+  }
 }
 
-.cluster1 { width:30px; height:30px; }
-.cluster2 { width:35px; height:35px; font-size:15px; line-height:35px; }
-.cluster3 { width:40px; height:40px; font-size:16px; line-height:40px; }
-
-.tooltip {
-  font: 13px $font-stack;
-  position: relative; z-index: 1; width: 160px; color: #556; text-align: center; opacity: 0; transform: translate(0, -20px); transition: .3s;
+@keyframes spin {
+  100% {transform: rotate(1turn); }
 }
 
-.tooltip.show { transform:translate(0, 0); opacity:1; }
-.tooltip div  { position:absolute; left:0; right:0; bottom:0; }
-.tooltip span { position:relative; display:inline-block; padding:5px 10px; border-radius:4px; background:rgba(255,255,255,1.0); box-shadow:0 0 3px rgba(0,0,0,.3); }
-.tooltip span:before { content:''; position:absolute; left:50%; top:100%; margin:0 -6px; border:6px solid transparent; border-top-color:rgba(0,0,0,.1); }
-.tooltip span:after { content:''; position:absolute; left:50%; top:100%; margin:0 -5px; border:5px solid transparent; border-top-color:rgba(255,255,255,.9); }

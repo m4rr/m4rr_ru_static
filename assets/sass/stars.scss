@@ -151,7 +151,7 @@ a {
   color: $link;
   text-decoration: none;
 
-  &:hover, .hover { /* birman hover */
+  &:hover, .hover {
     color: $hover; // ff2d55
   }
 
@@ -162,7 +162,7 @@ a {
     padding: 0px 9px 2px 9px;
     margin-left: -9px;
 
-    &.hover { /* birman hover */
+    &.hover {
       color: $hover;
     }
 
