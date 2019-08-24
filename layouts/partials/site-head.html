@@ -13,21 +13,19 @@
 
 <link rel="author" type="text/plain" href="{{ relURL ($.Site.BaseURL) }}humans.txt" />
 
-{{ $stylesheet := .Site.Data.webpack_assets.app }}
+{{/*  {{ $stylesheet := .Site.Data.webpack_assets.app }}
 {{ with $stylesheet.css }}
   <link href="{{ relURL (printf "%s%s" "dist/" .) }}" rel="stylesheet">
-{{ end }}
+{{ end }}  */}}
 
-{{ range .Site.Params.custom_css }}
-  <link rel="stylesheet" href="{{ relURL ($.Site.BaseURL) }}{{ . }}">
-{{ end }}
+{{/*  {{ range .Site.Params.custom_css }}
+  <link rel="stylesheet" href="{{ relURL ($.Site.BaseURL) | permalink }}{{ . }}">
+{{ end }}  */}}
 
 {{ range .Site.Params.custom_scss }}
   {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "themes/simpleit/node_modules")) }}
-  {{/* $style := resources.Get "sass/welcome.scss" | toCSS $options | postCSS | minify | fingerprint }}
 
-  {{ $options := (dict "outputStyle" "compact" "targetPath" "style.css") */}}
-  {{ $style := . | resources.Get | toCSS $options | minify }}
+  {{ $style := resources.Get . | toCSS $options | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 {{ end }}
 
