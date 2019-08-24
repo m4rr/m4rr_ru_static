@@ -13,7 +13,7 @@ params:
   title: Marat Saytakov
   description: iOS && macOS Developer, Traveler
   images:
-    - m4rr.ru-og-image.png
+    - images/m4rr-ru-redesign-x.png
 
   # favicon = ""
   custom_scss:
