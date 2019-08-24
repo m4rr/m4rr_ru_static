@@ -6,6 +6,18 @@
 
     <h2>{{ .Site.Params.description }}</h2>
 
+    {{ if ne .Site.Params.lang "en" }}
+      {{/*  .ru  */}}
+      <script>
+        const tokenID = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlZIQzZQQVVTUTIifQ.eyJpc3MiOiJZNVA3QVg5VU0yIiwiaWF0IjoxNTY2NDQwMjY3LCJleHAiOjE2NjE0NzIwMDAsIm9yaWdpbiI6Imh0dHBzOi8vbTRyci5ydSJ9.QQ8egxYwImRuBi9Sybh-bLTEPB7Vqov_pObeTmL-oHEDW8TudkyiCOvurFJ1QFLBI970w_iAuzZJzwOuv5B9vg";
+      </script>
+    {{ else }}
+      {{/*  .com  */}}
+      <script>
+        const tokenID = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlZIQzZQQVVTUTIifQ.eyJpc3MiOiJZNVA3QVg5VU0yIiwiaWF0IjoxNTY2NjU4MjIwLCJleHAiOjE2NzA1NDQwMDAsIm9yaWdpbiI6Imh0dHBzOi8vc2F5dGFrb3YuY29tIn0.7fByTx18E9yo5S56xX5wmLD6UC3RzWzm8TUG_NtGgT13lF37u8XUEr9Ai4g4f-sYnvG-NPtRWqBu7OKf4tcuXg";
+      </script>
+    {{ end }}
+
     <ul class="menu">
       <li>
         <a href="https://blog.m4rr.ru/" class="nbsp"><b>{{ i18n "blog" }}</b></a>
