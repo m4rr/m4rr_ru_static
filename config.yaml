@@ -28,14 +28,14 @@ params:
 languages:
   en:
     baseURL: https://saytakov.com/
-    weight: 1
+    weight: 2
     title: Marat Saytakov
     params:
       description: iOS && macOS Developer, Traveler
       lang: en
   ru:
     baseURL: https://m4rr.ru/
-    weight: 2
+    weight: 1
     title: Марат Сайтаков
     params:
       description: iOS-программист и путешественник
