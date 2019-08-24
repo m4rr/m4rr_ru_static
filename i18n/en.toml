@@ -1,0 +1,63 @@
+[blog]
+other = "Blog"
+
+[cv]
+other = "Résumé / CV"
+
+[fuck]
+other = "Fuck"
+
+[visited_countries]
+other = "<strong>Visited</strong> {{ .Count }} countries"
+one = "<strong>Visited</strong> {{ .Count }} country"
+
+[visited_cities]
+other = "and {{ .Count }} cities"
+
+[channel]
+other = "channel"
+
+[projects]
+other = "Projects"
+
+[medium]
+other = "Medium on iOS development"
+
+[citoyen]
+other = "Citoyen Marat"
+
+[talks]
+other = "Talks"
+
+[formac]
+other = "for Mac"
+
+[new]
+other = "new"
+
+[for]
+other = "for"
+
+[numpad_desc]
+other = "Dialer for FaceTime"
+
+[chars2]
+other = "Chars 2"
+
+[chars2_desc]
+other = "Beautiful and native way to type every&#173;thing with Unicode characters on iOS"
+
+[mauth]
+other = "Moscow Metro Wi-Fi Auth"
+
+[mauth_desc]
+other = "Helps avoid ads in MosMetro_Free, for free"
+
+[huyak]
+other = "Geek Sticker Set"
+
+[huyak_desc]
+other = "Well-illustrated techie memes (huyak stickers). <b>60k+</b> happy users"
+
+[moneybot_desc]
+other = "Converts ₽ to $, others — to ₽. Very handy in international chats. Collects nothing"

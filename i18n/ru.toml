@@ -1,0 +1,65 @@
+[blog]
+other = "Блог"
+
+[cv]
+other = "Резюме / CV"
+
+[fuck]
+other = "Нахуй"
+
+[visited_countries]
+# one = "<strong>Был</strong> в {{ .Count }} стране"
+other = "<strong>Был</strong> в {{ .Count }} странах"
+# many = "и {{ .Count }} городах"
+
+[visited_cities]
+one = "и {{ .Count }} городе"
+many = "и {{ .Count }} городах"
+
+[channel]
+other = "канал"
+
+[projects]
+other = "Проекты"
+
+[medium]
+other = "Medium про iOS-разработку"
+
+[citoyen]
+other = "Прямо о второстепенном"
+
+[talks]
+other = "Выступления"
+
+[formac]
+other = "для Мака"
+
+[new]
+other = "новое"
+
+[for]
+other = "для"
+
+[numpad_desc]
+other = "Номеронабиратель для Фейстайма"
+
+[chars2]
+other = "Символы 2"
+
+[chars2_desc]
+other = "Легкое и простое приложение для быстрой записи заметок. Откуда затем можно поделиться или твитнуть их удобным вам способом"
+
+[mauth]
+other = "Москва. Метро. Wi-Fi"
+
+[mauth_desc]
+other = "Помогает не смотреть рекламу в MosMetro_Free, бесплатно"
+
+[huyak]
+other = "Стикеры «Хуяк и в продакшен»"
+
+[huyak_desc]
+other = "Прекрасно проиллюстрированные стикеры для технарей. Больше <b>60 тысяч</b> пользователей"
+
+[moneybot_desc]
+other = "Переводит ₽ в $, остальное — в ₽. Оч удобно в международных чатах. Ничего не хранит"

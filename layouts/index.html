@@ -2,19 +2,30 @@
 <div class="container">
   <div class="wrapnav">
   <nav class="fade-in one">
-    <h1 class="29yo">Marat Saytakov</h1>
+    <h1 class="29yo">{{ .Title }}</h1>
 
-    <h2>iOS && macOS Developer, Traveler</h2>
+    <h2>{{ .Site.Params.description }}</h2>
 
     <ul class="menu">
       <li>
-        <a href="/marat-saytakov-cv.pdf" class="nbsp"><b>Résumé / CV</b></a>
+        <a href="https://blog.m4rr.ru/" class="nbsp"><b>{{ i18n "blog" }}</b></a>
       </li>
-      <li>Travel Map <span class="travel-map"></span></li>
+      <li>
+        <a href="/cv" class="nbsp"><b>{{ i18n "cv" }}</b></a>
+      </li>
+      {{ if ne .Site.Params.lang "en"}}
+      <li>
+        <a href="/" class="globe">🌎</a>
+      </li>
+      {{ else }}
+      <li>
+        <a href="/ru/" class="globe">🌍</a>
+      </li>
+      {{ end }}
     </ul>
 
     <div class="links">
-      <a href="https://github.com/m4rr"><i class="icon-github"></i></a><a href="https://stackoverflow.com/users/1204935/marat-saytakov"><i class="icon-stackoverflow"></i></a><a href="https://twitter.com/m4rr"><i class="icon-twitter"></i></a><a href="https://t.me/CitoyenMarat"><i class="icon-paper-plane"></i></a><a href="https://instagram.com/m4rr"><i class="icon-instagram"></i></a><a class="disabled" title="No Facebook"><i class="icon-facebook-squared"></i></a><a class="disabled" title="No VK"><i class="icon-vkontakte"></i></a><a class="disabled" title="No LinkedIn"><i class="icon-linkedin"></i></a>
+      <a href="https://github.com/m4rr"><i class="icon-github"></i></a><a href="https://stackoverflow.com/users/1204935/marat-saytakov"><i class="icon-stackoverflow"></i></a><a href="https://twitter.com/m4rr"><i class="icon-twitter"></i></a><a href="https://t.me/CitoyenMarat"><i class="icon-paper-plane"></i></a><a href="https://instagram.com/m4rr"><i class="icon-instagram"></i></a><a class="disabled" title='{{i18n "fuck"}} Facebook'><i class="icon-facebook-squared"></i></a><a class="disabled" title='{{i18n "fuck"}} VK'><i class="icon-vkontakte"></i></a><a class="disabled" title='{{i18n "fuck"}} LinkedIn'><i class="icon-linkedin"></i></a>
     </div>
 
     <!-- <h3>★ Wantr</h3> -->
@@ -22,23 +33,22 @@
 
     <space></space>
 
-    <p><strong>Visited</strong> {{ .Site.Params.countries }} countries and {{ .Site.Params.cities }} cities.</p>
+    <p>{{ i18n "visited_countries" .Site.Params.countries | safeHTML }} {{ i18n "visited_cities" .Site.Params.cities }}<span class="travel-map"></span></p>
 
     <space></space>
 
     <ul>
-      <strong>Projects</strong>
-      <li><a href="https://blog.m4rr.ru/" class="nbsp"><b>Passionflower</b> Blog in Russian</a></li>
-      <li><a href="https://medium.com/@m4rr" class="nbsp">Medium Blog in English</a></li>
-      <li><a href="https://telegram.me/m4rrch">Useful Links on Programming</a> <i class="icon-paper-plane"></i> channel</li>
-      <li><a href="https://t.me/CitoyenMarat" target="_blank" rel="noopener noreferrer">Citoyen Marat</a> <i class="icon-paper-plane"></i> channel</li>
-      <li><a href="http://moscoding.ru/swift/">iOS Development 101 on Swift <!--span class="now">now</span--></a><br />Moscow Coding School</li>
+      <strong>{{ i18n "projects" }}</strong>
+      <li><a href="https://medium.com/@m4rr" class="nbsp">{{i18n "medium"}}</a> (in En)</li>
+      <li><a href="https://telegram.me/m4rrch">Useful Links on Programming</a> <i class="icon-paper-plane"></i> {{ i18n "channel" }}</li>
+      <li><a href="https://moscoding.ru/swift/">iOS Development 101 on Swift <!--span class="now">now</span--></a><br />Moscow Coding School</li>
+      <li><a href="https://t.me/CitoyenMarat">{{ i18n "citoyen" }}</a> <i class="icon-paper-plane"></i> {{ i18n "channel" }}</li>
     </ul>
 
     <space></space>
 
     <ul>
-      <strong>Talks</strong>
+      <strong>{{ i18n "talks" }}</strong>
       <li><a href="https://www.codementor.io/m4rr">28 expert sessions</a>, Codementor</li>
       <li><a href="https://blog.m4rr.ru/all/size-classes-addition/">Size Classes on iOS</a>, CocoaHeads Moscow</li>
       <li><a href="https://habrahabr.ru/company/mailru/blog/244673/">Custom Keyboards</a>, · · ·</li>
@@ -49,19 +59,17 @@
     <hr>
 
     <p class="app">
-      <strong><a href="https://itunes.apple.com/app/numpad/id1429855047?ls=1&mt=12">Numpad <span class="now">for Mac</span></a></strong><br />
-      Dialer for FaceTime.<br />
+      <strong><a href="https://itunes.apple.com/app/numpad/id1429855047?ls=1&mt=12">Numpad <span class="now">{{ i18n "formac" }}</span></a></strong><br />
+      {{i18n "numpad_desc"}}<br />
       <a class="call-to-action" href="https://itunes.apple.com/app/numpad/id1429855047?ls=1&mt=12">Mac App Store</a>
-      <!--%# <span class="splitter"></span> %-->
-      <!--%# <a href="https://chars.cc/">chars.cc</a> %-->
     </p>
 
     <p class="app">
-      <strong><a href="https://itunes.apple.com/app/chars/id918947313?mt=8">Chars 2 <span class="now">New</span></a></strong><br />
-      Beautiful and native way to type every&#173;thing with Unicode characters on iOS.<br />
+      <strong><a href="https://itunes.apple.com/app/chars/id918947313?mt=8">{{ i18n "chars2" }} <span class="now">{{ i18n "new" }}</span></a></strong><br />
+      {{ i18n "chars2_desc" | safeHTML }}<br />
       <a class="call-to-action" href="https://itunes.apple.com/app/chars/id918947313?mt=8">App Store</a>
       <span class="splitter"></span>
-      <a href="https://chars.cc/">chars.cc</a>
+      <a href="https://chars.app/">chars.app</a>
     </p>
 
     <p class="app">
@@ -77,8 +85,8 @@
     </p>
 
     <p class="app">
-      <strong><a href="https://itunes.apple.com/ru/app/moscow-metro-wi-fi-authorization/id1041801794?l=ru&mt=8">Moscow Metro Wi-Fi Auth</a></strong>&nbsp;&nbsp;<span class="stars">★★★★★</span><br />
-      Helps avoid ads in MosMetro_Free, for free.<br />
+      <strong><a href="https://itunes.apple.com/ru/app/moscow-metro-wi-fi-authorization/id1041801794?l=ru&mt=8">{{ i18n "mauth" }}</a></strong>&nbsp;&nbsp;<span class="stars">★★★★★</span><br />
+      {{ i18n "mauth_desc" }}<br />
       <a class="call-to-action" href="https://itunes.apple.com/ru/app/moscow-metro-wi-fi-authorization/id1041801794?l=ru&mt=8">App Store</a>
       <span class="splitter"></span>
       <a href="https://github.com/m4rr/mauth">GitHub</a>
@@ -94,16 +102,12 @@
       <a class="call-to-action" href="https://itunes.apple.com/us/app/easy-percent-much-easier-calc/id740111096?mt=8">App Store</a>
     </p>
 
-    {{/*  <space></space>  */}}
     <hr>
 
-
     <p class="app">
-      <a href="https://telegram.me/addstickers/DUMP2016"><img align="right" alt="Стикеры для телеграма: хуяк-хуяк и в продакшен / Slap shit together and deploy" title="Хуяк-хуяк и в продакшен / Slap shit together and deploy" src="images/huyak-production@2x.png" width="60" /></a>
-      <strong><a href="https://telegram.me/addstickers/DUMP2016">Geek Sticker Set</a></strong><br />
-      Well-illustrated techie memes
-      (huyak stickers).
-      <span class="nbsp"><strong>60k</strong>+ happy users.</span><br />
+      <a href="https://telegram.me/addstickers/DUMP2016"><img align="right" alt="Стикеры для телеграма: хуяк-хуяк и в продакшен / Slap shit together and deploy" title="Хуяк-хуяк и в продакшен / Slap shit together and deploy" src="/images/huyak-production@2x.png" width="60" /></a>
+      <strong><a href="https://telegram.me/addstickers/DUMP2016">{{i18n "huyak"}}</a></strong><br />
+      {{i18n "huyak_desc" | safeHTML}}<br />
       <a class="call-to-action" href="https://telegram.me/addstickers/DUMP2016">Telegram</a>
       <span class="splitter"></span>
       <a class="call-to-action" href="https://itunes.apple.com/app/dump-stickers/id1141655638?ls=1&mt=8">iMessage</a>
@@ -113,8 +117,8 @@
       <a href="https://blog.m4rr.ru/all/huyak-stickers/">Blog</a>
     </p>
     <p class="app last">
-      <strong><a href="https://telegram.me/USDRUB_bot">Money Bot</a></strong>&nbsp; <span class="nbsp">for <i class="icon-paper-plane"></i> Telegram</span><br />
-      Pretty straightforward currency converter bot. Useful helper on a Philosophers' ships chats.<br />
+      <strong><a href="https://telegram.me/USDRUB_bot">Money Bot</a></strong>&nbsp; <span class="nbsp">{{i18n "for"}} <i class="icon-paper-plane"></i> Telegram</span><br />
+      {{i18n "moneybot_desc"}}<br />
       <a class="call-to-action" href="https://telegram.me/USDRUB_bot">Send Message</a>
       <span class="splitter"></span>
       <a href="https://github.com/m4rr/money_bot">GitHub</a>

@@ -1,0 +1,41 @@
+baseURL: https://m4rr.ru/
+title: Marat Saytakov
+description: iOS && macOS Developer, Traveler
+DefaultContentLanguage: en
+
+metaDataFormat: yaml
+disableKinds: section
+  - taxonomy
+  - taxonomyTerm
+  - RSS
+  - sitemap
+
+params:
+  title: Marat Saytakov
+  description: iOS && macOS Developer, Traveler
+  images:
+    - m4rr.ru-og-image.png
+
+  # favicon = ""
+  custom_scss:
+    - sass/welcome.scss
+  custom_js:
+    - js/amaps.js
+    - js/helpers.js
+
+  countries: "32"
+  cities: "256"
+
+languages:
+  en:
+    weight: 1
+    title: Marat Saytakov
+    params:
+      description: iOS && macOS Developer, Traveler
+      lang: en
+  ru:
+    weight: 2
+    title: Марат Сайтаков
+    params:
+      description: iOS && macOS программист, путешественник
+      lang: ru
