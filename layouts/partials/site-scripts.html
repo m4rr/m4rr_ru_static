@@ -12,9 +12,6 @@
 {{ end }}
   */}}
 
-
-{{/*  {{ $script := resources.Get "js/amaps.js" }}  */}}
-{{/*  {{ $js := $script | resources.Minify }}  */}}
-{{ $global := resources.Get "js/amaps.js" | resources.Minify }}
-{{/*  {{ printf "bbb-%s" ($global) }}  */}}
-<script type="text/javascript" src="{{ $global.Permalink }}"></script>
+{{ range .Site.Params.custom_js }}
+  <script src="{{ relURL ($.Site.BaseURL) }}{{ . }}"></script>
+{{ end }}
