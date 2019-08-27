@@ -20,8 +20,9 @@ var factory = function(coordinate, options) {
 
 function buildMap(markers) {
   var MarkerAnnotation = mapkit.MarkerAnnotation;
-
   var map = new mapkit.Map("map");
+
+  map.colorScheme = map_color_scheme;
 
   var annotations = markers.map(function (landmark) {
     var coo = new mapkit.Coordinate(landmark.y, landmark.x);
