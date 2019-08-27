@@ -1,5 +1,6 @@
 function mapInitialize() {
   mapkit.init({
+      language: map_locale,
       authorizationCallback: function(done) {
           done(tokenID);
       }
