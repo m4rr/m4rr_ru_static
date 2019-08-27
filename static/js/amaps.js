@@ -22,7 +22,7 @@ function buildMap(markers) {
   var MarkerAnnotation = mapkit.MarkerAnnotation;
   var map = new mapkit.Map("map");
 
-  map.colorScheme = map_color_scheme === "Dark" ? Map.ColorSchemes.Dark : Map.ColorSchemes.Light;
+  map.colorScheme = map_color_scheme === "Dark" ? mapkit.Map.ColorSchemes.Dark : mapkit.Map.ColorSchemes.Light;
 
   var annotations = markers.map(function (landmark) {
     var coo = new mapkit.Coordinate(landmark.y, landmark.x);
