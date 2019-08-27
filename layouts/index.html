@@ -9,8 +9,10 @@
     <script>
       if(matchMedia('(prefers-color-scheme: dark)').matches) {
         const map_color_scheme = "Dark";
+        console.log("map_color_scheme = Dark");
       } else {
         const map_color_scheme = "Light";
+        console.log("map_color_scheme = Light");
       }
 
       {{ if ne .Site.Params.lang "en" }}
