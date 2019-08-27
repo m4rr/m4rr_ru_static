@@ -21,6 +21,6 @@ cd ~
 # to build from scratch:
 #docker run -d -p 80:80 --restart=unless-stopped --name nginx-proxy -e ENABLE_IPV6=true -v /var/run/docker.sock:/tmp/docker.sock jwilder/nginx-proxy
 # https://stackoverflow.com/a/52989931
-docker start nginx-proxy
 docker network connect m4rrrustatic_default nginx-proxy
 docker network connect blogm4rrdeploy_default nginx-proxy
+docker start nginx-proxy
