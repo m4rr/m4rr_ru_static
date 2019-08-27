@@ -377,6 +377,11 @@ i.icon-paper-plane {
   }
 }
 
+li.globe {
+  /* https://en.wikipedia.org/wiki/Axial_tilt */
+  transform: rotate(23.43674deg);
+}
+
 /* global `a` config */
 a {
   color: var(--link-color);;
@@ -496,58 +501,24 @@ and (orientation : portrait) {
           animation-delay: 1.5s;
 }
 
-
-@-webkit-keyframes heartBeat {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-
-  14% {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
-  }
-
-  28% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-
-  42% {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
-  }
-
-  70% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
 @keyframes heartBeat {
   0% {
-    -webkit-transform: scale(1);
     transform: scale(1);
   }
 
   14% {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
+    transform: scale(1.5);
   }
 
   28% {
-    -webkit-transform: scale(1);
     transform: scale(1);
   }
 
   42% {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
+    transform: scale(1.5);
   }
 
   70% {
-    -webkit-transform: scale(1);
     transform: scale(1);
   }
 }
-

@@ -25,15 +25,13 @@
       <li>
         <a href="/cv" class="nbsp"><b>{{ i18n "cv" }}</b></a>
       </li>
-      {{ if ne .Site.Params.lang "en"}}
-      <li>
-        <a href="https://saytakov.com/" class="globe">🌎</a>
+      <li class="globe">
+        {{ if ne .Site.Params.lang "en"}}
+          <a href="https://saytakov.com/" class="globe">🌎</a>
+        {{ else }}
+          <a href="https://m4rr.ru/" class="globe">🌍</a>
+        {{ end }}
       </li>
-      {{ else }}
-      <li>
-        <a href="https://m4rr.ru/" class="globe">🌍</a>
-      </li>
-      {{ end }}
     </ul>
 
     <div class="links">
