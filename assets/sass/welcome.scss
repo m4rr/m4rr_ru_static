@@ -16,7 +16,7 @@ $hover: #ff6800; // Яркий оранжевый
   --back-color: rgb(255, 255, 255, 0.7);
   --link-color: #7b68ee;
   --hr-color: #ddd;
-  --map-bgcolor: #F8F5EE;
+  --map-bgcolor: #B7E0F3;
 }
 
 @media (prefers-dark-interface), (prefers-color-scheme: dark) {
@@ -25,7 +25,7 @@ $hover: #ff6800; // Яркий оранжевый
     --back-color: rgba(0, 0, 0, 0.7);
     --link-color: rgb(102, 187, 255);
     --hr-color: #666;
-    --map-bgcolor: #404040;
+    --map-bgcolor: #374464;
   }
 }
 
