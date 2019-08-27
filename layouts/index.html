@@ -7,12 +7,10 @@
     <h2>{{ .Site.Params.description }}</h2>
 
     <script>
+      var map_color_scheme = "Light";
+
       if(matchMedia('(prefers-color-scheme: dark)').matches) {
-        const map_color_scheme = "Dark";
-        console.log("map_color_scheme = Dark");
-      } else {
-        const map_color_scheme = "Light";
-        console.log("map_color_scheme = Light");
+        map_color_scheme = "Dark";
       }
 
       {{ if ne .Site.Params.lang "en" }}
