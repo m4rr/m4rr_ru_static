@@ -16,6 +16,7 @@ $hover: #ff6800; // Яркий оранжевый
   --back-color: rgb(255, 255, 255, 0.7);
   --link-color: #7b68ee;
   --hr-color: #ddd;
+  --map-bgcolor: #F8F5EE;
 }
 
 @media (prefers-dark-interface), (prefers-color-scheme: dark) {
@@ -24,6 +25,7 @@ $hover: #ff6800; // Яркий оранжевый
     --back-color: rgba(0, 0, 0, 0.7);
     --link-color: rgb(102, 187, 255);
     --hr-color: #666;
+    --map-bgcolor: #404040;
   }
 }
 
@@ -80,7 +82,7 @@ span.travel-map {
   }
 }
 
-.wrapnav {
+.nav-wrapper {
   // background:transparent url('/images/trans.png') repeat center top;
 
   padding: 9px;
@@ -112,7 +114,7 @@ span.travel-map {
 }
 
 @supports(padding: unquote('max(0px)')) {
-  .wrapnav {
+  .nav-wrapper {
     padding-left:  unquote('max(9px, env(safe-area-inset-left, 9px))');
     margin-bottom: m#{a}x(20px, env(safe-area-inset-bottom, 20px));
   }
@@ -128,9 +130,11 @@ span.travel-map {
 }
 
 
-.body {
+.map-wrapper {
   // flex-grow: 1;
   // position: relative;
+
+  background-color: var(--map-bgcolor);
 
   position: fixed;
   left: 0;
@@ -434,7 +438,7 @@ and (orientation : portrait) {
     display: flex;
     flex-direction: column;
   }
-  .wrapnav {
+  .nav-wrapper {
     max-width: 100%;
     min-width: 250px;
   }
@@ -450,7 +454,7 @@ and (orientation : portrait) {
   span.travel-map {&:after {
     content: " ↑"
   }}
-  .body {
+  .map-wrapper {
     position: fixed;
     top: 0;
     left: 0;
