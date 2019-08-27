@@ -2,6 +2,7 @@
 title: Stars
 type: stars
 title: "Rating Stars: 5 out of 5"
+# disableLanguages: "en"
 description: "The thing missed on Apple Watch. Rate music right on the Apple Watch or iPhone."
 images:
   - stars-og.jpg

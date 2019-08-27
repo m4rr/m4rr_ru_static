@@ -7,7 +7,7 @@ disableKinds: section
   - taxonomy
   - taxonomyTerm
   - RSS
-  - sitemap
+  # - sitemap
 
 params:
   title: Marat Saytakov
