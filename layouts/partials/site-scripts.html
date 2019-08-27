@@ -1,0 +1,20 @@
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js"></script>
+{{/*  {{ $script := .Site.Data.webpack_assets.app }}
+{{ with $script.js }}
+  <script src="{{ relURL (printf "%s%s" "dist/" .) }}"></script>
+{{ end }}  */}}
+{{/*  {{ range .Site.Params.custom_js }}
+{{ with resources.Get . }}
+{{ $js := . | minify }}
+  {{ printf "bbb-%s" ($js) }}
+  {{/*  <script src="{{ $js.Permalink }}"></script>
+{{ end }}
+  */}}
+
+
+{{/*  {{ $script := resources.Get "js/amaps.js" }}  */}}
+{{/*  {{ $js := $script | resources.Minify }}  */}}
+{{ $global := resources.Get "js/amaps.js" | resources.Minify }}
+{{/*  {{ printf "bbb-%s" ($global) }}  */}}
+<script type="text/javascript" src="{{ $global.Permalink }}"></script>
