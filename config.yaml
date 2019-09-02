@@ -13,7 +13,7 @@ params:
   title: Marat Saytakov
   description: iOS && macOS Developer, Traveler
   images:
-    - images/m4rr-ru-redesign-x.png
+    - images/m4rr.ru-redesign-x.png
 
   # favicon = ""
   custom_scss:
@@ -33,6 +33,9 @@ languages:
     params:
       description: iOS && macOS Developer, Traveler
       lang: en
+      images:
+      - images/saytakov.com-redesign-x.png
+
   ru:
     baseURL: https://m4rr.ru/
     weight: 1
