@@ -41,7 +41,7 @@ function buildMap(markers) {
     annotation.subtitle = landmark.title_ru;
     annotation.anchorOffset = new DOMPoint(0, -10);
     annotation.animates = true;
-    annotation.appearanceAnimation = "zoomIn";
+    annotation.appearanceAnimation = "zoomIn 1s";
     // annotation.glyphText = "✈️";
 
     return annotation;
