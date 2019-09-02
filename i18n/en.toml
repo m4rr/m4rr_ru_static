@@ -1,6 +1,9 @@
 [blog]
 other = "Blog"
 
+[promo]
+other = "Промо"
+
 [cv]
 other = "Résumé / CV"
 
