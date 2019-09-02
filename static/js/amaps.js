@@ -6,7 +6,7 @@ function mapInitialize() {
       }
   });
 
-  $.getJSON("/js/cities.json", function(json) {
+  $.getJSON("/cities.json", function(json) {
     buildMap(json);
   });
 }
