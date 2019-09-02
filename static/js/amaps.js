@@ -40,6 +40,7 @@ function buildMap(markers) {
     annotation.title = landmark.title_en;
     annotation.subtitle = landmark.title_ru;
     annotation.anchorOffset = new DOMPoint(0, -10);
+    annotation.animates = true;
     // annotation.glyphText = "✈️";
 
     return annotation;
