@@ -56,6 +56,12 @@ other = "Moscow Metro Wi-Fi Auth"
 [mauth_desc]
 other = "Helps avoid ads in MosMetro_Free, for free"
 
+[easyper]
+other = "Easy Percent"
+
+[easyper_desc]
+other = "Blazing fast, super easy, and pretty cool percentages calculator. App size is 640 KB, ought to be enough. Launch time is 250 µs."
+
 [huyak]
 other = "Geek Sticker Set"
 

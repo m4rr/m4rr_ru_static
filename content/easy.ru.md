@@ -1,14 +1,22 @@
 ---
-title: "mauth • Privacy Policy"
-date: 2019-08-20T07:33:07+03:00
-# draft: true
-kind: page
-type: mauth
-url: "/mauth/privacy/"
+title: Easy Percent X
+type: easy
+kind: easy
+# disableLanguages: "en"
+description: "Easy Percent X — Privacy Policy"
+images:
+  - easy-percent-x-og.jpg
+# audio: []
+# date: "2006-01-02"
+# series: []
+# tags: []
+# videos: []
+# type: "website"
+url: "/easy/"
 ---
 # Политика конфиденциальности
 
-Приложение «mauth» разработано и поддерживается Маратом Сайтаковым.
+Приложение Easy Percent разработано и поддерживается Маратом Сайтаковым.
 
 Приложение и Марат не собирают и не хранят действия пользователей, а также личные данные пользователей.
 
@@ -18,7 +26,7 @@ url: "/mauth/privacy/"
 
 # Privacy Policy
 
-Mauth app is developed and supported by Marat Saytakov.
+Easy Percent app is developed and supported by Marat Saytakov.
 
 Application or Marat doesn't collect or store private data or user actions.
 
