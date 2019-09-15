@@ -22,4 +22,4 @@ Mauth app is developed and supported by Marat Saytakov.
 
 Application or Marat doesn't collect or store private data or user actions.
 
-If Marat will change this Privacy Policy, he will notify you about it by publishing new version of document at this link.
+If Marat change this Privacy Policy, he will notify you about it by publishing new version of document at this link.
