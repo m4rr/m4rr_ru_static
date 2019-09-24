@@ -33,6 +33,10 @@ $hover: #ff6800; // Яркий оранжевый
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
+html {
+  background-color: var(--back-color);
+}
+
 html, body, {
   box-shadow: none;
   color: var(--text-color);
