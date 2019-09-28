@@ -26,7 +26,8 @@ function buildMap(markers) {
 
   var annotations = markers.map(function (landmark) {
     var coo = new mapkit.Coordinate(landmark.y, landmark.x);
-    var color = '#'+Math.floor(Math.random()*16777215).toString(16);
+ // var color = '#'+Math.random().toString(16).substr(-6);
+    var color = 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';
 
     var options = {
       title: landmark.title_en,
