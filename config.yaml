@@ -22,8 +22,8 @@ params:
     - js/amaps.js
     - js/helpers.js
 
-  countries: "34"
-  cities: "227"
+  countries: "35"
+  cities: "229"
 
 languages:
   en:
