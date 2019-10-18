@@ -3,7 +3,7 @@
 
 // @import url('https://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800&display=swap');
 
-$font-stack: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-stack: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 $margin: 20px 15px 15px 16px;
 
@@ -352,7 +352,7 @@ span.now {
   // fixes
   display: inline;
   position: relative;
-  top: -2px;
+  top: -8px;
   padding: 0 7px;
   line-height: 0;
 
@@ -364,9 +364,6 @@ span.now {
   text-transform: uppercase;
 }
 
-i.icon-paper-plane {
-  font-size: 12px;
-}
 
 .links { /* social icon-links */
   font-size: 18px;
@@ -375,7 +372,6 @@ i.icon-paper-plane {
   margin-left: 3px; /* noble left padding */
   overflow-x: hidden;
   overflow-y: hidden;
-  // background-color: red;
   height: 25px;
 
   i {
@@ -383,7 +379,7 @@ i.icon-paper-plane {
   }
 
   i.icon-paper-plane {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   a {
@@ -408,7 +404,7 @@ li.globe {
 
 /* global `a` config */
 a {
-  color: var(--link-color);;
+  color: var(--link-color);
   text-decoration: none;
   transition: 0.3s;
 
@@ -447,8 +443,8 @@ a {
       color: white;
       text-decoration: none;
 
-      // -webkit-background-clip: padding-box; /* for Safari */
-              background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+      -webkit-background-clip: padding; /* for Safari */
+      background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 
       &.imessage {
         background-color: #3484F7;
