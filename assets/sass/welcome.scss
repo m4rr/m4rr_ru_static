@@ -433,6 +433,10 @@ a {
     &.hover {
       color: $hover;
       box-shadow: inset 1px 0 $hover, inset 0 1px $hover, inset -1px 0 $hover, inset 0 -1px $hover;
+
+      &.imessage {
+        box-shadow: none;
+      }
     }
 
     &:hover {
@@ -442,6 +446,10 @@ a {
 
       // -webkit-background-clip: padding-box; /* for Safari */
               background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+
+      &.imessage {
+        background-color: #3484F7;
+      }
     }
   }
 }
