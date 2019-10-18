@@ -265,6 +265,11 @@ p {
   &.last {
     // margin-bottom: 3px;
   }
+
+  &.donate a {
+    letter-spacing: 0.1em;
+    font-size: 13px;
+  }
 }
 
 .soon {

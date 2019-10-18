@@ -7,6 +7,12 @@ other = "Промо"
 [cv]
 other = "Резюме / CV"
 
+[patreon]
+other = "Патреон"
+
+[donate]
+other = "Донаты"
+
 [fuck]
 other = "Нахуй"
 
