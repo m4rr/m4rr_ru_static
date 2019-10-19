@@ -420,11 +420,11 @@ span.now {
       opacity: 0.25;
       cursor: default;
 
-      margin: 8px 0 8px 3px;
+      margin: 8px 0 8px 0px;
       padding: 2px;
 
       background-color: transparent;
-      background: linear-gradient(-45deg, rgba(0,0,0,0) 44%, $dimmed-color 47%, rgba(0,0,0,0) 50%);
+      background: linear-gradient(-45deg, rgba(0,0,0,0) 44%, $dimmed-color 46%, rgba(0,0,0,0) 48%);
 
       &:hover {
         color: $dimmed-color;
