@@ -28,7 +28,7 @@ function buildMap(markers) {
   map.region = Europe;
   map.colorScheme = map_color_scheme === "Dark" ? mapkit.Map.ColorSchemes.Dark : mapkit.Map.ColorSchemes.Light;
 
-  markers.sort((a,b) => a.x < b.x); // east to west
+  markers.sort((a,b) => a.x < b.x); // east to west // kommt die sonne
   markers.forEach(function(landmark, index) {
     // var hue = Math.random() * 120 - 60; // magentas to yellows (300° to 60°)
     // var color = 'hsla(' + (hue < 0 ? hue % 360 + 360 : hue % 360) + ', 100%, 50%, 0.6)';
