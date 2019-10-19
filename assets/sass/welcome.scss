@@ -174,11 +174,11 @@ span.travel-map {
   background-color: #c969e0;
   text-align: center;
   line-height: 32px;
-  transition: 0.05s;
+  transition: 0.3s;
 
   &:hover {
     background-color: $hover !important;
-    transition: 0.5s;
+    transition: 0.05s;
   }
 }
 
