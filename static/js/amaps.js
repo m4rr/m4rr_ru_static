@@ -2,7 +2,7 @@ function mapInitialize() {
   mapkit.init({
     language: map_locale,
     authorizationCallback: function(done) {
-        done(tokenID);
+      done(tokenID);
     }
   });
 
@@ -11,7 +11,7 @@ function mapInitialize() {
   });
 }
 
-var factory = function(coordinate, options) {
+var factory = function(coo, options) {
   var div = document.createElement("div");
   div.className = "circle-annotation";
   div.style.backgroundColor = options.data.color;
@@ -27,11 +27,10 @@ function buildMap(markers) {
   );
 
   var map = new mapkit.Map("map");
-
   map.region = Europe;
   map.colorScheme = map_color_scheme === "Dark" ? mapkit.Map.ColorSchemes.Dark : mapkit.Map.ColorSchemes.Light;
 
-  markers.sort((a,b) => a.x < b.x);
+  markers.sort((a,b) => a.x < b.x); // east to west
   markers.forEach(function(landmark, index) {
     // var hue = Math.random() * 120 - 60; // magentas to yellows (300° to 60°)
     // var color = 'hsla(' + (hue < 0 ? hue % 360 + 360 : hue % 360) + ', 100%, 50%, 0.6)';
@@ -55,7 +54,7 @@ function buildMap(markers) {
     // return annotation;
 
     // map.addAnnotation(annotation);
-    setTimeout(() => map.addAnnotation(annotation), 2000 + 20 * index);
+    setTimeout(() => map.addAnnotation(annotation), 2000 + 20 * index); // delay 2s + interval 20ms
   });
 
   // var annotations = markers.map(...)
