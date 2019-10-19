@@ -76,6 +76,19 @@ async function buildMap(markers) {
     map.addAnnotation(new mapkit.MarkerAnnotation(coordinate));
   });
 
+  map.element.addEventListener("hover", function(event) {
+    // if (event.target.parentNode !== map.element) {
+    //     // This condition prevents clicks on controls. Binding to a
+    //     // secondary click is another option to prevent conflict
+    //     return;
+    // }
+    // var domPoint = new DOMPoint(event.pageX, event.pageY);
+    // var coordinate = map.convertPointOnPageToCoordinate(domPoint);
+    // map.addAnnotation(new mapkit.MarkerAnnotation(coordinate));
+    event.target.click();
+  });
+
+
 }
 
 window.onload = mapInitialize;
