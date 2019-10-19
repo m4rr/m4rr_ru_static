@@ -22,7 +22,7 @@ var factory = function(coordinate, options) {
   return div;
 };
 
-function buildMap(markers) {
+async function buildMap(markers) {
   var MarkerAnnotation = mapkit.MarkerAnnotation;
   var map = new mapkit.Map("map");
 
