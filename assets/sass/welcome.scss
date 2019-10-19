@@ -438,9 +438,14 @@ span.now {
   }
 }
 
-li.globe {
-  /* https://en.wikipedia.org/wiki/Axial_tilt */
-  transform: rotate(23.43674deg);
+// .globe {
+//   /* https://en.wikipedia.org/wiki/Axial_tilt */
+//   transform: rotate(23.43674deg);
+//}
+
+.icon-mic {
+  float: right;
+  color: $dimmed-color;
 }
 
 /* global `a` config */
@@ -454,7 +459,7 @@ a {
 
     &:hover {
       text-decoration: none;
-      animation: heartBeat 1s linear infinite;
+      // animation: heartBeat 1s linear infinite;
     }
   }
 

@@ -26,21 +26,13 @@
 
     <ul class="menu">
       <li>
-        <a href="https://blog.m4rr.ru/" class="nbsp"><b>{{ i18n "blog" }}</b></a>
-      </li>
-      <li>
         <a href="/cv" class="nbsp"><b>{{ i18n "cv" }}</b></a>
       </li>
       <li>
         <a href="https://www.patreon.com/m4rr" class="nbsp"><b>{{ i18n "patreon" }}</b></a>
       </li>
-      <li class="globe">
-        <!-- .globe: https://en.wikipedia.org/wiki/Axial_tilt -->
-        {{ if ne .Site.Params.lang "en"}}
-          <a href="https://saytakov.com/" class="globe">🌎</a>
-        {{ else }}
-          <a href="https://m4rr.ru/" class="globe">🌍</a>
-        {{ end }}
+      <li>
+        <a href="https://blog.m4rr.ru/" class="nbsp"><b>{{ i18n "blog" }}</b></a>
       </li>
     </ul>
 
@@ -154,6 +146,22 @@
       <br />
       <a href="bitcoin:3Mt8QW6Q3pFU5663CBTvqaupuN4V54z2Zb">3Mt8QW6Q3pFU5663CBTvqaupuN4V54z2Zb</a>
     </p>
+
+    <hr>
+
+    <p>
+      <!-- <li class="globe"> -->
+        <!-- .globe: https://en.wikipedia.org/wiki/Axial_tilt -->
+        {{ if ne .Site.Params.lang "en"}}
+        <a href="https://saytakov.com/" class="globe"><i class="icon-globe"></i></a>
+        {{ else }}
+        <a href="https://m4rr.ru/" class="globe"><i class="icon-globe"></i></a>
+        {{ end }}
+      <!-- </li> -->
+
+      <i class="icon-mic"></i>
+    </p>
+
   </nav>
   </div>
   <div class="map-wrapper">
