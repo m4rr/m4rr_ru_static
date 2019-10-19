@@ -1,3 +1,15 @@
+var Europe = new mapkit.CoordinateRegion(
+  new mapkit.Coordinate(50, 5),
+  new mapkit.CoordinateSpan(30, 30)
+);
+
+var factory = function(coo, options) {
+  var div = document.createElement("div");
+  div.className = "circle-annotation";
+  div.style.backgroundColor = options.data.color;
+  return div;
+};
+
 function mapInitialize() {
   mapkit.init({
     language: map_locale,
@@ -11,21 +23,7 @@ function mapInitialize() {
   });
 }
 
-var factory = function(coo, options) {
-  var div = document.createElement("div");
-  div.className = "circle-annotation";
-  div.style.backgroundColor = options.data.color;
-  return div;
-};
-
 function buildMap(markers) {
-  // var MarkerAnnotation = mapkit.MarkerAnnotation;
-
-  var Europe = new mapkit.CoordinateRegion(
-    new mapkit.Coordinate(50, 5),
-    new mapkit.CoordinateSpan(30, 30)
-  );
-
   var map = new mapkit.Map("map");
   map.region = Europe;
   map.colorScheme = map_color_scheme === "Dark" ? mapkit.Map.ColorSchemes.Dark : mapkit.Map.ColorSchemes.Light;
