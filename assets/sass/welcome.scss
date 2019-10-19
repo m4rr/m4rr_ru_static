@@ -10,6 +10,7 @@ $margin: 20px 15px 15px 16px;
 $dimmed-color: #99a;
 // $link: #7b68ee; // Умеренный аспидно-синий
 $hover: #ff6800; // Яркий оранжевый
+$gold: #daa520; // gold
 
 :root {
   --text-color: #556;
@@ -328,7 +329,7 @@ ul.menu {
 }
 
 .stars {
-  color: #daa520; // gold;
+  color: $gold;
   display: inline-block;
   font-size: 11px;
   letter-spacing: 0.4em;
@@ -363,7 +364,7 @@ span.now {
   line-height: 0;
 
   // design
-  color: $hover;
+  color: $gold;
   font-size: 10px;
   font-weight: bold;
   letter-spacing: .2em;
