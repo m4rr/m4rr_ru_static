@@ -29,7 +29,7 @@ function buildMap(markers) {
  // var color = '#'+Math.random().toString(16).substr(-6);
     var hue = Math.random() * 120 - 60; // magentas to yellows (300° to 60°)
     // var color = 'hsla(' + (hue < 0 ? hue % 360 + 360 : hue % 360) + ', 100%, 50%, 0.6)';
-    var color = map_color_scheme === "Dark" ? 'rgba(255,255,255,0.8)' : 'rgba(160,104,172,1)';
+    var color = map_color_scheme === "Dark" ? 'rgba(255,255,255,0.8)' : 'rgba(160,104,172,0.8)';
 
     var options = {
       title: landmark.title_en,
