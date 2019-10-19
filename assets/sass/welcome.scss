@@ -344,6 +344,15 @@ ul.menu {
       content: "★";
     }
   }
+
+  heart {
+    color: red;
+    display: inline-block;
+    transform: rotate(20deg);
+    &:before {
+      content: "♥";
+    }
+  }
 }
 
 .nbsp {
