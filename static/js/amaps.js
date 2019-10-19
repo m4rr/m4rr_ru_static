@@ -28,7 +28,7 @@ async function buildMap(markers) {
 
   map.colorScheme = map_color_scheme === "Dark" ? mapkit.Map.ColorSchemes.Dark : mapkit.Map.ColorSchemes.Light;
 
-  markers.sort((a,b) => a.x < b.x);
+  markers.sort((a,b) => a.x > b.x);
 
   // var annotations =
   markers.forEach(async function(landmark, index) {
@@ -59,7 +59,7 @@ async function buildMap(markers) {
 
     // map.addAnnotation(annotation);
 
-    setTimeout(() => map.addAnnotation(annotation), 70 * index);
+    setTimeout(() => map.addAnnotation(annotation), 50 * index);
 
   });
   // map.showItems(annotations);
