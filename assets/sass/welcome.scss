@@ -425,7 +425,11 @@ span.now {
       padding: 2px;
 
       background-color: transparent;
-      background: linear-gradient(-45deg, rgba(0,0,0,0) 44%, $dimmed-color 46%, rgba(0,0,0,0) 48%);
+      background: linear-gradient(-45deg, rgba(0,0,0,0) 44%, $dimmed-color 47%, rgba(0,0,0,0) 50%);
+
+      &:first-child {
+        margin-left: 10px;
+      }
 
       &:hover {
         color: $dimmed-color;
