@@ -27,13 +27,19 @@ other = "and {{ .Count }} cities"
 other = "Projects"
 
 [medium]
-other = "Medium on iOS development"
+other = "Thoughts on development and computers"
 
 [usefullinks]
 other = "Useful Links on Programming"
 
 [citoyen]
 other = "Citoyen Marat"
+
+[course]
+other = "﻿"
+
+[class]
+other = "class"
 
 [talks]
 other = "Talks"

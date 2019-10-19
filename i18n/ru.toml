@@ -29,13 +29,19 @@ many = "и {{ .Count }} городах"
 other = "Проекты"
 
 [medium]
-other = "Medium про iOS-разработку"
+other = "Мысли о разработке и компьютерах"
 
 [usefullinks]
-other = "Полезные ссылки для программистов"
+other = "Полезные ссылки для программистов"
 
 [citoyen]
 other = "Прямо о второстепенном"
+
+[course]
+other = "Курс"
+
+[class]
+other = "﻿"
 
 [talks]
 other = "Выступления"
