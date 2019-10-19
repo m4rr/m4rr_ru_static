@@ -274,9 +274,12 @@ p {
     // margin-bottom: 3px;
   }
 
-  &.donate a {
-    letter-spacing: 0.1em;
-    font-size: 13px;
+  &.donate {
+    margin-bottom: 30px;
+    a {
+      letter-spacing: 0.1em;
+      font-size: 13px;
+    }
   }
 }
 
@@ -354,6 +357,11 @@ ul.menu {
       content: "♥";
     }
   }
+}
+
+sup {
+  font-size: .83em;
+  vertical-align: super;
 }
 
 .nbsp {
