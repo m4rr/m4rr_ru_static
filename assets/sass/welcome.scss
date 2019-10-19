@@ -176,7 +176,7 @@ span.travel-map {
   line-height: 32px;
 
   &:hover {
-    background-color: $hover;
+    background-color: $hover !important;
   }
 }
 
