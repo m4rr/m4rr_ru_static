@@ -41,7 +41,7 @@ other = "Прямо о второстепенном"
 other = "Курс"
 
 [class]
-other = "﻿"
+other = " "
 
 [talks]
 other = "Выступления"
