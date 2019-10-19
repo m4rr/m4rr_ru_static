@@ -29,7 +29,7 @@ async function buildMap(markers) {
   map.colorScheme = map_color_scheme === "Dark" ? mapkit.Map.ColorSchemes.Dark : mapkit.Map.ColorSchemes.Light;
 
   // var annotations =
-  markers.forEach(async function(landmark) {
+  markers.forEach(async function(landmark, index) {
 
     // var hue = Math.random() * 120 - 60; // magentas to yellows (300° to 60°)
     // var color = 'hsla(' + (hue < 0 ? hue % 360 + 360 : hue % 360) + ', 100%, 50%, 0.6)';
@@ -55,9 +55,9 @@ async function buildMap(markers) {
 
     // return annotation;
 
-    map.addAnnotation(annotation);
+    // map.addAnnotation(annotation);
 
-    await sleep(50);
+    setTimeout(() => map.addAnnotation(annotation), 50 * index);
 
   });
   // map.showItems(annotations);
