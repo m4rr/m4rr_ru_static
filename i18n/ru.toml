@@ -25,9 +25,6 @@ other = "<strong>Был</strong> в {{ .Count }} странах"
 one = "и {{ .Count }} городе"
 many = "и {{ .Count }} городах"
 
-[channel]
-other = "канал"
-
 [projects]
 other = "Проекты"
 

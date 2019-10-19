@@ -23,9 +23,6 @@ one = "<strong>Visited</strong> {{ .Count }} country"
 [visited_cities]
 other = "and {{ .Count }} cities"
 
-[channel]
-other = "channel"
-
 [projects]
 other = "Projects"
 
