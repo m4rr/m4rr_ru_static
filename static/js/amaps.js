@@ -1,12 +1,14 @@
 var EuropeDesktop = new mapkit.CoordinateRegion(
-  new mapkit.Coordinate(50, 5),
-  new mapkit.CoordinateSpan(30, 30)
+  new mapkit.Coordinate(54.6669, 5.0879),
+  new mapkit.CoordinateSpan(48.7855, 114.1699)
 );
 
 var EuropeMobile = new mapkit.CoordinateRegion(
-  new mapkit.Coordinate(39.79928586819792, 21.04003906249997),
-  new mapkit.CoordinateSpan(85.88281262723112, 65.91796875000003)
+  new mapkit.Coordinate(39.7993, 21.04004),
+  new mapkit.CoordinateSpan(85.8828, 65.91797)
 );
+
+var isMobile = window.matchMedia("only screen and (max-width: 767px)").matches;
 
 var factory = function(coo, options) {
   var div = document.createElement("div");
@@ -14,8 +16,6 @@ var factory = function(coo, options) {
   div.style.backgroundColor = options.data.color;
   return div;
 };
-
-var isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
 
 function mapInitialize() {
   mapkit.init({
@@ -30,9 +30,8 @@ function mapInitialize() {
   });
 }
 
-var map = 0;
 function buildMap(markers) {
-  map = new mapkit.Map("map");
+  var map = new mapkit.Map("map");
   map.region = isMobile ? EuropeMobile : EuropeDesktop;
   map.colorScheme = map_color_scheme === "Dark" ? mapkit.Map.ColorSchemes.Dark : mapkit.Map.ColorSchemes.Light;
 
