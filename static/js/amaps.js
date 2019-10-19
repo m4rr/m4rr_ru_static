@@ -52,7 +52,7 @@ function buildMap(markers) {
     // return annotation;
 
     // map.addAnnotation(annotation);
-    setTimeout(() => map.addAnnotation(annotation), 2000 + 20 * index); // delay 2s + interval 20ms
+    setTimeout(() => map.addAnnotation(annotation), 2000 + 10 * index); // delay 2s + interval 10ms
   });
 
   // var annotations = markers.map(...)
