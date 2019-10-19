@@ -25,7 +25,7 @@ $gold: #daa520; // gold
     --text-color: white;
     --back-color: rgba(0, 0, 0, 0.7);
     --link-color: rgb(102, 187, 255);
-    --hr-color: #666;
+    --hr-color: #333;
     --map-bgcolor: #2B2D2F;
   }
 }
@@ -218,7 +218,7 @@ space {
 hr {
   border: 1px solid var(--hr-color);
   border-width: 1px 0 0 0;
-  margin: $margin;
+  margin: 20px 0;
 }
 
 strong, b {
