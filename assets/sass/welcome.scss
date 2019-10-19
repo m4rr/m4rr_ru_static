@@ -298,14 +298,15 @@ ul {
   margin-top: 0;
 
   li {
-    margin-left: 20px;
+    margin-left: 15px;
     padding: 5px 0 0 0;
     list-style-type: none;
     &:before {
       color: $dimmed-color;
       content: '\2022'; /* Unicode bullet symbol */
-      margin-left: -12px;
-      padding-right: 0.5em;
+      margin-left: -1em;
+      padding-right: .55em;
+      left: -20px;
     }
   }
 }
