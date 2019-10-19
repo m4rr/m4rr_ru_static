@@ -18,21 +18,24 @@ var factory = function(coordinate, options) {
   return div;
 };
 
-async function buildMap(markers) {
-  var MarkerAnnotation = mapkit.MarkerAnnotation;
+function buildMap(markers) {
+  // var MarkerAnnotation = mapkit.MarkerAnnotation;
+
+  var Europe = new mapkit.CoordinateRegion(
+    new mapkit.Coordinate(50, 5),
+    new mapkit.CoordinateSpan(30, 30)
+  );
+
   var map = new mapkit.Map("map");
 
+  map.region = Europe;
   map.colorScheme = map_color_scheme === "Dark" ? mapkit.Map.ColorSchemes.Dark : mapkit.Map.ColorSchemes.Light;
 
   markers.sort((a,b) => a.x < b.x);
-
-  // var annotations =
   markers.forEach(function(landmark, index) {
-
     // var hue = Math.random() * 120 - 60; // magentas to yellows (300° to 60°)
     // var color = 'hsla(' + (hue < 0 ? hue % 360 + 360 : hue % 360) + ', 100%, 50%, 0.6)';
     var color = map_color_scheme === "Dark" ? 'rgba(255,255,255,0.8)' : 'rgba(160,104,172,0.8)';
-
     var options = {
       title: landmark.title_en,
       data: {
@@ -41,7 +44,6 @@ async function buildMap(markers) {
     };
 
     var coo = new mapkit.Coordinate(landmark.y, landmark.x);
-
     var annotation = new mapkit.Annotation(coo, factory, options);
     // annotation.color = color;
     // annotation.glyphText = "✈️";
@@ -50,45 +52,14 @@ async function buildMap(markers) {
     annotation.anchorOffset = new DOMPoint(0, -10);
     annotation.animates = true;
     annotation.appearanceAnimation = "zoomIn 0.3s ease-out";
-
     // return annotation;
 
     // map.addAnnotation(annotation);
     setTimeout(() => map.addAnnotation(annotation), 2000 + 20 * index);
   });
+
+  // var annotations = markers.map(...)
   // map.showItems(annotations);
-
-  var Europe = new mapkit.CoordinateRegion(
-    new mapkit.Coordinate(50, 5),
-    new mapkit.CoordinateSpan(30, 30)
-  );
-
-  map.region = Europe;
-
-  map.element.addEventListener("click", function(event) {
-    if (event.target.parentNode !== map.element) {
-        // This condition prevents clicks on controls. Binding to a
-        // secondary click is another option to prevent conflict
-        return;
-    }
-    var domPoint = new DOMPoint(event.pageX, event.pageY);
-    var coordinate = map.convertPointOnPageToCoordinate(domPoint);
-    map.addAnnotation(new mapkit.MarkerAnnotation(coordinate));
-  });
-
-  map.element.addEventListener("hover", function(event) {
-    // if (event.target.parentNode !== map.element) {
-    //     // This condition prevents clicks on controls. Binding to a
-    //     // secondary click is another option to prevent conflict
-    //     return;
-    // }
-    // var domPoint = new DOMPoint(event.pageX, event.pageY);
-    // var coordinate = map.convertPointOnPageToCoordinate(domPoint);
-    // map.addAnnotation(new mapkit.MarkerAnnotation(coordinate));
-    event.target.click();
-  });
-
-
 }
 
 window.onload = mapInitialize;
