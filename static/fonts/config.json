@@ -37,12 +37,6 @@
       "src": "fontawesome"
     },
     {
-      "uid": "4743b088aa95d6f3b6b990e770d3b647",
-      "css": "facebook-squared",
-      "code": 62216,
-      "src": "fontawesome"
-    },
-    {
       "uid": "f3d95e13eb43f3f6b8efe1eb424a1e3b",
       "css": "vkontakte",
       "code": 61833,
@@ -106,6 +100,12 @@
       "uid": "47a1f80457068fbeab69fdb83d7d0817",
       "css": "youtube-play",
       "code": 61802,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "8e04c98c8f5ca0a035776e3001ad2638",
+      "css": "facebook",
+      "code": 61594,
       "src": "fontawesome"
     }
   ]
