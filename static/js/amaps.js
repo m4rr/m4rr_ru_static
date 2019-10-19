@@ -57,7 +57,7 @@ async function buildMap(markers) {
 
     // map.addAnnotation(annotation);
 
-    setTimeout(() => map.addAnnotation(annotation), 100 * index);
+    setTimeout(() => map.addAnnotation(annotation), 70 * index);
 
   });
   // map.showItems(annotations);
