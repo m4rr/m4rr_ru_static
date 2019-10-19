@@ -218,7 +218,8 @@ space {
 hr {
   border: 1px solid var(--hr-color);
   border-width: 1px 0 0 0;
-  margin: 20px 0;
+  margin: $margin;
+  margin-right: 0;
 }
 
 strong, b {
