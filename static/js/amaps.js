@@ -1,4 +1,9 @@
-var Europe = new mapkit.CoordinateRegion(
+var EuropeDesktop = new mapkit.CoordinateRegion(
+  new mapkit.Coordinate(50, 5),
+  new mapkit.CoordinateSpan(30, 30)
+);
+
+var EuropeMobile = new mapkit.CoordinateRegion(
   new mapkit.Coordinate(50, 5),
   new mapkit.CoordinateSpan(30, 30)
 );
