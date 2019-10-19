@@ -396,6 +396,12 @@ span.now {
       opacity: 0.25;
       cursor: default;
 
+      margin: 8px 3px;
+      padding: 2px 2px;
+
+      background-color: transparent;
+      background: linear-gradient(-45deg, rgba(0,0,0,0) 44%, $dimmed-color 47%, rgba(0,0,0,0) 50%);
+
       &:hover {
         color: $dimmed-color;
       }
