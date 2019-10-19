@@ -11,16 +11,16 @@ function mapInitialize() {
   });
 }
 
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 var factory = function(coordinate, options) {
   var div = document.createElement("div");
   div.className = "circle-annotation";
   div.style.backgroundColor = options.data.color;
   return div;
 };
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 async function buildMap(markers) {
   var MarkerAnnotation = mapkit.MarkerAnnotation;
@@ -29,7 +29,7 @@ async function buildMap(markers) {
   map.colorScheme = map_color_scheme === "Dark" ? mapkit.Map.ColorSchemes.Dark : mapkit.Map.ColorSchemes.Light;
 
   // var annotations =
-  markers.forEach(function(landmark) {
+  markers.forEach(async function(landmark) {
 
     // var hue = Math.random() * 120 - 60; // magentas to yellows (300° to 60°)
     // var color = 'hsla(' + (hue < 0 ? hue % 360 + 360 : hue % 360) + ', 100%, 50%, 0.6)';
