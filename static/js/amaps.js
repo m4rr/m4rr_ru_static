@@ -18,10 +18,6 @@ var factory = function(coordinate, options) {
   return div;
 };
 
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 async function buildMap(markers) {
   var MarkerAnnotation = mapkit.MarkerAnnotation;
   var map = new mapkit.Map("map");
@@ -31,7 +27,7 @@ async function buildMap(markers) {
   markers.sort((a,b) => a.x < b.x);
 
   // var annotations =
-  markers.forEach(async function(landmark, index) {
+  markers.forEach(function(landmark, index) {
 
     // var hue = Math.random() * 120 - 60; // magentas to yellows (300° to 60°)
     // var color = 'hsla(' + (hue < 0 ? hue % 360 + 360 : hue % 360) + ', 100%, 50%, 0.6)';
@@ -58,9 +54,6 @@ async function buildMap(markers) {
     // return annotation;
 
     // map.addAnnotation(annotation);
-
-    setTimeout(() => map.addAnnotation(annotation), 30 * index);
-
   });
   // map.showItems(annotations);
 
