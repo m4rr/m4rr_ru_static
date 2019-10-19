@@ -1,9 +1,9 @@
 function mapInitialize() {
   mapkit.init({
-      language: map_locale,
-      authorizationCallback: function(done) {
-          done(tokenID);
-      }
+    language: map_locale,
+    authorizationCallback: function(done) {
+        done(tokenID);
+    }
   });
 
   $.getJSON("/cities.json", function(json) {
@@ -44,16 +44,17 @@ async function buildMap(markers) {
 
     var annotation = new mapkit.Annotation(coo, factory, options);
     // annotation.color = color;
+    // annotation.glyphText = "✈️";
     annotation.title = landmark.title_en;
     annotation.subtitle = landmark.title_ru;
     annotation.anchorOffset = new DOMPoint(0, -10);
     annotation.animates = true;
     annotation.appearanceAnimation = "zoomIn 0.3s ease-out";
-    // annotation.glyphText = "✈️";
 
     // return annotation;
 
     // map.addAnnotation(annotation);
+    setTimeout(() => map.addAnnotation(annotation), 30 * index);
   });
   // map.showItems(annotations);
 
