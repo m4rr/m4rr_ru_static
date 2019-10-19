@@ -10,6 +10,8 @@ var factory = function(coo, options) {
   return div;
 };
 
+var isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+
 function mapInitialize() {
   mapkit.init({
     language: map_locale,
@@ -23,9 +25,10 @@ function mapInitialize() {
   });
 }
 
+var map = 0;
 function buildMap(markers) {
-  var map = new mapkit.Map("map");
-  map.region = Europe;
+  map = new mapkit.Map("map");
+  map.region = isMobile ? EuropeMobile : EuropeDesktop;
   map.colorScheme = map_color_scheme === "Dark" ? mapkit.Map.ColorSchemes.Dark : mapkit.Map.ColorSchemes.Light;
 
   markers.sort((a,b) => a.x < b.x); // east to west // kommt die sonne
