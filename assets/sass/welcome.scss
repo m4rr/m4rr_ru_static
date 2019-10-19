@@ -453,7 +453,7 @@ a {
     }
   }
 
-  &:hover, .hover {
+  &:hover, &.hover {
     color: $hover; // ff2d55
     transition: 0s;
   }
