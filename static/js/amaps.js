@@ -52,12 +52,24 @@ function buildMap(markers) {
 
   map.showItems(annotations);
 
-  var Cupertino = new mapkit.CoordinateRegion(
+  var Europe = new mapkit.CoordinateRegion(
     new mapkit.Coordinate(50, 5),
     new mapkit.CoordinateSpan(30, 30)
   );
 
-  map.region = Cupertino;
+  map.region = Europe;
+
+  map.element.addEventListener("click", function(event) {
+    if (event.target.parentNode !== map.element) {
+        // This condition prevents clicks on controls. Binding to a
+        // secondary click is another option to prevent conflict
+        return;
+    }
+    var domPoint = new DOMPoint(event.pageX, event.pageY);
+    var coordinate = map.convertPointOnPageToCoordinate(domPoint);
+    map.addAnnotation(new mapkit.MarkerAnnotation(coordinate));
+});
+
 }
 
 window.onload = mapInitialize;
