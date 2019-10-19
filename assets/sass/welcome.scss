@@ -249,6 +249,10 @@ p {
   &.app {
     margin-bottom: 20px;
 
+    &.geek {
+      margin-right: 5px;
+    }
+
     strong {
       a {
         color: inherit;
