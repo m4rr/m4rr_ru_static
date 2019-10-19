@@ -11,6 +11,10 @@ function mapInitialize() {
   });
 }
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 var factory = function(coordinate, options) {
   var div = document.createElement("div");
   div.className = "circle-annotation";
@@ -52,6 +56,9 @@ function buildMap(markers) {
     // return annotation;
 
     map.addAnnotation(annotation);
+
+    await sleep(50);
+
   });
   // map.showItems(annotations);
 
