@@ -82,9 +82,13 @@ nav {
 }
 
 span.travel-map {
-  &:after {
-    content: " →"
-  }
+  // &:after {
+    // content: " ✈";
+    // vertical-align: super;
+    display: inline-block;
+    // font-size: .83em;
+    transform: rotate(-45deg);
+  // }
 }
 
 .nav-wrapper {
@@ -198,7 +202,7 @@ span.travel-map {
   height: 100px;
   position: fixed;
 
-  text-shadow: black 0px -1px;
+  text-shadow: var(--back-color) 0px -1px;
 
   .que {
     font-size: 30px;
@@ -211,8 +215,10 @@ span.travel-map {
   }
 
   p {
-    margin: 5px 0 0 0;
+    margin: 0px 0 0 0;
     padding: 0;
+    line-height: 150%;
+
   }
 }
 
@@ -571,9 +577,11 @@ and (orientation : portrait) {
     min-height: 100%;
     width: 100%;
   }
-  span.travel-map {&:after {
-    content: " ↓"
-  }}
+  span.travel-map {
+    // &:after {
+    //   content: " ↓"
+    // }
+  }
   .map-wrapper {
     position: fixed;
     top: 0;
