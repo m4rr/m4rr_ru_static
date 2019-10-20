@@ -133,16 +133,10 @@
       "src": "fontawesome"
     },
     {
-      "uid": "b1a40ej6b1xgsxjeh1b1urm8ptglt0hk",
-      "css": "mic",
-      "code": 59393,
-      "src": "typicons"
-    },
-    {
-      "uid": "b7bd78e163801889af145e513d6c5383",
-      "css": "mic-outline",
-      "code": 59394,
-      "src": "typicons"
+      "uid": "19c50c52858a81de58f9db488aba77bc",
+      "css": "mic-2",
+      "code": 61744,
+      "src": "fontawesome"
     }
   ]
 }
