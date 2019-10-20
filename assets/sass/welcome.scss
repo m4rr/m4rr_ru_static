@@ -194,7 +194,7 @@ span.travel-map {
   background-color: transparent;
   float: right;
   display: block;
-  z-index: 100;
+  z-index: 10;
   height: 100px;
   position: fixed;
 
@@ -585,7 +585,7 @@ and (orientation : portrait) {
     background-color: transparent;
     float: right;
     display: block;
-    z-index: 100;
+    z-index: 10;
     // height: 100px;
     position: fixed;
   }
