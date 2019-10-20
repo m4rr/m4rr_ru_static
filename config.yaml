@@ -31,7 +31,7 @@ languages:
     weight: 2
     title: Marat Saytakov
     params:
-      description: iOS && macOS Developer, Traveler
+      description: Go || JS || iOS && macOS Developer
       lang: en
       images:
       - images/saytakov.com-redesign-x.png
@@ -41,5 +41,5 @@ languages:
     weight: 1
     title: Марат Сайтаков
     params:
-      description: программирование и путешествия
+      description: Программист iOS && macOS || Go || JS
       lang: ru

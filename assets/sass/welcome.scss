@@ -188,31 +188,76 @@ span.travel-map {
   height: auto !important;
 }
 
-h1 {
-  font-size: 30px;
-  font-weight: bold;
-  margin: $margin;
-  margin-top: 20px;
+.travel-stat {
+  margin-left: 430px !important;
+  margin-top: 19px !important;
+  background-color: transparent;
+  float: right;
+  display: block;
+  z-index: 100;
+  height: 100px;
+  position: fixed;
 
-  img {
-    margin-left: 5px;
-    // bottom: -5px;
-    width: 50px;
-    border-radius: 50%;
-    border: 1px solid var(--hr-color);
-    vertical-align: -50%;
+  .que {
+    font-size: 30px;
+    // font-weight: bold;
+
+    // margin: 10px 0 5px 0px;
+    // padding: 0 0 0 0px;
+
+    line-height: 130%;
+  }
+
+  p {
+    margin: 5px 0 0 0;
+    padding: 0;
   }
 }
 
+h1 {
+  font-size: 30px;
+  // font-weight: bold;
+
+  margin: 10px 0 5px 0px;
+  padding: 0 0 0 0px;
+
+  line-height: 130%;
+
+  display: block;
+
+}
+
+.photo {
+  margin: 15px 10px 5px 13px;
+  padding: 0px;
+  // bottom: -5px;
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid var(--hr-color);
+  vertical-align: -30%;
+
+  display: block;
+  float: left;
+}
+
 h2 {
-  font-weight: bold;
-  margin: $margin;
-  margin-top: 0px;
+  font-weight: normal;
+  margin: 0 15px 0 0;
+  padding: 0;
+}
+
+.clear {
+  clear: both;
 }
 
 space {
   display: block;
   margin: 18px;
+  // clear: both;
+
+  &.smaller {
+    margin: 10px;
+  }
 }
 
 hr {
@@ -524,7 +569,7 @@ and (orientation : portrait) {
     width: 100%;
   }
   span.travel-map {&:after {
-    content: " ↑"
+    content: " ↓"
   }}
   .map-wrapper {
     position: fixed;
@@ -532,6 +577,17 @@ and (orientation : portrait) {
     left: 0;
     bottom: 0;
     width: 100%;
+  }
+
+  .travel-stat {
+
+    margin: 10px 15px !important;
+    background-color: transparent;
+    float: right;
+    display: block;
+    z-index: 100;
+    // height: 100px;
+    position: fixed;
   }
 }
 

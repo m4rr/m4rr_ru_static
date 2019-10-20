@@ -1,3 +1,12 @@
+[marat]
+other = "Marat"
+
+[saytakov]
+other = "Saytakov"
+
+[where]
+other = "Where have you been?"
+
 [blog]
 other = "Blog"
 
@@ -17,11 +26,12 @@ other = "Donate"
 other = "Fuck"
 
 [visited_countries]
-other = "<strong>Visited</strong> {{ .Count }} countries"
-one = "<strong>Visited</strong> {{ .Count }} country"
+other = "{{ .Count }} countries"
+one = "{{ .Count }} country"
 
 [visited_cities]
 other = "and {{ .Count }} cities"
+one = "and {{ .Count }} city"
 
 [projects]
 other = "Projects"

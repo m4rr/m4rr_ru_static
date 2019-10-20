@@ -1,3 +1,12 @@
+[marat]
+other = "Марат"
+
+[saytakov]
+other = "Сайтаков"
+
+[where]
+other = "Где ты был?"
+
 [blog]
 other = "Блог"
 
@@ -17,13 +26,14 @@ other = "Донаты"
 other = "Нахуй"
 
 [visited_countries]
-# one = "<strong>Был</strong> в {{ .Count }} стране"
-other = "<strong>Был</strong> в {{ .Count }} странах"
-# many = "и {{ .Count }} городах"
+one = "{{ .Count }} страна"
+many = "{{ .Count }} стран"
+other = "{{ .Count }} стран"
 
 [visited_cities]
-one = "и {{ .Count }} городе"
-many = "и {{ .Count }} городах"
+one = "и {{ .Count }} город"
+many = "и {{ .Count }} городов"
+other = "и {{ .Count }} города"
 
 [projects]
 other = "Проекты"
