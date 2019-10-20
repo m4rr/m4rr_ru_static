@@ -190,13 +190,15 @@ span.travel-map {
 
 .travel-stat {
   margin-left: 430px !important;
-  margin-top: 19px !important;
+  margin-top: 22px !important;
   background-color: transparent;
   float: right;
   display: block;
   z-index: 10;
   height: 100px;
   position: fixed;
+
+  text-shadow: black 0px -1px;
 
   .que {
     font-size: 30px;
@@ -218,7 +220,7 @@ h1 {
   font-size: 30px;
   // font-weight: bold;
 
-  margin: 10px 0 5px 0px;
+  margin: 13px 0 0px 0px;
   padding: 0 0 0 0px;
 
   line-height: 130%;
@@ -244,6 +246,7 @@ h2 {
   font-weight: normal;
   margin: 0 15px 0 0;
   padding: 0;
+  line-height: 150%;
 }
 
 .clear {
@@ -256,7 +259,7 @@ space {
   // clear: both;
 
   &.smaller {
-    margin: 10px;
+    margin: 7px;
   }
 }
 
