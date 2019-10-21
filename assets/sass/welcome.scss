@@ -44,6 +44,28 @@ $gold: #daa520; // gold
     --call-action-hover-border: unset;
     --call-action-hover-bg: unset;
     --hover-imessage: unset;
+
+    .neonize {
+
+      color: azure !important;
+      --color1: azure;
+      --color2: aqua;
+      --color3: dodgerblue;
+      --color4: blue;
+      // font-family: Sriracha;
+      // --interval: 1333ms;
+
+      --interval: 1s;
+      display: block;
+      text-shadow:
+        0 0 10px var(--color1),
+        0 0 20px var(--color2),
+        0 0 40px var(--color3),
+        0 0 80px var(--color4);
+      will-change: filter, color;
+      filter: saturate(60%);
+      animation: flicker steps(100) var(--interval) 1s infinite;
+    }
   }
 
 }
@@ -221,9 +243,8 @@ span.travel-map {
   position: fixed;
 
   color: var(--text-color) !important;
-
   // text-shadow: var(--back-color) 0px -1px;
-  animation: var(--hover-anim);
+  // animation: var(--hover-anim);
 
   .que {
     font-size: 30px;
@@ -820,3 +841,9 @@ and (orientation : portrait) {
     0 0 150px #0ff;
 }
 
+@keyframes flicker {
+  50% {
+    color: white;
+    filter: saturate(200%) hue-rotate(20deg);
+  }
+}
