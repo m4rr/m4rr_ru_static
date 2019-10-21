@@ -30,14 +30,14 @@ function mapInitialize() {
   });
 }
 
-const media = window.matchMedia('(prefers-color-scheme: dark)');
-const isDark = media.matches ? 'dark' : 'light'
+const media = window.matchMedia('(prefers-color-scheme: dark)')
+const isDark = media.matches
 
 function buildMap(markers) {
   var map = new mapkit.Map("map");
   map.region = isMobile ? EuropeMobile : EuropeDesktop;
   map.mapType = mapkit.Map.MapTypes.MutedStandard
-  map.colorScheme = map_color_scheme === "Dark" ? mapkit.Map.ColorSchemes.Dark : mapkit.Map.ColorSchemes.Light;
+  map.colorScheme = isDark ? mapkit.Map.ColorSchemes.Dark : mapkit.Map.ColorSchemes.Light;
 
   // media.addListener(() => {
   //   let isDark = media.matches ? 'dark' : 'light'
@@ -49,7 +49,7 @@ function buildMap(markers) {
   markers.forEach(function(landmark, index) {
     // var hue = Math.random() * 120 - 60; // magentas to yellows (300° to 60°)
     // var color = 'hsla(' + (hue < 0 ? hue % 360 + 360 : hue % 360) + ', 100%, 50%, 0.6)';
-    var color = map_color_scheme === "Dark" ? 'rgba(255,255,255,0.9)' : 'rgba(160,104,172,0.8)';
+    var color = isDark ? 'rgba(255,255,255,0.9)' : 'rgba(160,104,172,0.8)';
     var options = {
       title: landmark.title_en,
       data: {
