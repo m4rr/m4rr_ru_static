@@ -31,7 +31,7 @@ function mapInitialize() {
 }
 
 const media = window.matchMedia('(prefers-color-scheme: dark)')
-const isDark = media.matches
+var isDark = media.matches
 
 function buildMap(markers) {
   var map = new mapkit.Map("map");
@@ -39,11 +39,11 @@ function buildMap(markers) {
   map.mapType = mapkit.Map.MapTypes.MutedStandard
   map.colorScheme = isDark ? mapkit.Map.ColorSchemes.Dark : mapkit.Map.ColorSchemes.Light;
 
-  // media.addListener(() => {
-  //   let isDark = media.matches ? 'dark' : 'light'
-  //   map.colorScheme = isDark ? mapkit.Map.ColorSchemes.Dark : mapkit.Map.ColorSchemes.Light;
+  media.addListener(() => {
+    isDark = media.matches
+    map.colorScheme = isDark ? mapkit.Map.ColorSchemes.Dark : mapkit.Map.ColorSchemes.Light;
   //   // alert(`The mode has changed to ${media.matches ? 'dark' : 'light'}`);
-  // });
+  });
 
   markers.sort((a,b) => a.x < b.x); // east to west // kommt die sonne
   markers.forEach(function(landmark, index) {
