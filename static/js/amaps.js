@@ -30,10 +30,20 @@ function mapInitialize() {
   });
 }
 
+const media = window.matchMedia('(prefers-color-scheme: dark)');
+const isDark = media.matches ? 'dark' : 'light'
+
 function buildMap(markers) {
   var map = new mapkit.Map("map");
   map.region = isMobile ? EuropeMobile : EuropeDesktop;
+  map.mapType = mapkit.Map.MapTypes.MutedStandard
   map.colorScheme = map_color_scheme === "Dark" ? mapkit.Map.ColorSchemes.Dark : mapkit.Map.ColorSchemes.Light;
+
+  // media.addListener(() => {
+  //   let isDark = media.matches ? 'dark' : 'light'
+  //   map.colorScheme = isDark ? mapkit.Map.ColorSchemes.Dark : mapkit.Map.ColorSchemes.Light;
+  //   // alert(`The mode has changed to ${media.matches ? 'dark' : 'light'}`);
+  // });
 
   markers.sort((a,b) => a.x < b.x); // east to west // kommt die sonne
   markers.forEach(function(landmark, index) {
