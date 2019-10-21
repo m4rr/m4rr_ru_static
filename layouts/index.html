@@ -11,24 +11,6 @@
 
     <space class="smaller"></space>
 
-    <script>
-      var map_color_scheme = "Light";
-
-      if(matchMedia('(prefers-color-scheme: dark)').matches) {
-        map_color_scheme = "Dark";
-      }
-
-      {{ if ne .Site.Params.lang "en" }}
-        {{/*  .ru  */}}
-        const map_locale = "ru";
-        const tokenID = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlZIQzZQQVVTUTIifQ.eyJpc3MiOiJZNVA3QVg5VU0yIiwiaWF0IjoxNTY2NDQwMjY3LCJleHAiOjE2NjE0NzIwMDAsIm9yaWdpbiI6Imh0dHBzOi8vbTRyci5ydSJ9.QQ8egxYwImRuBi9Sybh-bLTEPB7Vqov_pObeTmL-oHEDW8TudkyiCOvurFJ1QFLBI970w_iAuzZJzwOuv5B9vg";
-      {{ else }}
-        {{/*  .com  */}}
-        const map_locale = "en";
-        const tokenID = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlZIQzZQQVVTUTIifQ.eyJpc3MiOiJZNVA3QVg5VU0yIiwiaWF0IjoxNTY2NjU4MjIwLCJleHAiOjE2NzA1NDQwMDAsIm9yaWdpbiI6Imh0dHBzOi8vc2F5dGFrb3YuY29tIn0.7fByTx18E9yo5S56xX5wmLD6UC3RzWzm8TUG_NtGgT13lF37u8XUEr9Ai4g4f-sYnvG-NPtRWqBu7OKf4tcuXg";
-      {{ end }}
-    </script>
-
     <ul class="menu">
       <li>
         <a href="/cv" class="nbsp"><b>{{ i18n "cv" }}</b></a>
@@ -179,6 +161,18 @@
       <p>{{ i18n "visited_countries" .Site.Params.countries | safeHTML }} {{ i18n "visited_cities" .Site.Params.cities }} <span class="travel-map">✈</span></p>
   </div>
 </div>
+
+<script>
+  {{ if ne .Site.Params.lang "en" }}
+    {{/*  .ru  */}}
+    const map_locale = "ru";
+    const tokenID = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlZIQzZQQVVTUTIifQ.eyJpc3MiOiJZNVA3QVg5VU0yIiwiaWF0IjoxNTY2NDQwMjY3LCJleHAiOjE2NjE0NzIwMDAsIm9yaWdpbiI6Imh0dHBzOi8vbTRyci5ydSJ9.QQ8egxYwImRuBi9Sybh-bLTEPB7Vqov_pObeTmL-oHEDW8TudkyiCOvurFJ1QFLBI970w_iAuzZJzwOuv5B9vg";
+  {{ else }}
+    {{/*  .com  */}}
+    const map_locale = "en";
+    const tokenID = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlZIQzZQQVVTUTIifQ.eyJpc3MiOiJZNVA3QVg5VU0yIiwiaWF0IjoxNTY2NjU4MjIwLCJleHAiOjE2NzA1NDQwMDAsIm9yaWdpbiI6Imh0dHBzOi8vc2F5dGFrb3YuY29tIn0.7fByTx18E9yo5S56xX5wmLD6UC3RzWzm8TUG_NtGgT13lF37u8XUEr9Ai4g4f-sYnvG-NPtRWqBu7OKf4tcuXg";
+  {{ end }}
+</script>
 
 {{ block "scripts" . }}{{ partialCached "site-scripts.html" . }}{{ end }}
 
