@@ -16,7 +16,7 @@ $gold: #daa520; // gold
 :root {
   --text-color: #556;
   --back-color: rgb(255, 255, 255, 0.7);
-  --link-color: #EB3AF1;
+  --link-color: #EB3AF1; // add some cyberpunk
   --hr-color: #ddd;
   --map-bgcolor: #F8F5EE;
 
@@ -223,6 +223,7 @@ span.travel-map {
   color: var(--text-color) !important;
 
   // text-shadow: var(--back-color) 0px -1px;
+  animation: var(--hover-anim);
 
   .que {
     font-size: 30px;
@@ -238,7 +239,6 @@ span.travel-map {
     margin: 0px 0 0 0;
     padding: 0;
     line-height: 150%;
-
   }
 }
 
