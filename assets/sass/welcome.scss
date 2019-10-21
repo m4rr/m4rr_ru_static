@@ -77,6 +77,10 @@ $gold: #daa520; // gold
       filter: saturate(60%);
       animation: flicker steps(100) var(--interval) 1s infinite;
     }
+
+    .circle-annotation {
+      background-color: rgba(255,255,255,0.9);
+    }
   }
 
 }
@@ -227,7 +231,7 @@ span.travel-map {
   // border: 2px solid #000;
   box-shadow: 0 -0 0px 1px rgba(0, 0, 0, 0.1);
   color: #FFF;
-  background-color: #c969e0;
+  background-color: rgba(160,104,172,0.8); // #c969e0;
   text-align: center;
   line-height: 32px;
   transition: 0.3s;

@@ -8,12 +8,10 @@ var EuropeMobile = new mapkit.CoordinateRegion(
   new mapkit.CoordinateSpan(85.8828, 65.91797)
 );
 
-var isMobile = window.matchMedia("only screen and (max-width: 767px)").matches;
-
 var factory = function(coo, options) {
   var div = document.createElement("div");
   div.className = "circle-annotation";
-  div.style.backgroundColor = options.data.color;
+  // div.style.backgroundColor = options.data.color;
   return div;
 };
 
@@ -30,31 +28,25 @@ function mapInitialize() {
   });
 }
 
+var isMobile = window.matchMedia("only screen and (max-width: 767px)").matches
 const media = window.matchMedia('(prefers-color-scheme: dark)')
 var isDark = media.matches
 
 function buildMap(markers) {
-  var map = new mapkit.Map("map");
-  map.region = isMobile ? EuropeMobile : EuropeDesktop;
+  let map = new mapkit.Map("map")
+  map.region = isMobile ? EuropeMobile : EuropeDesktop
   map.mapType = mapkit.Map.MapTypes.MutedStandard
-  map.colorScheme = isDark ? mapkit.Map.ColorSchemes.Dark : mapkit.Map.ColorSchemes.Light;
-
-  media.addListener(() => {
-    isDark = media.matches
-    map.colorScheme = isDark ? mapkit.Map.ColorSchemes.Dark : mapkit.Map.ColorSchemes.Light;
-  //   // alert(`The mode has changed to ${media.matches ? 'dark' : 'light'}`);
-  });
+  map.colorScheme = isDark ? mapkit.Map.ColorSchemes.Dark : mapkit.Map.ColorSchemes.Light
 
   markers.sort((a,b) => a.x < b.x); // east to west // kommt die sonne
   markers.forEach(function(landmark, index) {
     // var hue = Math.random() * 120 - 60; // magentas to yellows (300° to 60°)
     // var color = 'hsla(' + (hue < 0 ? hue % 360 + 360 : hue % 360) + ', 100%, 50%, 0.6)';
-    var color = isDark ? 'rgba(255,255,255,0.9)' : 'rgba(160,104,172,0.8)';
     var options = {
-      title: landmark.title_en,
-      data: {
-        color: color
-      }
+      title: landmark.title_en
+      // , data: {
+      //   color: color
+      // }
     };
 
     var coo = new mapkit.Coordinate(landmark.y, landmark.x);
@@ -74,6 +66,11 @@ function buildMap(markers) {
 
   // var annotations = markers.map(...)
   // map.showItems(annotations);
+
+  media.addListener(() => {
+    isDark = media.matches
+    map.colorScheme = isDark ? mapkit.Map.ColorSchemes.Dark : mapkit.Map.ColorSchemes.Light
+  });
 }
 
 window.onload = mapInitialize;
