@@ -9,25 +9,43 @@ $margin: 20px 15px 15px 16px;
 
 $dimmed-color: #99a;
 // $link: #7b68ee; // Умеренный аспидно-синий
-$hover: #ff6800; // Яркий оранжевый
+// $hover: #c6e2ff;
+$orange-hover: #ff6800; // Яркий оранжевый
 $gold: #daa520; // gold
 
 :root {
   --text-color: #556;
   --back-color: rgb(255, 255, 255, 0.7);
-  --link-color: #7b68ee;
+  --link-color: #EB3AF1;
   --hr-color: #ddd;
   --map-bgcolor: #F8F5EE;
+
+  --hover: #ff6800;
+  --hover-anim: unset;
+  --hover-border-anim: unset;
+
+  --call-action-hover-border: inset 1px 0 #ff6800, inset 0 1px #ff6800, inset -1px 0 #ff6800, inset 0 -1px #ff6800;
+  --call-action-hover-bg: #ff6800;
+  --hover-imessage: #3484F7;
 }
 
 @media (prefers-dark-interface), (prefers-color-scheme: dark) {
-  :root {
+  :root { // in dark
     --text-color: white;
     --back-color: rgba(0, 0, 0, 0.7);
-    --link-color: rgb(102, 187, 255);
+    --link-color: #EB3AF1; //  rgb(102, 187, 255);
     --hr-color: #333;
     --map-bgcolor: #2B2D2F;
+
+    --hover: #c6e2ff;
+    --hover-anim: neon .08s ease-in-out infinite alternate;
+    --hover-border-anim: neon-border .08s ease-in-out infinite alternate;
+
+    --call-action-hover-border: unset;
+    --call-action-hover-bg: unset;
+    --hover-imessage: unset;
   }
+
 }
 
 * {
@@ -38,7 +56,7 @@ html {
   background-color: var(--back-color);
 }
 
-html, body, {
+html, body {
   box-shadow: none;
   color: var(--text-color);
   font: 1rem/150% $font-stack;
@@ -182,7 +200,7 @@ span.travel-map {
   transition: 0.3s;
 
   &:hover {
-    background-color: $hover !important;
+    background-color: red !important;
     transition: 0.05s;
   }
 }
@@ -202,7 +220,9 @@ span.travel-map {
   height: 100px;
   position: fixed;
 
-  text-shadow: var(--back-color) 0px -1px;
+  color: var(--text-color) !important;
+
+  // text-shadow: var(--back-color) 0px -1px;
 
   .que {
     font-size: 30px;
@@ -231,7 +251,7 @@ h1 {
 
   line-height: 130%;
 
-  display: block;
+  display: inline-block;
 
 }
 
@@ -311,7 +331,7 @@ p {
       a {
         color: inherit;
         &:hover, &.hover {
-          color: $hover;
+          color: var(--hover);
           text-decoration: none;
         }
       }
@@ -355,6 +375,11 @@ ul {
     margin-left: 15px;
     padding: 5px 0 0 0;
     list-style-type: none;
+
+    a {
+      display: inline-block;
+    }
+
     &:before {
       color: $dimmed-color;
       content: '\2022'; /* Unicode bullet symbol */
@@ -454,8 +479,8 @@ span.now {
   word-spacing: 0;
 
   margin-left: 3px; /* noble left padding */
-  overflow-x: hidden;
-  overflow-y: hidden;
+  // overflow-x: hidden;
+  // overflow-y: hidden;
   height: 25px;
   white-space: nowrap;
 
@@ -487,6 +512,7 @@ span.now {
 
       &:hover {
         color: $dimmed-color;
+        animation: unset;
       }
     }
   }
@@ -504,6 +530,7 @@ span.now {
 
 /* global `a` config */
 a {
+  display: inline-block;
   color: var(--link-color);
   text-decoration: none;
   transition: 0.3s;
@@ -518,8 +545,10 @@ a {
   }
 
   &:hover, &.hover {
-    color: $hover; // ff2d55
+    color: var(--hover); // ff2d55
     transition: 0s;
+    animation: var(--hover-anim);
+
   }
 
   &.call-to-action {
@@ -530,8 +559,10 @@ a {
     margin-left: -9px;
 
     &.hover {
-      color: $hover;
-      box-shadow: inset 1px 0 $hover, inset 0 1px $hover, inset -1px 0 $hover, inset 0 -1px $hover;
+      color: var(--hover);
+      box-shadow: var(--call-action-hover-border);
+
+      // animation: neon-border .08s ease-in-out infinite alternate;
 
       &.imessage {
         box-shadow: none;
@@ -539,17 +570,24 @@ a {
     }
 
     &:hover {
-      background-color: $hover;
+      background-color: var(--call-action-hover-bg);
       color: white;
       text-decoration: none;
+
+      box-shadow: var(--call-action-hover-border);
+      animation: var(--hover-border-anim);
 
       -webkit-background-clip: padding; /* for Safari */
       background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 
       &.imessage {
-        background-color: #3484F7;
+        background-color: var(--hover-imessage);
       }
     }
+  }
+
+  &.rightimage {
+    float: right;
   }
 }
 
@@ -710,3 +748,75 @@ and (orientation : portrait) {
     transform: scale3d(1, 1, 1);
   }
 }
+
+@keyframes neon {
+  from {
+    text-shadow:
+    0 0 6px rgba(202,228,225,0.92),
+    0 0 30px rgba(202,228,225,0.34),
+    0 0 12px rgba(30,132,242,0.52),
+    0 0 21px rgba(30,132,242,0.92),
+    0 0 34px rgba(30,132,242,0.78),
+    0 0 54px rgba(30,132,242,0.92);
+  }
+  to {
+    text-shadow:
+    0 0 6px rgba(202,228,225,0.98),
+    0 0 30px rgba(202,228,225,0.42),
+    0 0 12px rgba(30,132,242,0.58),
+    0 0 22px rgba(30,132,242,0.84),
+    0 0 38px rgba(30,132,242,0.88),
+    0 0 60px rgba(30,132,242,1);
+  }
+}
+
+@keyframes neon-border {
+  from {
+    box-shadow:
+    0 0 6px rgba(202,228,225,0.92),
+    0 0 30px rgba(202,228,225,0.34),
+    0 0 12px rgba(30,132,242,0.52),
+    0 0 21px rgba(30,132,242,0.92),
+    0 0 34px rgba(30,132,242,0.78),
+    0 0 54px rgba(30,132,242,0.92),
+
+    inset 0 0 6px rgba(202,228,225,0.92),
+    inset 0 0 30px rgba(202,228,225,0.34),
+    inset 0 0 12px rgba(30,132,242,0.52),
+    inset 0 0 21px rgba(30,132,242,0.92),
+    inset 0 0 34px rgba(30,132,242,0.78),
+    inset 0 0 54px rgba(30,132,242,0.92)
+    ;
+  }
+  to {
+    box-shadow:
+    0 0 6px rgba(202,228,225,0.98),
+    0 0 30px rgba(202,228,225,0.42),
+    0 0 12px rgba(30,132,242,0.58),
+    0 0 22px rgba(30,132,242,0.84),
+    0 0 38px rgba(30,132,242,0.88),
+    0 0 60px rgba(30,132,242,1),
+
+    inset 0 0 6px rgba(202,228,225,0.98),
+    inset 0 0 30px rgba(202,228,225,0.42),
+    inset 0 0 12px rgba(30,132,242,0.58),
+    inset 0 0 22px rgba(30,132,242,0.84),
+    inset 0 0 38px rgba(30,132,242,0.88),
+    inset 0 0 60px rgba(30,132,242,1)
+    ;
+  }
+}
+
+.neon-text {
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+}
+

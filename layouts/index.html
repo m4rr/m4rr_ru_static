@@ -5,7 +5,7 @@
     <img class="photo" src="/images/marat-saytakov.jpeg" alt="Marat Photo">
     <h1 class="29yo">{{ i18n "marat" }} {{ i18n "saytakov" }}</h1>
 
-    <h2>{{ .Site.Params.description | safeHTML }}</h2>
+    <h2 class="">{{ .Site.Params.description | safeHTML }}</h2>
 
     <!-- <span class="clear"></span> -->
 
@@ -120,7 +120,7 @@
     <hr>
 
     <p class="app geek">
-      <a href="/DUMP2016"><img align="right" alt="Стикеры для телеграма: хуяк-хуяк и в продакшен / Slap shit together and deploy" title="Хуяк-хуяк и в продакшен / Slap shit together and deploy" src="/images/huyak-production@2x.png" width="60" /></a>
+      <a href="/DUMP2016" class="rightimage"><img align="right" alt="Стикеры для телеграма: хуяк-хуяк и в продакшен / Slap shit together and deploy" title="Хуяк-хуяк и в продакшен / Slap shit together and deploy" src="/images/huyak-production@2x.png" width="60" /></a>
       <strong><a href="/DUMP2016">{{i18n "huyak"}}</a></strong><br />
       {{i18n "huyak_desc" | safeHTML}}<br />
       <a class="call-to-action" href="/DUMP2016">Telegram</a>
@@ -169,7 +169,7 @@
     <div id="map" class="map fade-in two"></div>
   </div>
 
-  <div class="travel-stat">
+  <div class="travel-stat neon-text">
 
     <span class="que">{{ i18n "where"}}</span>
     <br>
