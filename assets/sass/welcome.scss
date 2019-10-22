@@ -96,7 +96,13 @@ $gold: #daa520; // gold
 
 html {
   background-color: var(--back-color);
+  -webkit-tap-highlight-color: black;
 }
+
+// ::selection {
+//   background-color: black;
+//   // color: #000;
+// }
 
 html, body {
   box-shadow: none;
@@ -283,37 +289,32 @@ span.travel-map {
   }
 }
 
-h1 {
-  font-size: 30px;
-  // font-weight: bold;
-
-  margin: 13px 0 0px 0px;
-  padding: 0 0 0 0px;
-
-  line-height: 130%;
-
-  display: inline-block;
-
-}
-
 .photo {
-  margin: 15px 10px 5px 13px;
+  margin: 12px 10px 0px 12px;
   padding: 0px;
   // bottom: -5px;
   width: 60px;
   border-radius: 50%;
   border: 1px solid var(--hr-color);
-  vertical-align: -30%;
-
-  display: block;
+  // vertical-align: -30%;
+  // display: inline-block;
   float: left;
 }
 
+h1 {
+  font-size: 30px;
+  font-weight: 300;
+  margin: 0 0 0px 90px;
+  padding: 10px 0 0 0px;
+  line-height: 130%;
+  // display: inline-block;
+}
+
 h2 {
+  margin: 0 0px 0 90px;
+  padding: 4px 0 4px 0;
+  // line-height: 170%;
   font-weight: normal;
-  margin: 0 15px 0 0;
-  padding: 0;
-  line-height: 150%;
 }
 
 .clear {
@@ -326,7 +327,10 @@ space {
   // clear: both;
 
   &.smaller {
-    margin: 7px;
+    margin: 4px;
+    padding: 3px;
+
+    clear: both;
   }
 }
 
@@ -389,9 +393,9 @@ p {
     }
   }
 
-  &.last {
+  // &.last {
     // margin-bottom: 3px;
-  }
+  // }
 
   &.donate {
     // margin-bottom: 30px;
@@ -522,7 +526,7 @@ span.now {
   margin-left: 3px; /* noble left padding */
   // overflow-x: hidden;
   // overflow-y: hidden;
-  height: 25px;
+  height: 44px;
   white-space: nowrap;
 
   i {

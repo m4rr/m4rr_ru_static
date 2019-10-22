@@ -137,6 +137,72 @@
       "css": "mic-2",
       "code": 61744,
       "src": "fontawesome"
+    },
+    {
+      "uid": "d7b214265bfe7138768bb8b9f62b759a",
+      "css": "certificate-outline",
+      "code": 59393,
+      "src": "typicons"
+    },
+    {
+      "uid": "1a7ed99931fee554309101d072e5363d",
+      "css": "certificate",
+      "code": 59394,
+      "src": "typicons"
+    },
+    {
+      "uid": "237ee28b7e826b75a5b6f51ee3e2bfc1",
+      "css": "hacker-news",
+      "code": 61908,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "7a9d73c640892d4b917c706ad95d6fec",
+      "css": "anchor",
+      "code": 61757,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "823a9e02e643318116fea40a00190e4e",
+      "css": "asterisk",
+      "code": 59395,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "326dd5dc5899787161184614d04a50b9",
+      "css": "motorcycle",
+      "code": 61980,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "e70df9acbabaebfbbf9c1dbc3e52ab13",
+      "css": "twitch",
+      "code": 61928,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "1b1a592d33fa26c37926cbe840eb60b8",
+      "css": "snapchat-ghost",
+      "code": 62124,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "f08ba9f0e8f9b426a92efcaa59c1e932",
+      "css": "reddit-alien",
+      "code": 62081,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "72b1277834cba5b7944b0a6cac7ddb0d",
+      "css": "rss",
+      "code": 61598,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "026007bd17bfc67f3fe013199676f620",
+      "css": "dollar",
+      "code": 61781,
+      "src": "fontawesome"
     }
   ]
 }

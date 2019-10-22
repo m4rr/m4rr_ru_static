@@ -36,6 +36,9 @@ one = "and {{ .Count }} city"
 [projects]
 other = "Projects"
 
+[ktoto]
+other = "ktotoneprav"
+
 [medium]
 other = "Thoughts on development and computers"
 
@@ -53,6 +56,21 @@ other = " class "
 
 [talks]
 other = "Talks"
+
+[icon_money]
+other = "icon-dollar"
+
+[busy_3_1]
+other = "Busy #3.1: Thai wintering"
+
+[busy_aftershow]
+other = "Busy #3.1 aftershow: investments"
+
+[showroom_9]
+other = "Showroom #9: Startups"
+
+[showroom_6]
+other = "Showroom #6: Travel"
 
 [formac]
 other = "for Mac"
@@ -79,7 +97,7 @@ other = "Moscow Metro Wi-Fi Auth"
 other = "Helps avoid ads in MosMetro_Free, for free"
 
 [easy]
-other = "Easy Percent"
+other = "Easy % Ⅹ"
 
 [easy_desc]
 other = "Blazing fast, super easy, and pretty cool percentages calculator. App size is 640 KB, ought to be enough. Launch time is 250 µs"
