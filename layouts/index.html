@@ -6,7 +6,6 @@
     <h1 class="29yo">{{ i18n "marat" }} {{ i18n "saytakov" }}</h1>
     {{/*  <h2 class="">{{ .Site.Params.description | safeHTML }}</h2>  */}}
     <h2>{{i18n "desc2" | safeHTML}}</h2>
-    <h3>{{i18n "desc3" | safeHTML}}</h3>
 
     <space class="smaller"></space>
 
@@ -21,6 +20,8 @@
         <a href="https://blog.m4rr.ru/" class="nbsp"><b>{{ i18n "blog" }}</b></a>
       </li>
     </ul>
+
+    <h3>{{i18n "desc3" | safeHTML}}</h3>
 
     <div class="links">
       <a href="https://github.com/m4rr" title="GitHub"><i class="icon-github"></i></a><a href="https://stackoverflow.com/users/1204935/marat-saytakov" title="Stack Overflow"><i class="icon-stackoverflow"></i></a><a href="https://www.patreon.com/m4rr" title="Patreon"><i class="icon-pied-piper-squared"></i></a><a href="https://twitter.com/m4rr" title="Twitter"><i class="icon-twitter"></i></a><!--a href=""><i class="icon-reddit-alien"></i></a--><!--a href="/CitoyenMarat" title="Telegram"><i class="icon-paper-plane"></i></a--><a href="https://instagram.com/m4rr" title="Instagram"><i class="icon-instagram"></i></a><a class="disabled" disabled="disabled" title='{{i18n "fuck"}} LinkedIn'><i class="icon-linkedin"></i></a><a class="disabled" disabled="disabled" title='{{i18n "fuck"}} Facebook'><i class="icon-facebook"></i></a><a class="disabled" disabled="disabled" title='{{i18n "fuck"}} VK'><i class="icon-vkontakte"></i></a>
@@ -173,7 +174,7 @@
 
       <!-- https://tripster.ru/m4rr/ -->
 
-      <p>{{ i18n "visited_countries" .Site.Params.countries | safeHTML }} {{ i18n "visited_cities" .Site.Params.cities }} <span class="travel-map">✈</span></p>
+      <p>{{ i18n "visited_countries" .Site.Params.countries | safeHTML }} {{ i18n "visited_cities" .Site.Params.cities }}. <!--span class="travel-map">✈</span--></p>
   </div>
 </div>
 
