@@ -4,7 +4,9 @@
   <nav class="fade-in one">
     <img class="photo" src="/images/marat-saytakov.jpeg" alt="Marat Photo">
     <h1 class="29yo">{{ i18n "marat" }} {{ i18n "saytakov" }}</h1>
-    <h2 class="">{{ .Site.Params.description | safeHTML }}</h2>
+    {{/*  <h2 class="">{{ .Site.Params.description | safeHTML }}</h2>  */}}
+    <h2>{{i18n "desc2" | safeHTML}}</h2>
+    <h3>{{i18n "desc3" | safeHTML}}</h3>
 
     <space class="smaller"></space>
 

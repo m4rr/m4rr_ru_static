@@ -302,8 +302,8 @@ span.travel-map {
 }
 
 h1 {
-  font-size: 30px;
-  font-weight: 300;
+  font-size: 20px;
+  font-weight: bold;
   margin: 0 0 0px 90px;
   padding: 10px 0 0 0px;
   line-height: 130%;
@@ -311,7 +311,14 @@ h1 {
 }
 
 h2 {
-  margin: 0 0px 0 90px;
+  margin: 0 4px 0 90px;
+  padding: 4px 0 4px 0;
+  // line-height: 170%;
+  font-weight: 500;
+}
+
+h3 {
+  margin: 0 4px 0 90px;
   padding: 4px 0 4px 0;
   // line-height: 170%;
   font-weight: normal;
