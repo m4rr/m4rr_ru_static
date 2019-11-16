@@ -8,7 +8,7 @@ images:
   - zwj-og.jpg
 # type: "website"
 url: "/zwj/privacy-policy/"
-date: 2019-11-16T23:43:58+03:00
+date: 2019-11-15T23:43:58+03:00
 ---
 # Zero Width Joiner
 
