@@ -19,6 +19,9 @@ other = "Blog"
 [promo]
 other = "Promo"
 
+[privacy]
+other = "Privacy"
+
 [cv]
 other = "Résumé / CV"
 
