@@ -8,3 +8,4 @@ services:
       # - "4000:8080"
     environment: # &environment
       - VIRTUAL_HOST=m4rr.ru,saytakov.com
+      - HUGO_ENV=production

@@ -1,12 +1,13 @@
-Марат Сайтаков (личный сайт)
-
-⌘ ⌘ ⌘
-
-Marat Saytakov (personal website)
+Marat Saytakov
+---------------
+personal website
 
 Moscow → Phuket
-Follow me on Twitter.com/m4rr
 
-Thanks @bbflame for JS magic!
+Follow me on Twitter.com/m4rr
+Donate: 3Mt8QW6Q3pFU5663CBTvqaupuN4V54z2Zb
+
+Thanks Orange Juice for helping me with JavaScript
+https://github.com/bbflame
 
 2006...2019
