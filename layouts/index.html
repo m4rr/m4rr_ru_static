@@ -17,7 +17,11 @@
         <a href="https://www.patreon.com/m4rr" class="nbsp"><b>{{ i18n "patreon" }}</b></a>
       </li>
       <li>
-        <a href="https://blog.m4rr.ru/" class="nbsp"><b>{{ i18n "blog" }}</b></a>
+        {{ if ne .Site.Params.lang "en" }}
+          <a href="https://blog.m4rr.ru/" class="nbsp"><b>{{ i18n "blog" }}</b></a>
+        {{ else }}
+          <a href="https://medium.com/@m4rr" class="nbsp"><b>Medium</b></a>
+        {{ end }}
       </li>
     </ul>
 
