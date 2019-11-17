@@ -120,7 +120,7 @@ html, body {
   text-rendering: optimizeLegibility;
 }
 
-.container {
+.hero-container {
   display: -webkit-flex;
   display: flex;
   height: 100%;
@@ -648,7 +648,7 @@ a {
 @media only screen
 and (max-width: 767px)
 and (orientation : portrait) {
-  .container {
+  .hero-container {
     display: flex;
     flex-direction: column;
   }

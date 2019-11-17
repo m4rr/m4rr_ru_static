@@ -9,6 +9,8 @@ disableKinds: section
   - RSS
   # - sitemap
 
+disableHugoGeneratorInject: true
+
 params:
   title: Marat Saytakov
   description: iOS && macOS Developer, Traveler
