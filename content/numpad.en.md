@@ -11,7 +11,7 @@ url: "/numpad/privacy-policy/"
 # date: 2019-11-15T23:43:58+03:00
 ---
 
-Numpad for FaceTime app is developed and supported by Marat Saytakov.
+{{< param Title >}} app is developed and supported by Marat Saytakov.
 
 Application or Marat doesn't collect or store any private data or user actions.
 

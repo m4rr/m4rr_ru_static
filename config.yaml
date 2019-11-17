@@ -45,3 +45,27 @@ languages:
     params:
       description: Программист iOS && macOS || Go || JS
       lang: ru
+
+menu:
+  main:
+    - name: "Zero Width Joiner"
+      url: "/zwj/privacy-policy/"
+      weight: 100
+    - name: "Numpad"
+      url: "/numpad/privacy-policy/"
+      weight: 105
+    - name: "Easy Percent Ⅹ"
+      url: "/easy-percent/privacy-policy/"
+      weight: 110
+    - name: "Metro Wi-Fi Auth"
+      url: "/mauth/privacy/"
+      weight: 130
+    - name: "Stars"
+      url: "/stars/privacy-policy/"
+      weight: 135
+    - name: "•"
+      url: "#"
+      weight: 139
+    - name: "Chars"
+      url: "https://chars.app/privacy/"
+      weight: 140

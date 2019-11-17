@@ -1,11 +1,11 @@
 ---
-title: Moscow Metro Wi-Fi Auth
+title: Rating Stars
 description: "Политика конфиденциальности"
 # date: 2019-08-20T07:33:07+03:00
 # draft: true
 # kind: page
 type: zwj
-url: "/mauth/privacy/"
+url: "/stars/privacy-policy/"
 ---
 
 Приложение {{< param Title >}} разработал и поддерживает Марат Сайтаков.

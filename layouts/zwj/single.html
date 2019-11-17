@@ -1,10 +1,10 @@
 {{ define "zwj" }}
 <div class="container mt-4 align-items-center justify-content-center">
-  <h1 class="display-4">{{ .Title | markdownify}}</h1>
 
+  <h1 class="">{{ .Title | markdownify}}</h1>
   <h2 class="">{{ .Description }}</h2>
 
-  <article class="article">
+  <article class="article mt-4">
     {{ .Content }}
   </article>
 </div>

@@ -1,19 +1,11 @@
 ---
-title: Easy Percent Ⅹ
-type: zwj
-# kind: easy
-# disableLanguages: "en"
+title: Moscow Metro Wi-Fi Auth
 description: "Privacy Policy"
-images:
-  - easy-percent-x-og.jpg
-# audio: []
-# date: "2006-01-02"
-# series: []
-# tags: []
-# videos: []
-# type: "website"
-url: "/easy-percent/privacy-policy/"
-# date: 2019-09-14T23:43:58+03:00
+# date: 2019-08-20T07:33:07+03:00
+# draft: true
+# kind: page
+type: zwj
+url: "/mauth/privacy/"
 ---
 
 {{< param Title >}} app is developed and supported by Marat Saytakov.
