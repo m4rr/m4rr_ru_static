@@ -4,7 +4,7 @@ LABEL maintainer="m4rr (remarr+docker@gmail.com)"
 COPY . /src
 WORKDIR /src
 ENV HUGO_ENV production
-RUN hugo
+RUN hugo --minify
 
 FROM nginx:1.17.2-alpine
 LABEL maintainer="m4rr (remarr+docker@gmail.com)"
