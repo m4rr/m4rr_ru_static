@@ -1,18 +1,15 @@
 ---
-title: Zero Width Joiner for iOS
+title: Zero Width Joiner для iOS
 type: zwj
-kind: zwj
+# kind: zwj
 # disableLanguages: "en"
-description: "Zero Width Joiner for iOS — Privacy Policy"
+description: "Политика конфиденциальности"
 images:
   - zwj-og.jpg
 # type: "website"
 url: "/zwj/privacy-policy/"
 # date: 2019-11-16T23:43:58+03:00
 ---
-# Zero Width Joiner
-
-## Политика конфиденциальности
 
 Приложение Zero Width Joiner разработано и поддерживается Маратом Сайтаковым.
 

@@ -25,7 +25,7 @@
 {{ end }}
 
 {{ block "favicon" . }}
-  {{ partialCached "site-favicon.html" . }}
+  {{ partialCached "favicon.html" . }}
 {{ end }}
 
 {{/*  {{ if .RSSLink }}
@@ -34,11 +34,11 @@
 {{ end }}  */}}
 
 {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/spf13/hugo/blob/master/tpl/tplimpl/template_embedded.go#L158 */}}
-{{- template "_internal/opengraph.html" . -}}
+{{/*- template "_internal/opengraph.html" . -}}
 {{- template "_internal/google_news.html" . -}}
 {{- template "_internal/schema.html" . -}}
-{{- template "_internal/twitter_cards.html" . -}}
+{{- template "_internal/twitter_cards.html" . -*/}}
 
-{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+{{/* if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
   {{ template "_internal/google_analytics_async.html" . }}
-{{ end }}
+{{ end */}}

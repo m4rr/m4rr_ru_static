@@ -1,22 +1,17 @@
 ---
-title: Easy Percent Ⅹ
+title: Numpad для FaceTime (для Мака)
 type: zwj
-# kind: easy
+# kind: zwj
 # disableLanguages: "en"
-description: "Privacy Policy"
+description: "Политика конфиденциальности"
 images:
-  - easy-percent-x-og.jpg
-# audio: []
-# date: "2006-01-02"
-# series: []
-# tags: []
-# videos: []
+  - numpad-og.jpg
 # type: "website"
-url: "/easy-percent/privacy-policy/"
-# date: 2019-09-14T23:43:58+03:00
+url: "/numpad/privacy-policy/"
+# date: 2019-11-16T23:43:58+03:00
 ---
 
-Приложение Easy Percent разработано и поддерживается Маратом Сайтаковым.
+Приложение Numpad для FaceTime разработано и поддерживается Маратом Сайтаковым.
 
 Приложение и Марат не собирают и не хранят действия пользователей, а также личные данные пользователей.
 

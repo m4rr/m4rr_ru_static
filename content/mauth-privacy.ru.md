@@ -1,12 +1,13 @@
 ---
-title: "mauth • Privacy Policy"
+title: Moscow Metro Wi-Fi Auth (mauth)
 date: 2019-08-20T07:33:07+03:00
 # draft: true
-kind: page
-type: mauth
+# kind: page
+type: zwj
 url: "/mauth/privacy/"
 ---
-# Политика конфиденциальности
+
+### Политика конфиденциальности
 
 Приложение «mauth» разработано и поддерживается Маратом Сайтаковым.
 
@@ -14,9 +15,9 @@ url: "/mauth/privacy/"
 
 Если Марат изменит настоящую политику конфиденциальности, он уведомит вас об этом, опубликовав новую версию документа по этой ссылке.
 
-•••
+<hr>
 
-# Privacy Policy
+### Privacy Policy
 
 Mauth app is developed and supported by Marat Saytakov.
 
