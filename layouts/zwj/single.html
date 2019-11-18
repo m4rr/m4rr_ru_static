@@ -1,11 +1,30 @@
 {{ define "zwj" }}
 <div class="container mt-4 align-items-center justify-content-center">
 
-  <h1 class="">{{ .Title | markdownify}}</h1>
+  <h1 class="">{{ .Title | markdownify }}</h1>
   <h2 class="">{{ .Description }}</h2>
 
   <article class="article mt-4">
     {{ .Content }}
+
+    {{ if ne .Site.Params.lang "en" }}
+
+    <p>Приложение {{ .Title }} разработал и поддерживает Марат Сайтаков.</p>
+    <p>Приложение и Марат не собирают и не хранят действия пользователей, а также личные данные пользователей.</p>
+    <p>Если Марат изменит настоящую политику конфиденциальности, он уведомит вас об этом, опубликовав новую версию документа по этой ссылке.</p>
+    <p class="text-muted">18 ноября 2019</p>
+
+    {{ else }}
+
+    <p>{{ .Title }} app is developed and supported by Marat Saytakov.</p>
+    <p>Application or Marat doesn't collect or store any private data or user actions.</p>
+    <p>If Marat change this Privacy Policy, he will notify you about it by publishing new version of document at this link.</p>
+    <p class="text-muted">Nov 18, 2019</p>
+
+    {{ end }}
+
+    <hr>
+    <a href="{{- .Params.appstore -}}"><img class="mb-4" src="/stars/Download_on_the_App_Store@2x.png" alt="Download on the App Store" width="150"></a>
   </article>
 </div>
 {{ end }}

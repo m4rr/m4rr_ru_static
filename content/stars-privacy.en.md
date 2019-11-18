@@ -6,10 +6,5 @@ description: "Privacy Policy"
 # kind: page
 type: zwj
 url: "/stars/privacy-policy/"
+appstore: https://itunes.apple.com/app/rating-stars-5-out-of-5/id1135086336?ls=1&mt=8
 ---
-
-{{< param Title >}} app is developed and supported by Marat Saytakov.
-
-Application or Marat doesn't collect or store private data or user actions.
-
-If Marat change this Privacy Policy, he will notify you about it by publishing new version of document at this link.

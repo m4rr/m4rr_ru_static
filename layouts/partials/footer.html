@@ -1,13 +1,41 @@
 <footer class="footer">
   <div class="container">
-    <span class="text-muted">𐤿 <a href="/">Go back</a></span>
+    <span class="text-muted">𐤿 <a href="/">
+      {{ if ne .Site.Params.lang "en" }}
+      Назад
+      {{ else }}
+      Go back
+      {{ end }}
+    </a></span>
   </div>
 </footer>
 
+<div class="container mt-4">
+<p>
+  <img src="/images/qr.png" class="rounded img-thumbnail d-none d-md-block d-lg-block d-xl-block float-right">
+  {{ if ne .Site.Params.lang "en" }}
+    В моих проектах нет рекламы и трекеров:
+    <ul>
+      <li>многим не нравится реклама в приложениях;</li>
+      <li>трекеры могут сливать приватные данные третьим лицам.</li>
+    </ul>
+    Если вам нравится то, что я делаю и вы хотите оставить чаевые, это можно сделать через Биткоин:
+  {{ else }}
+    There are no ads nor trackings in my projects:
+    <ul>
+      <li>most people don't like ads in apps;</li>
+      <li>trackers can expose private data to third parties.</li>
+    </ul>
+    If you find my work valuable and you wish to leave a tip, you can do it with Bitcoin:
+  {{ end }}
+  <a href="bitcoin:3Mt8QW6Q3pFU5663CBTvqaupuN4V54z2Zb" rel="nofollow noindex">3Mt8QW6Q3pFU5663CBTvqaupuN4V54z2Zb</a>
+  <img src="/images/qr.png" class="mt-2 img-thumbnail rounded d-block d-md-none d-lg-none d-xl-none">
+</p>
+
+</div>
+
 <style>
   .footer {
-    //position: absolute;
-    //bottom: 0;
     width: 100%;
     height: 60px; /* Set the fixed height of the footer here */
     line-height: 60px; /* Vertically center the text there */

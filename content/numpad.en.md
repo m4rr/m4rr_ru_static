@@ -9,10 +9,5 @@ images:
 # type: "website"
 url: "/numpad/privacy-policy/"
 # date: 2019-11-15T23:43:58+03:00
+appstore: https://itunes.apple.com/app/numpad/id1429855047?ls=1&mt=12
 ---
-
-{{< param Title >}} app is developed and supported by Marat Saytakov.
-
-Application or Marat doesn't collect or store any private data or user actions.
-
-If Marat change this Privacy Policy, he will notify you about it by publishing new version of document at this link.

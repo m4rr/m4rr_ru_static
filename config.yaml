@@ -57,6 +57,9 @@ menu:
     - name: "Easy Percent Ⅹ"
       url: "/easy-percent/privacy-policy/"
       weight: 110
+    - name: "Bitcoin World Map"
+      url: "/coin-map/privacy-policy/"
+      weight: 120
     - name: "Metro Wi-Fi Auth"
       url: "/mauth/privacy/"
       weight: 130
@@ -66,6 +69,7 @@ menu:
     - name: "•"
       url: "#"
       weight: 139
+      # appstore:
     - name: "Chars"
       url: "https://chars.app/privacy/"
       weight: 140
