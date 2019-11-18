@@ -70,11 +70,11 @@
 
     <p class="app">
       <strong><a href="https://apps.apple.com/app/zero-width-joiner/id1488117519?l=en">Zero Width Joiner</a> <span class="now">{{ i18n "new" }}</span></strong><br />
-      The only Unicode inspector for ZWJ sequences! Zero-Width Non-Joiner is also supported.
+      {{i18n "zwj_desc"}}
       <br />
       <a class="call-to-action" href="https://apps.apple.com/app/zero-width-joiner/id1488117519?l=en">App Store</a>
       <span class="splitter"></span>
-      <a href="https://twitter.com/m4rr">{{i18n "promo"}}</a>
+      <a href="https://twitter.com/m4rr/status/1196262398937579520">{{i18n "promo"}}</a>
       <span class="splitter"></span>
       <a href="/zwj/privacy-policy/">{{ i18n "privacy" }}</a>
     </p>
@@ -158,10 +158,14 @@
 
     <hr>
 
-    <p class="donate">
-      <strong>{{i18n "donate"}}<sup>₿</sup></strong>&nbsp;&nbsp;<span class="stars"><claps></claps></span>
+    <p class="app donate">
+      <strong>{{i18n "donate"}}<sup>₿</sup></strong></span>
       <br />
-      <a href="bitcoin:3Mt8QW6Q3pFU5663CBTvqaupuN4V54z2Zb">3Mt8QW6Q3pFU5663CBTvqaupuN4V54z2Zb</a>
+      {{i18n "donate_desc" | safeHTML}}
+      <br />
+      <a href="/images/qr.png" class="call-to-action"><i class="icon-qrcode-1"></i></a>
+      <span class="splitter"></span>
+      <a href="bitcoin:3Mt8QW6Q3pFU5663CBTvqaupuN4V54z2Zb" rel="nofollow noindex">3Mt8QW6Q3pFU5663CBTvqaupuN4V54z2Zb</a>
     </p>
 
     <hr>
@@ -197,18 +201,18 @@
   </div>
 </div>
 
-<script>
-  {{ if ne .Site.Params.lang "en" }}
-    {{/*  .ru  */}}
+{{ if ne .Site.Params.lang "en" }}
+  <!-- .ru --><script>
     const map_locale = "ru";
     const tokenID = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlZIQzZQQVVTUTIifQ.eyJpc3MiOiJZNVA3QVg5VU0yIiwiaWF0IjoxNTY2NDQwMjY3LCJleHAiOjE2NjE0NzIwMDAsIm9yaWdpbiI6Imh0dHBzOi8vbTRyci5ydSJ9.QQ8egxYwImRuBi9Sybh-bLTEPB7Vqov_pObeTmL-oHEDW8TudkyiCOvurFJ1QFLBI970w_iAuzZJzwOuv5B9vg";
-  {{ else }}
-    {{/*  .com  */}}
+  </script>
+{{ else }}
+  <!-- .com --><script>
     const map_locale = "en";
     const tokenID = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlZIQzZQQVVTUTIifQ.eyJpc3MiOiJZNVA3QVg5VU0yIiwiaWF0IjoxNTY2NjU4MjIwLCJleHAiOjE2NzA1NDQwMDAsIm9yaWdpbiI6Imh0dHBzOi8vc2F5dGFrb3YuY29tIn0.7fByTx18E9yo5S56xX5wmLD6UC3RzWzm8TUG_NtGgT13lF37u8XUEr9Ai4g4f-sYnvG-NPtRWqBu7OKf4tcuXg";
-  {{ end }}
-</script>
+  </script>
+{{ end }}
 
-{{ block "scripts" . }}{{ partialCached "scripts.html" . }}{{ end }}
-
+{{ block "scripts" . }}
+{{ partialCached "scripts.html" . }}{{ end }}
 {{ end }}

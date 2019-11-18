@@ -31,6 +31,9 @@ other = "Patreon"
 [donate]
 other = "Donate"
 
+[donate_desc]
+other = "There are no ads nor trackings in my projects:<br> • most people don't like ads in apps;<br>• trackers can expose private data to third parties.<br><br>If you find my work valuable and you wish to leave a tip, you can do it with Bitcoin:"
+
 [fuck]
 other = "Fuck"
 
@@ -89,6 +92,9 @@ other = "new"
 
 [for]
 other = "for"
+
+[zwj_desc]
+other = "The only Unicode inspector for ZWJ sequences! Zero-Width Non-Joiner is also supported"
 
 [numpad_desc]
 other = "Dialer for FaceTime"

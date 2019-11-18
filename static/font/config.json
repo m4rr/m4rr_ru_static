@@ -203,6 +203,18 @@
       "css": "dollar",
       "code": 61781,
       "src": "fontawesome"
+    },
+    {
+      "uid": "fd45bb961d08f9f2092f0df3fba29fe9",
+      "css": "qrcode",
+      "code": 59396,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "04f7e0bbd0bba658464ca2b49097f37f",
+      "css": "qrcode-1",
+      "code": 59397,
+      "src": "elusive"
     }
   ]
 }

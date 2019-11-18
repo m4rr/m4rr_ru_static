@@ -359,16 +359,17 @@ p {
   .splitter {
     display: inline;
     color: $dimmed-color;
-    padding: 20px 0px;
-    margin: 0 7px;
+    // padding: 20px 0px;
+    margin: 0 3px;
 
     &:before {
       content: '\2022'; /* Unicode bullet symbol • */
       font-size: 12px;
       line-height: 0;
       position: relative;
+      // margin-right: 5px;
       top: -1px;
-      left: 1px;
+      left: -2px;
     }
   }
 
@@ -391,11 +392,11 @@ p {
 
     /* if .splitter is right after the .call-to-action, reduce left-space */
     .call-to-action + .splitter {
-      margin-left: 0;
-      padding-left: 0;
+      // margin-left: 0;
+      // padding-left: 0;
       &:before {
         position: relative;
-        left: 0;
+        left: -6px;
       }
     }
   }
@@ -407,8 +408,9 @@ p {
   &.donate {
     // margin-bottom: 30px;
     a {
-      letter-spacing: 0.1em;
-      font-size: 13px;
+      letter-spacing: -0.05em;
+      font-size: 14px;
+      font-family: monospace;
     }
   }
 }
@@ -667,11 +669,11 @@ and (orientation : portrait) {
     min-height: 100%;
     width: 100%;
   }
-  span.travel-map {
+  // span.travel-map {
     // &:after {
     //   content: " ↓"
     // }
-  }
+  // }
   .map-wrapper {
     position: fixed;
     top: 0;
