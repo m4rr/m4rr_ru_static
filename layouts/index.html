@@ -1,22 +1,23 @@
 {{ define "main" }}
 <div class="hero-container">
   <div class="nav-wrapper">
-  <nav class="fade-in one">
-    <img class="photo" src="/images/marat-saytakov.jpeg">
+  <div class="sidebar fade-in one">
+    <a href="/" style="display: inline;"><img class="photo" src="/images/marat-saytakov.jpeg"></a>
     <h1 class="29yo">{{ i18n "marat" }} {{ i18n "saytakov" }}</h1>
     {{/*  <h2 class="">{{ .Site.Params.description | safeHTML }}</h2>  */}}
     <h2>{{i18n "desc2" | safeHTML}}</h2>
 
     <space class="smaller"></space>
 
-    <ul class="menu">
-      <li>
+    <span itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+    <ul id="menu-main" class="nav menu">
+      <li class="nav">
         <a href="/cv" class="nbsp"><b>{{ i18n "cv" }}</b></a>
       </li>
-      <li>
+      <li class="nav">
         <a href="https://www.patreon.com/m4rr" class="nbsp"><b>{{ i18n "patreon" }}</b></a>
       </li>
-      <li>
+      <li class="nav">
         {{ if ne .Site.Params.lang "en" }}
           <a href="https://blog.m4rr.ru/" class="nbsp"><b>{{ i18n "blog" }}</b></a>
         {{ else }}
@@ -24,6 +25,7 @@
         {{ end }}
       </li>
     </ul>
+    </span>
 
     <h3>{{i18n "desc3" | safeHTML}}</h3>
 
@@ -183,7 +185,7 @@
       <!-- <i class="mic icon-mic-2"></i> -->
     </p>
 
-  </nav>
+  </div>
   </div>
 
   <div class="map-wrapper">

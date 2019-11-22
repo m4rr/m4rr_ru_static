@@ -128,7 +128,7 @@ html, body {
   // flex-direction: row;
 }
 
-nav {
+.sidebar {
   overflow: scroll;
   background-color: var(--back-color);
 
@@ -196,7 +196,7 @@ span.travel-map {
 }
 
 @supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
-  nav {
+  .sidebar {
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     -moz-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
@@ -661,7 +661,7 @@ and (orientation : portrait) {
     overflow-y: visible;
     margin-top: 53vh;
   }
-  nav {
+  .sidebar {
     position: relative;
 
     min-width: 100%;
