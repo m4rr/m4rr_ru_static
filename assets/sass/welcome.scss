@@ -360,7 +360,7 @@ p {
     display: inline;
     color: $dimmed-color;
     // padding: 20px 0px;
-    margin: 0 3px;
+    margin: 0 5px;
 
     &:before {
       content: '\2022'; /* Unicode bullet symbol • */
@@ -392,11 +392,11 @@ p {
 
     /* if .splitter is right after the .call-to-action, reduce left-space */
     .call-to-action + .splitter {
-      // margin-left: 0;
+      margin: 0 2px;
       // padding-left: 0;
       &:before {
         position: relative;
-        left: -6px;
+        left: -7px;
       }
     }
   }
