@@ -21,63 +21,64 @@ services:
         volume:
           nocopy: true
 
-  # filebeat:
-  #   image: docker.elastic.co/beats/filebeat:$ELASTIC_VERSION
-  #   restart: unless-stopped
-  #   command: filebeat -e -strict.perms=false
-  #   environment:
-  #     ELASTIC_USERNAME: $ELASTIC_USERNAME
-  #     ELASTIC_PASSWORD: $ELASTIC_PASSWORD
-  #   volumes:
-  #     - type: bind
-  #       source: ./configs/filebeat/filebeat.yml
-  #       target: /usr/share/filebeat/filebeat.yml
-  #       read_only: true
-  #     - type: bind
-  #       source: ./configs/filebeat/modules.d
-  #       target: /usr/share/filebeat/modules.d
-  #       read_only: true
-  #     - type: volume
-  #       source: website-logs
-  #       target: /var/log/nginx
-  #       volume:
-  #         nocopy: true
-  #   depends_on:
-  #     - elasticsearch
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:$ELASTIC_VERSION
+    restart: unless-stopped
+    command: filebeat -e -strict.perms=false
+    environment:
+      ELASTIC_USERNAME: $ELASTIC_USERNAME
+      ELASTIC_PASSWORD: $ELASTIC_PASSWORD
+    volumes:
+      - type: bind
+        source: ./configs/filebeat/filebeat.yml
+        target: /usr/share/filebeat/filebeat.yml
+        read_only: true
+      - type: bind
+        source: ./configs/filebeat/modules.d
+        target: /usr/share/filebeat/modules.d
+        read_only: true
+      - type: volume
+        source: website-logs
+        target: /var/log/nginx
+        volume:
+          nocopy: true
+    depends_on:
+      - elasticsearch
 
-  # kibana:
-  #   image: docker.elastic.co/kibana/kibana:$ELASTIC_VERSION
-  #   restart: unless-stopped
-  #   environment:
-  #     ELASTICSEARCH_USERNAME: $ELASTIC_USERNAME
-  #     ELASTICSEARCH_PASSWORD: $ELASTIC_PASSWORD
-  #   labels:
-  #     - traefik.http.routers.kibana-http.rule=Host(`kibana.${DOMAIN}`)
-  #     - traefik.http.routers.kibana-http.entrypoints=http
-  #     - traefik.http.routers.kibana-http.middlewares=redirect
+  kibana:
+    image: docker.elastic.co/kibana/kibana:$ELASTIC_VERSION
+    restart: unless-stopped
+    environment:
+      ELASTICSEARCH_USERNAME: $ELASTIC_USERNAME
+      ELASTICSEARCH_PASSWORD: $ELASTIC_PASSWORD
+      VIRTUAL_HOST: kibana.m4rr.ru
+    # labels:
+    #   - traefik.http.routers.kibana-http.rule=Host(`kibana.${DOMAIN}`)
+    #   - traefik.http.routers.kibana-http.entrypoints=http
+    #   - traefik.http.routers.kibana-http.middlewares=redirect
 
-  #     - traefik.http.routers.kibana-https.rule=Host(`kibana.${DOMAIN}`)
-  #     - traefik.http.routers.kibana-https.entrypoints=https
-  #     - traefik.http.routers.kibana-https.tls=true
-  #     - traefik.http.routers.kibana-https.tls.certresolver=${HTPPS_CERTIFICATE_RESOLVER}
-  #   depends_on:
-  #     - elasticsearch
+    #   - traefik.http.routers.kibana-https.rule=Host(`kibana.${DOMAIN}`)
+    #   - traefik.http.routers.kibana-https.entrypoints=https
+    #   - traefik.http.routers.kibana-https.tls=true
+    #   - traefik.http.routers.kibana-https.tls.certresolver=${HTPPS_CERTIFICATE_RESOLVER}
+    depends_on:
+      - elasticsearch
 
-  # elasticsearch:
-  #   image: docker.elastic.co/elasticsearch/elasticsearch:$ELASTIC_VERSION
-  #   restart: unless-stopped
-  #   volumes:
-  #     - type: bind
-  #       source: ./configs/elasticsearch.yml
-  #       target: /usr/share/elasticsearch/config/elasticsearch.yml
-  #       read_only: true
-  #     - type: volume
-  #       source: elastic-data
-  #       target: /usr/share/elasticsearch/data
-  #   environment:
-  #     ELASTIC_USERNAME: $ELASTIC_USERNAME
-  #     ELASTIC_PASSWORD: $ELASTIC_PASSWORD
-  #     ES_JAVA_OPTS: -Xmx256m -Xms256m
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:$ELASTIC_VERSION
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: ./configs/elasticsearch.yml
+        target: /usr/share/elasticsearch/config/elasticsearch.yml
+        read_only: true
+      - type: volume
+        source: elastic-data
+        target: /usr/share/elasticsearch/data
+    environment:
+      ELASTIC_USERNAME: $ELASTIC_USERNAME
+      ELASTIC_PASSWORD: $ELASTIC_PASSWORD
+      ES_JAVA_OPTS: -Xmx256m -Xms256m
 
 volumes:
   website-logs:

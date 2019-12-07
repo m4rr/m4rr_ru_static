@@ -6,3 +6,5 @@ resources/
 hugo
 
 node_modules
+
+.env
