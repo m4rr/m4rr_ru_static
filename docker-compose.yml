@@ -52,8 +52,8 @@ services:
       ELASTICSEARCH_USERNAME: $ELASTIC_USERNAME
       ELASTICSEARCH_PASSWORD: $ELASTIC_PASSWORD
       VIRTUAL_HOST: kibana.m4rr.ru
-    ports:
-      - "5601"
+    # ports:
+      # - "5601"
     # labels:
     #   - traefik.http.routers.kibana-http.rule=Host(`kibana.${DOMAIN}`)
     #   - traefik.http.routers.kibana-http.entrypoints=http
