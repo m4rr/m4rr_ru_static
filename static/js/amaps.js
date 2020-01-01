@@ -55,7 +55,9 @@ function buildMap(markers) {
     annotation.animates = true;
     annotation.appearanceAnimation = "zoomIn 0.3s ease-out";
 
-    setTimeout(() => map.addAnnotation(annotation), 2000 + 10 * index); // delay 2s + interval 10ms
+    let delay = 100;
+    let interval = 10;
+    setTimeout(() => map.addAnnotation(annotation), delay + interval * index);
   });
 
   // var annotations = markers.map(... return annotation)
