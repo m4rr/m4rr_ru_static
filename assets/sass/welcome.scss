@@ -97,6 +97,7 @@ $gold: #daa520; // gold
 html {
   background-color: var(--back-color);
   -webkit-tap-highlight-color: black;
+  overflow: hidden;
 }
 
 // ::selection {
@@ -118,6 +119,12 @@ html, body {
           text-size-adjust: 100%;
 
   text-rendering: optimizeLegibility;
+}
+
+body {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling:touch;
+
 }
 
 .hero-container {
@@ -219,7 +226,7 @@ span.travel-map {
 }
 
 .map {
-  transition: height 999999s; //stackoverflow.com/a/28151062/1204935
+  // transition: height 999999s; //stackoverflow.com/a/28151062/1204935
 
   // -webkit-flex: 5;
   //         flex: 5;
@@ -684,8 +691,8 @@ and (orientation : portrait) {
   }
 
   .travel-stat {
-    margin: 10vh 15px !important;
-    bottom: -50px;
+    margin: 15vh 15px !important;
+    // bottom: -50px;
     background-color: transparent;
     float: right;
     display: block;
