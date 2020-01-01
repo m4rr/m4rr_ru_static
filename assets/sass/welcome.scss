@@ -658,7 +658,7 @@ and (orientation : portrait) {
     max-width: 100%;
     min-width: 250px;
     overflow-y: visible;
-    margin-top: 53vh;
+    margin-bottom: 90vh;
   }
   .sidebar {
     position: relative;
@@ -682,7 +682,7 @@ and (orientation : portrait) {
   }
 
   .travel-stat {
-    margin: 10px 15px !important;
+    margin: 10vh 15px !important;
     background-color: transparent;
     float: right;
     display: block;
