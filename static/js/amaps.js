@@ -4,8 +4,8 @@ const EuropeDesktop = new mapkit.CoordinateRegion(
 );
 
 const EuropeMobile = new mapkit.CoordinateRegion(
-  new mapkit.Coordinate(52.82205, 20.86426),
-  new mapkit.CoordinateSpan(72.405164, 65.91797)
+  new mapkit.Coordinate(56.56591437170576, 16.00726314186568),
+  new mapkit.CoordinateSpan(47.08312339848416, 46.73522065143359)
 );
 
 const factory = function(coo, options) {
