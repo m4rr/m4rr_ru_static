@@ -29,9 +29,9 @@ function mapInitialize() {
     .then(response => response.json())
     .then(json => buildMap(json));
 }
-
+let map;
 function buildMap(markers) {
-  let map = new mapkit.Map("map")
+   map = new mapkit.Map("map")
   map.region = isMobile ? EuropeMobile : EuropeDesktop
   map.mapType = mapkit.Map.MapTypes.MutedStandard
   map.colorScheme = darkMedia.matches ? mapkit.Map.ColorSchemes.Dark : mapkit.Map.ColorSchemes.Light
