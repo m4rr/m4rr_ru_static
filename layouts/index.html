@@ -189,7 +189,7 @@
   </div>
 
   <div class="map-wrapper">
-    <div id="map" class="map"></div>
+    <div id="map" class="map" onclick="loadMapMobile()"></div>
   </div>
 
   <div class="travel-stat neon-text">
@@ -199,7 +199,10 @@
 
       <!-- https://tripster.ru/m4rr/ -->
 
-      <p>{{ i18n "visited_countries" .Site.Params.countries | safeHTML }} {{ i18n "visited_cities" .Site.Params.cities }}. <!--span class="travel-map">✈</span--></p>
+      <p>
+        {{ i18n "visited_countries" .Site.Params.countries | safeHTML }} {{ i18n "visited_cities" .Site.Params.cities }}.
+        <!--span class="travel-map">✈</span-->
+      </p>
   </div>
 </div>
 

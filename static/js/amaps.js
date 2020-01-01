@@ -14,10 +14,17 @@ const factory = function(coo, options) {
   return div;
 };
 
-var isMobile = window.matchMedia("only screen and (max-width: 767px)").matches
+let isMobile = window.matchMedia("only screen and (max-width: 767px)").matches
 const darkMedia = window.matchMedia('(prefers-color-scheme: dark)') // for darkMedia.addListener()
 
+let map;
+
 function mapInitialize() {
+
+  // if (map !== "undefined") {
+  //   return;
+  // }
+
   mapkit.init({
     language: map_locale,
     authorizationCallback: function(done) {
@@ -29,9 +36,9 @@ function mapInitialize() {
     .then(response => response.json())
     .then(json => buildMap(json));
 }
-let map;
+
 function buildMap(markers) {
-   map = new mapkit.Map("map")
+  map = new mapkit.Map("map")
   map.region = isMobile ? EuropeMobile : EuropeDesktop
   map.mapType = mapkit.Map.MapTypes.MutedStandard
   map.colorScheme = darkMedia.matches ? mapkit.Map.ColorSchemes.Dark : mapkit.Map.ColorSchemes.Light
@@ -68,4 +75,8 @@ function buildMap(markers) {
   });
 }
 
-window.onload = mapInitialize;
+if (isMobile) {
+  var loadMapMobile = mapInitialize;
+} else {
+  window.onload = mapInitialize;
+}
