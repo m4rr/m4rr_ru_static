@@ -2,7 +2,7 @@
 <div class="hero-container">
   <div class="nav-wrapper">
   <div class="sidebar">
-    <a href="/" style="display: inline;"><img class="photo" src="/images/marat-saytakov@2x.jpg"></a>
+    <a href="/" style="display: inline;"><img class="photo" src="/images/marat-saytakov@2x.jpg" alt='{{i18n "photo_alt"}}'></a>
     <h1 class="29yo">{{ i18n "marat" }} {{ i18n "saytakov" }}</h1>
     {{/*  <h2 class="">{{ .Site.Params.description | safeHTML }}</h2>  */}}
     <h2>{{i18n "desc2" | safeHTML}}</h2>
@@ -176,9 +176,9 @@
       <!-- <li class="globe"> -->
         <!-- .globe: https://en.wikipedia.org/wiki/Axial_tilt -->
         {{ if ne .Site.Params.lang "en"}}
-        <a href="https://saytakov.com/" class="globe"><i class="icon-globe"></i></a>
+        <a href="https://saytakov.com/" class="globe" alt="In English"><i class="icon-globe"></i></a>
         {{ else }}
-        <a href="https://m4rr.ru/" class="globe"><i class="icon-globe"></i></a>
+        <a href="https://m4rr.ru/" class="globe" alt="По-русски"><i class="icon-globe"></i></a>
         {{ end }}
       <!-- </li> -->
 
