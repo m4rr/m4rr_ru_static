@@ -1,5 +1,3 @@
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js"></script>
 {{/*  {{ $script := .Site.Data.webpack_assets.app }}
 {{ with $script.js }}
   <script src="{{ relURL (printf "%s%s" "dist/" .) }}"></script>
@@ -13,5 +11,5 @@
   */}}
 
 {{ range .Site.Params.custom_js }}
-  <script src="{{ relURL ($.Site.BaseURL) }}{{ . }}"></script>
+  <script defer src="{{ relURL ($.Site.BaseURL) }}{{ . }}"></script>
 {{ end }}
