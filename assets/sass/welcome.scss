@@ -97,7 +97,6 @@ $gold: #daa520; // gold
 html {
   background-color: var(--back-color);
   -webkit-tap-highlight-color: black;
-  overflow: hidden;
 }
 
 // ::selection {
@@ -119,12 +118,6 @@ html, body {
           text-size-adjust: 100%;
 
   text-rendering: optimizeLegibility;
-}
-
-body {
-  overflow-y: scroll;
-  -webkit-overflow-scrolling:touch;
-
 }
 
 .hero-container {
