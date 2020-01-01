@@ -219,6 +219,8 @@ span.travel-map {
 }
 
 .map {
+  transition: height 999999s; //stackoverflow.com/a/28151062/1204935
+
   // -webkit-flex: 5;
   //         flex: 5;
 
