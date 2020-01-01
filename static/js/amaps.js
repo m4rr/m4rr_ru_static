@@ -25,9 +25,9 @@ function mapInitialize() {
     }
   });
 
-  $.getJSON("/cities.json", function(json) {
-    buildMap(json);
-  });
+  fetch("/cities.json")
+    .then(response => response.json())
+    .then(json => buildMap(json));
 }
 
 function buildMap(markers) {
@@ -55,7 +55,7 @@ function buildMap(markers) {
     annotation.animates = true;
     annotation.appearanceAnimation = "zoomIn 0.3s ease-out";
 
-    let delay = 100;
+    let delay = 50;
     let interval = 10;
     setTimeout(() => map.addAnnotation(annotation), delay + interval * index);
   });
