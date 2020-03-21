@@ -51,7 +51,11 @@ function buildMap(markers) {
       // data: {
       //   color: color
       // },
-      title: landmark.title_en
+      title: landmark.title_en,
+      glyphColor: null,
+      glyphText: null,
+      glyphImage: null,
+      selectedGlyphImage: null
     };
 
     let coo = new mapkit.Coordinate(landmark.y, landmark.x);
