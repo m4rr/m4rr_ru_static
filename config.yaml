@@ -25,7 +25,7 @@ params:
     - js/helpers.js
 
   countries: "36"
-  cities: "240"
+  cities: "241"
 
 languages:
   en:
