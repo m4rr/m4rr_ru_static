@@ -3,9 +3,10 @@
 
 // @import url('https://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800&display=swap');
 
-$font-stack: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+// $font-stack: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-$margin: 20px 15px 15px 16px;
+$margin: 20px 15px 15px 15px;
 
 $dimmed-color: #99a;
 // $link: #7b68ee; // Умеренный аспидно-синий
@@ -291,36 +292,46 @@ span.travel-map {
 }
 
 .photo {
-  margin: 12px 10px 0px 12px;
+  margin: 9px;
   padding: 0px;
-  // bottom: -5px;
-  width: 60px;
+  width: 70px;
   border-radius: 50%;
   border: 1px solid var(--hr-color);
-  // vertical-align: -30%;
-  // display: inline-block;
-  float: left;
+  float: right;
 }
 
 h1 {
-  font-size: 20px;
-  font-weight: 400;
-  margin: 0 0 0px 90px;
-  padding: 10px 0 0 0px;
+  font-size: 22px;
+  font-weight: bold;
+
+  margin: $margin;
+  margin-top: 3px;
+  margin-right: 0;
+  margin-bottom: 0;
+
+  padding: 6px 0 0 0px;
   line-height: 130%;
   // display: inline-block;
 }
 
 h2 {
-  margin: 0 4px 0 90px;
+  margin: $margin;
+  margin-top: 0;
+  margin-right: 4;
+  margin-bottom: 0;
+
   padding: 4px 0 4px 0;
   // line-height: 170%;
   font-weight: 400;
 }
 
 h3 {
-  margin: 0 10px 0 16px;
-  padding: 0px 0 10px 0; //20px 15px 15px 16px
+  margin: $margin;
+  margin-top: 0;
+  margin-right: 10px;
+  margin-bottom: 0;
+
+  padding: 0px 0 10px 0;
   // line-height: 170%;
   font-weight: normal;
 }
@@ -451,6 +462,7 @@ ul.menu {
     display: inline-block;
     margin-left: 0;
     margin-right: 0;
+    padding-top: 0;
     &:before {
       content: none;
     }
