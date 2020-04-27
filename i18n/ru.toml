@@ -53,8 +53,11 @@ other = "и {{ .Count }} города"
 [projects]
 other = "Проекты"
 
+[passion]
+other = "Passionflower — блог"
+
 [ktoto]
-other = "Кто-то неправ"
+other = "Хроники мира/Гоа — видеоблог"
 
 [medium]
 other = "Мысли о разработке и компьютерах"
@@ -76,6 +79,9 @@ other = "Выступления"
 
 [icon_money]
 other = "icon-rouble"
+
+[immi_65]
+other = "Иммигранткаст-65 про удаленку в Гоа"
 
 [busy_3_1]
 other = "Бизи № 3.1 о зимовке в Таиланде"

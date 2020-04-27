@@ -51,8 +51,11 @@ one = "and {{ .Count }} city"
 [projects]
 other = "Projects"
 
+[passion]
+other = "Passionflower — oldschool blog"
+
 [ktoto]
-other = "ktotoneprav"
+other = "Now in Goa — tourist vlog"
 
 [medium]
 other = "Thoughts on development and computers"
@@ -75,17 +78,20 @@ other = "Talks"
 [icon_money]
 other = "icon-dollar"
 
+[immi_65]
+other = "Immigrantcast 65: Remote & curfew in Goa"
+
 [busy_3_1]
-other = "Busy #3.1: Thai wintering"
+other = "Busy 3.1: Thai wintering"
 
 [busy_aftershow]
-other = "Busy #3.1 aftershow: investments"
+other = "Busy 3.1 aftershow: Investments"
 
 [showroom_9]
-other = "Showroom #9: Startups"
+other = "Showroom 9: Startups"
 
 [showroom_6]
-other = "Showroom #6: Travel"
+other = "Showroom 6: Travel"
 
 [formac]
 other = "for Mac"
