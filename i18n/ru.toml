@@ -80,7 +80,10 @@ other = "Выступления"
 [icon_money]
 other = "icon-rouble"
 
-[showroom_sp]
+[showroom_wwdc]
+other = "Шоурум-спешал про WWDC 2020"
+
+[showroom_bg]
 other = "Шоурум-спешал про БГ"
 
 [immi_65]

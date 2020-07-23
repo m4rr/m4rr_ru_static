@@ -78,7 +78,10 @@ other = "Talks"
 [icon_money]
 other = "icon-dollar"
 
-[showroom_sp]
+[showroom_wwdc]
+other = "Showroom Special: WWDC 2020"
+
+[showroom_bg]
 other = "Showroom Special: Aquarium Rock Band"
 
 [immi_65]
