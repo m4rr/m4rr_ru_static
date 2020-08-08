@@ -7,7 +7,7 @@ services:
     labels: 
       - "traefik.enable=true"
       
-      # - "traefik.http.routers.m4rr-ru.entrypoints=http"
+      - "traefik.http.routers.m4rr-ru.entrypoints=http"
       - "traefik.http.routers.m4rr-ru.rule=Host(`m4rr.ru`,`saytakov.com`)"
     networks: 
       - traefik
@@ -42,7 +42,7 @@ services:
       - --accesslog.filepath=/var/log/traefik/access.log
     labels: 
       - "traefik.enable=true" # <== Enable traefik on itself to view dashboard and assign subdomain to$
-      - "traefik.http.routers.api.rule=Host(`monitor.m4rr.ru`)" # <== Setting the domain for the d$
+      - "traefik.http.routers.api.rule=Host(`mon.m4rr.ru`)" # <== Setting the domain for the d$
       - "traefik.http.routers.api.service=api@internal" # <== Enabling the api to be a service to acce$
     volumes: 
       - ./data/traefik:/var/log/traefik
