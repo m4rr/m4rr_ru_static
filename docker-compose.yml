@@ -1,7 +1,7 @@
 version: "3.7"
 services:
 
-  m4rr_ru_static:
+  website:
     build: .
     restart: always
     labels: 
