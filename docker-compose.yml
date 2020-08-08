@@ -9,7 +9,7 @@ services:
       
       - "traefik.http.routers.website.entrypoints=http"
       - "traefik.http.routers.website.rule=Host(`m4rr.ru`,`saytakov.com`)"
-      # - "traefik.http.routers.website.service=website-m4rr-ru-static@docker" # <== Enabling the api to be a service to acce$
+      - "traefik.http.routers.website.service=website-m4rr-ru-static@docker"
     networks: 
       - traefik
     # ports:
@@ -25,11 +25,11 @@ services:
     image: traefik:chevrotin
     restart: always
     command: 
-      - --api.debug=true
-      - --api.insecure=true
-      - --api.dashboard=true
-      - --api.debug=true
-      - --log.level=DEBUG
+      # - --api.debug=true
+      # - --api.insecure=true
+      # - --api.dashboard=true
+      # - --api.debug=true
+      # - --log.level=DEBUG
       
       - --providers.docker=true
       - --providers.docker.exposedbydefault=false
@@ -41,10 +41,10 @@ services:
 
       - --accesslog=true
       - --accesslog.filepath=/var/log/traefik/access.log
-    labels: 
-      - "traefik.enable=true" # <== Enable traefik on itself to view dashboard and assign subdomain to$
-      - "traefik.http.routers.api.rule=Host(`mon.m4rr.ru`)" # <== Setting the domain for the d$
-      - "traefik.http.routers.api.service=api@internal" # <== Enabling the api to be a service to acce$
+    # labels: 
+      # - "traefik.enable=true" # <== Enable traefik on itself to view dashboard and assign subdomain to$
+      # - "traefik.http.routers.api.rule=Host(`mon.m4rr.ru`)" # <== Setting the domain for the d$
+      # - "traefik.http.routers.api.service=api@internal" # <== Enabling the api to be a service to acce$
     volumes: 
       - ./data/traefik:/var/log/traefik
       - /var/run/docker.sock:/var/run/docker.sock:ro
