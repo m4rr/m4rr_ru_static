@@ -7,8 +7,9 @@ services:
     labels: 
       - "traefik.enable=true"
       
-      - "traefik.http.routers.m4rr-ru.entrypoints=http"
-      - "traefik.http.routers.m4rr-ru.rule=Host(`m4rr.ru`,`saytakov.com`)"
+      - "traefik.http.routers.website.entrypoints=http"
+      - "traefik.http.routers.website.rule=Host(`m4rr.ru`,`saytakov.com`)"
+      - "traefik.http.routers.website.service=website@docker" # <== Enabling the api to be a service to acce$
     networks: 
       - traefik
     # ports:
@@ -32,8 +33,8 @@ services:
       
       - --providers.docker=true
       - --providers.docker.exposedbydefault=false
-      - --providers.file.filename=/dynamic.yaml
       - --providers.docker.network=traefik
+      # - --providers.file.filename=/dynamic.yaml
       
       - --entrypoints.http.address=:80
       - --entrypoints.https.address=:443
