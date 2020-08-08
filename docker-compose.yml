@@ -9,7 +9,7 @@ services:
       
       - "traefik.http.routers.website.entrypoints=http"
       - "traefik.http.routers.website.rule=Host(`m4rr.ru`,`saytakov.com`)"
-      - "traefik.http.routers.website.service=website-m4rr-ru-static@docker" # <== Enabling the api to be a service to acce$
+      # - "traefik.http.routers.website.service=website-m4rr-ru-static@docker" # <== Enabling the api to be a service to acce$
     networks: 
       - traefik
     # ports:
