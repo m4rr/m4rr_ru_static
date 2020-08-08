@@ -44,11 +44,11 @@ services:
     labels: 
       - "traefik.enable=true" # <== Enable traefik on itself to view dashboard and assign subdomain to$
       - "traefik.http.routers.api.rule=Host(`mon.m4rr.ru`)" # <== Setting the domain for the d$
-      - "traefik.http.routers.api.service=api@internal" # <== Enabling the api to be a service to acce$
+      # - "traefik.http.routers.api.service=api@internal" # <== Enabling the api to be a service to acce$
     volumes: 
       - ./data/traefik:/var/log/traefik
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - ./dynamic.yaml:/dynamic.yaml
+      # - ./dynamic.yaml:/dynamic.yaml
     networks: 
       - traefik
     ports: 
