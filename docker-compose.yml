@@ -37,7 +37,7 @@ services:
       # - --providers.file.filename=/dynamic.yaml
       
       - --entrypoints.http.address=:80
-      - --entrypoints.https.address=:443
+      # - --entrypoints.https.address=:443
 
       - --accesslog=true
       - --accesslog.filepath=/var/log/traefik/access.log
@@ -54,7 +54,7 @@ services:
     ports: 
       - "80:80" # <== http
       - "8080:8080" # <== :8080 is where the dashboard runs on
-      - "443:443" # <== https
+      # - "443:443" # <== https
       
 networks: 
   traefik:
