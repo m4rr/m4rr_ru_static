@@ -191,7 +191,7 @@ span.travel-map {
 
 @supports(padding: unquote('max(0px)')) {
   .nav-wrapper {
-    padding-left:  unquote('max(9px, env(safe-area-inset-left, 9px))');
+    padding-left: unquote('max(9px, env(safe-area-inset-left, 9px))');
     margin-bottom: m#{a}x(20px, env(safe-area-inset-bottom, 20px));
   }
 }
