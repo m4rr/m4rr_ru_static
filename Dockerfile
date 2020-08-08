@@ -1,4 +1,4 @@
-FROM m4rr/hugo-extended as BUILD
+FROM m4rr/hugo-extended:latest as BUILD
 LABEL maintainer="m4rr (remarr+docker@gmail.com)"
 
 COPY . /src
@@ -6,7 +6,7 @@ WORKDIR /src
 ENV HUGO_ENV production
 RUN hugo --minify
 
-FROM nginx:1.17.2-alpine
+FROM nginx:stable-alpine
 LABEL maintainer="m4rr (remarr+docker@gmail.com)"
 
 COPY ./nginx.conf /etc/nginx/nginx.conf

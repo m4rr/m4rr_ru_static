@@ -1,87 +1,47 @@
 version: "3.7"
 services:
 
-  static_files:
+  m4rr_ru_static:
     build: .
-    restart: unless-stopped
-    ports:
-      # - "80:80"
-      - "3000:80"
-      # - "4000:8080"
-    environment: # &environment
-      - VIRTUAL_HOST=m4rr.ru,saytakov.com
-      - HUGO_ENV=production
+    restart: always
+    labels: 
+      - traefik.enable=true
+      
+      # - traefik.http.routers.m4rr-ru.entrypoints=http
+      - traefik.http.routers.m4rr-ru.rule=Host(`m4rr.ru`,`saytakov.com`)
+    networks: 
+      - traefik
+    # ports:
+      # - "3000:80"
+    # environment: # &environment
+      # - VIRTUAL_HOST=m4rr.ru,saytakov.com
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./logs:/var/log/nginx:rw
       # - ./public:/usr/share/nginx/html:ro
-      # - ./logs:/var/log/nginx:rw
-      - type: volume
-        source: website-logs
-        target: /var/log/nginx
-        volume:
-          nocopy: true
 
-  # filebeat:
-  #   image: docker.elastic.co/beats/filebeat:$ELASTIC_VERSION
-  #   restart: unless-stopped
-  #   command: filebeat -e -strict.perms=false
-  #   environment:
-  #     ELASTIC_USERNAME: $ELASTIC_USERNAME
-  #     ELASTIC_PASSWORD: $ELASTIC_PASSWORD
-  #   volumes:
-  #     - type: bind
-  #       source: ./configs/filebeat/filebeat.yml
-  #       target: /usr/share/filebeat/filebeat.yml
-  #       read_only: true
-  #     - type: bind
-  #       source: ./configs/filebeat/modules.d
-  #       target: /usr/share/filebeat/modules.d
-  #       read_only: true
-  #     - type: volume
-  #       source: website-logs
-  #       target: /var/log/nginx
-  #       volume:
-  #         nocopy: true
-  #   depends_on:
-  #     - elasticsearch
+  traefik:
+    image: traefik:chevrotin
+    restart: always
+    command: 
+      - -entrypoints.http.address=:80
 
-  # kibana:
-  #   image: docker.elastic.co/kibana/kibana:$ELASTIC_VERSION
-  #   restart: unless-stopped
-  #   environment:
-  #     ELASTICSEARCH_USERNAME: $ELASTIC_USERNAME
-  #     ELASTICSEARCH_PASSWORD: $ELASTIC_PASSWORD
-  #     VIRTUAL_HOST: kibana.m4rr.ru
-  #   # ports:
-  #     # - "5601"
-  #   # labels:
-  #   #   - traefik.http.routers.kibana-http.rule=Host(`kibana.${DOMAIN}`)
-  #   #   - traefik.http.routers.kibana-http.entrypoints=http
-  #   #   - traefik.http.routers.kibana-http.middlewares=redirect
+      - -providers.docker=true
+      - -providers.docker.exposedbydefault=false
 
-  #   #   - traefik.http.routers.kibana-https.rule=Host(`kibana.${DOMAIN}`)
-  #   #   - traefik.http.routers.kibana-https.entrypoints=https
-  #   #   - traefik.http.routers.kibana-https.tls=true
-  #   #   - traefik.http.routers.kibana-https.tls.certresolver=${HTPPS_CERTIFICATE_RESOLVER}
-  #   depends_on:
-  #     - elasticsearch
+      - -accesslog=true
+      - -accesslog.filepath=/var/log/traefik/access.log
+    labels: 
+      - traefik.enable=true
+    volumes: 
+      - ./data/traefik:/var/log/traefik
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks: 
+      - traefik
+    ports: 
+      - 80:80
 
-  # elasticsearch:
-  #   image: docker.elastic.co/elasticsearch/elasticsearch:$ELASTIC_VERSION
-  #   restart: unless-stopped
-  #   volumes:
-  #     - type: bind
-  #       source: ./configs/elasticsearch.yml
-  #       target: /usr/share/elasticsearch/config/elasticsearch.yml
-  #       read_only: true
-  #     - type: volume
-  #       source: elastic-data
-  #       target: /usr/share/elasticsearch/data
-  #   environment:
-  #     ELASTIC_USERNAME: $ELASTIC_USERNAME
-  #     ELASTIC_PASSWORD: $ELASTIC_PASSWORD
-  #     ES_JAVA_OPTS: -Xmx256m -Xms256m
-
-volumes:
-  website-logs:
-  elastic-data:
+networks: 
+  traefik:
+    external: 
+      name: traefik
