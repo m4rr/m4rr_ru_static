@@ -5,10 +5,10 @@ services:
     build: .
     restart: always
     labels: 
-      - traefik.enable=true
+      - "traefik.enable=true"
       
-      # - traefik.http.routers.m4rr-ru.entrypoints=http
-      - traefik.http.routers.m4rr-ru.rule=Host(`m4rr.ru`,`saytakov.com`)
+      # - "traefik.http.routers.m4rr-ru.entrypoints=http"
+      - "traefik.http.routers.m4rr-ru.rule=Host(`m4rr.ru`,`saytakov.com`)"
     networks: 
       - traefik
     # ports:
@@ -24,23 +24,36 @@ services:
     image: traefik:chevrotin
     restart: always
     command: 
-      - -entrypoints.http.address=:80
+      - --api.debug=true
+      - --api.insecure=true
+      - --api.dashboard=true
+      - --api.debug=true
+      - --log.level=DEBUG
+      
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      - --providers.file.filename=/dynamic.yaml
+      - --providers.docker.network=traefik
+      
+      - --entrypoints.traefik.address=:80
 
-      - -providers.docker=true
-      - -providers.docker.exposedbydefault=false
-
-      - -accesslog=true
-      - -accesslog.filepath=/var/log/traefik/access.log
+      - --accesslog=true
+      - --accesslog.filepath=/var/log/traefik/access.log
     labels: 
-      - traefik.enable=true
+      - "traefik.enable=true" # <== Enable traefik on itself to view dashboard and assign subdomain to$
+      - "traefik.http.routers.api.rule=Host(`monitor.m4rr.ru`)" # <== Setting the domain for the d$
+      - "traefik.http.routers.api.service=api@internal" # <== Enabling the api to be a service to acce$
     volumes: 
       - ./data/traefik:/var/log/traefik
       - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./dynamic.yaml:/dynamic.yaml
     networks: 
       - traefik
     ports: 
-      - 80:80
-
+      - "80:80" # <== http
+      - "8080:8080" # <== :8080 is where the dashboard runs on
+      - "443:443" # <== https
+      
 networks: 
   traefik:
     external: 
