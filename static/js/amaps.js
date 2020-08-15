@@ -10,7 +10,7 @@ const EuropeMobile = new mapkit.CoordinateRegion(
 
 const factory = function(coo, options) {
   let div = document.createElement("div");
-  div.className = "circle-annotation";
+  div.className = "circle-annotation" + " " + options.data.country;
   return div;
 };
 
@@ -48,14 +48,14 @@ function buildMap(markers) {
     // var hue = Math.random() * 120 - 60; // magentas to yellows (300° to 60°)
     // var color = 'hsla(' + (hue < 0 ? hue % 360 + 360 : hue % 360) + ', 100%, 50%, 0.6)';
     let options = {
-      // data: {
-      //   color: color
-      // },
+      data: {
+        country: landmark.country_en,
+        // glyphColor: null,
+        // glyphText: null,
+        // glyphImage: null,
+        // selectedGlyphImage: null
+      },
       title: landmark.title_en,
-      glyphColor: null,
-      glyphText: null,
-      glyphImage: null,
-      selectedGlyphImage: null
     };
 
     let coo = new mapkit.Coordinate(landmark.y, landmark.x);

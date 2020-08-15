@@ -21,6 +21,7 @@ $gold: #daa520; // gold
   --hr-color: #ddd;
   --map-bgcolor: #F8F5EE;
 
+  --map-hover: #ff6800;
   --hover: #ff6800;
   --hover-anim: unset;
   --hover-border-anim: unset;
@@ -43,6 +44,7 @@ $gold: #daa520; // gold
     --hr-color: #333;
     --map-bgcolor: #2B2D2F;
 
+    --map-hover: #EB3AF1;
     --hover: #c6e2ff;
     --hover-anim: neon .08s ease-in-out infinite alternate;
     --hover-border-anim: neon-border .08s ease-in-out infinite alternate;
@@ -86,6 +88,10 @@ $gold: #daa520; // gold
 
     .circle-annotation {
       background-color: rgba(255,255,255,0.9);
+      
+      &.Belarus {
+        background-color: #BE271A;
+      }
     }
   }
 
@@ -250,7 +256,7 @@ span.travel-map {
   transition: 0.3s;
 
   &:hover {
-    background-color: red !important;
+    background-color: var(--map-hover) !important;
     transition: 0.05s;
   }
 }
