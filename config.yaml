@@ -1,6 +1,6 @@
 title: Marat Saytakov
 description: iOS && macOS Developer, Traveler
-DefaultContentLanguage: en
+DefaultContentLanguage: ru # cannot disable default language (i.e. en in blog)
 
 metaDataFormat: yaml
 disableKinds: section
@@ -10,6 +10,9 @@ disableKinds: section
   # - sitemap
 
 disableHugoGeneratorInject: true
+
+# permalinks:
+  # blog: "/:section/:slug"
 
 params:
   title: Marat Saytakov
@@ -24,8 +27,8 @@ params:
     - js/amaps.js
     - js/helpers.js
 
-  countries: "36"
-  cities: "241"
+  countries: 36
+  cities: 241
 
 languages:
   en:
@@ -40,7 +43,7 @@ languages:
 
   ru:
     baseURL: https://m4rr.ru/
-    weight: 1
+    weight: 1 # lower weight comes first
     title: Марат Сайтаков
     params:
       description: Программист iOS && macOS || Go || JS
