@@ -1,7 +1,7 @@
 ---
 title: "MoneyBot"
 date: 2021-02-15T10:23:56+01:00
-draft: true
+draft: false
 slug: moneybot
 # summary_img: /blog/img/.jpg
 ---
