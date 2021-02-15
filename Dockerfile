@@ -1,4 +1,5 @@
-FROM m4rr/hugo-extended:latest as BUILD
+# FROM m4rr/hugo-extended:latest as BUILD
+FROM klakegg/hugo:0.80.0-ext-alpine as BUILD
 LABEL maintainer="m4rr (remarr+docker@gmail.com)"
 
 COPY . /src
