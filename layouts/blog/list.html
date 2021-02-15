@@ -4,18 +4,6 @@
 
 <p class="lead">{{ .Description | markdownify }}</p>
 
-<style>
-  article h1 a { /* text-decoration-none */
-    text-decoration: none;
-    border-bottom: 0.5px solid white;
-    border-bottom-color: var(--bs-secondary);
-  }
-  article h1 a:hover {
-    color: var(--bs-secondary) !important;
-    border-bottom-color: var(--bs-secondary);
-  }
-</style>
-
 <div>
 
   {{ range (.Paginator 50).Pages }}  
@@ -27,11 +15,11 @@
     </figure>
     {{ end }}
     
-    <h1 class="">
+    <h1 class="" style="font-family: 'Bitter', serif;"><strong>
       <a href="{{ .RelPermalink }}" class="link-dark stretched-link">{{ .Title }}</a>
-    </h1>
+    </strong></h1>
 
-    <p class="pb-0 mb-2">
+    <p class="pb-0 mb-2 lh-lg">
       {{ .Summary | safeHTML }} <!-- automatically takes the first paragraph in the .md article -->
     </p>
 

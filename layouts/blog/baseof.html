@@ -1,7 +1,9 @@
 <!doctype html>
 <html lang="{{.Site.Params.lang}}">
 
-{{- partial "blog/head.html" . -}}
+<head>
+  {{- partial "blog/head.html" . -}}
+</head>
 
 <body>
 
@@ -14,11 +16,11 @@
     </div>
   </nav>
 
-  <div class="container col-sm-12 col-md-11 col-lg-8 col-xl-7 mx-a uto pt-4">
+  <div class="container col-sm-12 col-md-11 col-lg-8 col-xl-7 pt-4 ">
     {{- block "main" . }}{{- end }}
   </div>
 
-  <div class="container my-4 border-top  pt-4  col-sm-12 col-md-11 col-lg-8 col-xl-7 mx-a uto">
+  <div class="container my-4 border-top  pt-4  col-sm-12 col-md-11 col-lg-8 col-xl-7">
     <span class="copyright">{{ replace .Site.Copyright "{year}" now.Year }}</span>
   </div>
 

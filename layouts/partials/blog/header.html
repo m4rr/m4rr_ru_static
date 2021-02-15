@@ -1,7 +1,5 @@
 {{ if eq .FirstSection . }}
-  <a class="navbar-brand d-inline-block" href="/">
-    <span class="navbar-brand mb-0 h1">◂ {{ .Site.Title }}</span>
-  </a>
+  <a class="navbar-brand d-inline-block" href="/">◂ {{ .Site.Title }}</a>
 {{else}}
   <a class="navbar-brand d-inline-block" href="/blog/">
     <span class="navbar-brand mb-0 h1">{{ .Site.Params.Blog }}</span>
@@ -18,5 +16,10 @@
     <a class="nav-link" href="https://m4rr.ru/cv">CV</a>
     <a class="nav-link" href="https://medium.com/@m4rr">Medium</a>
     <a class="nav-link" href="tg://resolve?domain=CitoyenMarat">телеканал</a>
+    
+    <!-- <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form> -->
   </div>
 </div>

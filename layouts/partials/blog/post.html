@@ -1,0 +1,18 @@
+
+<h1 class="hugo-single"><strong>{{ .Title }}</strong></h1>
+
+<p class="">
+  <small class="text-muted"><time>{{ .Date.Format "2.01.2006" }}</time> {{ if .Params.External }} — <span class="post-host">for {{ .Params.External.Host }}</span> {{ end }}</small>
+</p>
+
+{{ with .Params.Summary_img}}
+<div class="text-center">
+<figure class="figure w-100 pt-1 pb-0 mx-auto d-block" >
+  <img src="{{ . }}" class="figure-img img-fluid rounded   " >
+</figure>
+</div>
+{{ end }}
+
+<article class="article mt-2">
+  {{ .Content }}
+</article>
