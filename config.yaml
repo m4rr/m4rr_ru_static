@@ -47,7 +47,14 @@ languages:
     params:
       description: Программист iOS && macOS || Go || JS
       lang: ru
-
+    markup:
+      defaultMarkdownHandler: blackfriday
+      goldmark:
+        extensions:
+          typegrapher: true
+      blackfriday:
+        angledQuotes: true
+    
 menu:
   main:
     - name: "Zero Width Joiner"

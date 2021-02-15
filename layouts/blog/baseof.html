@@ -10,7 +10,7 @@
 
   <nav class="navbar navbar-expand navbar-dark bg-dark bg-gradient">
     <div class="container">
-      <div class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-8 mx-auto">
+      <div class="col-12 col-sm-12 col-md-11 col-lg-9 col-xl-8 mx-auto">
         <div class="d-flex flex-nowrap">
           {{- partial "blog/header.html" . -}}
         </div>
@@ -19,13 +19,13 @@
   </nav>
 
   <div class="container">
-    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 mx-auto pt-4">
+    <div class="col-sm-12 col-md-11 col-lg-9 col-xl-8 mx-auto pt-4">
       {{- block "main" . }}{{- end }}
     </div>
   </div>
 
   <div class="container my-4 ">
-    <div class=" border-top  pt-4 col-12 col-sm-11 col-md-10 col-lg-9 col-xl-8 mx-auto">
+    <div class=" border-top  pt-4 col-12 col-sm-12 col-md-11 col-lg-9 col-xl-8 mx-auto">
       <span class="copyright">{{ replace .Site.Copyright "{year}" now.Year }}</span>
     </div>
   </div>

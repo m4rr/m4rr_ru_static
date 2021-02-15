@@ -5,11 +5,7 @@ draft: false
 summary_img: /blog/img/afl@2x.png
 slug: mow-vvo
 ---
-Как летают самолеты
-
-{{< img "/blog/img/afl@2x.png" "AFL1702 AFL1700" >}}
-
-links zwo drei view links
+12 декабря 2 рейса MOW-VVO летели подряд. Потому что первый из них задержали на 4 часа.
 
 ## Как устроены самолеты
 

@@ -1,8 +1,33 @@
 {{ define "main" }}
 
-<h1 class=""><strong>{{ .Title }}</strong></h1>
+<style>
+.full-width1 {
+  left: 50%;
+  margin-left: -25vw;
+  margin-right: -75vw;
+  max-width: 100vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
+  padding: 0 20px;
+}
+</style>
 
-<article class="article mt-4">
+<h1 class="text-center"><strong>{{ .Title }}</strong></h1>
+
+<p class="text-center">
+  <small class="text-muted"><time>{{ .Date.Format "2.01.2006" }}</time> {{ if .Params.External }} — <span class="post-host">for {{ .Params.External.Host }}</span> {{ end }}</small>
+</p>
+
+{{ with .Params.Summary_img}}
+<div class="text-center">
+<figure class="figure w-100 pt-1 pb-0 mx-auto d-block" >
+  <img src="{{ . }}" class="figure-img img-fluid rounded   " >
+</figure>
+</div>
+{{ end }}
+
+<article class="article mt-2">
   {{ .Content }}
 </article>
 
