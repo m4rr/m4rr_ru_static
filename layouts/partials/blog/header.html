@@ -1,35 +1,22 @@
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
-<nav class="navbar navbar-expand navbar-dark bg-dark bg-gradient">
-  <div class="container">
+{{ if eq .FirstSection . }}
+  <a class="navbar-brand d-inline-block" href="/">
+    <span class="navbar-brand mb-0 h1">◂ {{ .Site.Title }}</span>
+  </a>
+{{else}}
+  <a class="navbar-brand d-inline-block" href="/blog/">
+    <span class="navbar-brand mb-0 h1">{{ .Site.Params.Blog }}</span>
+  </a>
+{{ end }}
 
-    
-    <!-- <div class=""> -->
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
 
-      {{ if eq .FirstSection . }}
-        <a class="navbar-brand d-inline-block" href="/">
-          <!-- <img src="/images/apple-touch-icon.png" alt="{{ .Site.Params.Blog }}" height="24" class="d-inline-block align-text-bottom"> -->
-          <span class="navbar-brand mb-0 h1">◂ {{ .Site.Title }}</span>
-        </a>
-      {{else}}
-        <a class="navbar-brand d-inline-block" href="/blog/">
-          <span class="navbar-brand mb-0 h1">{{ .Site.Params.Blog }}</span>
-        </a>
-      {{ end }}
-    <!-- </div> -->
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link" href="https://m4rr.ru/cv">CV</a>
-        <a class="nav-link" href="https://medium.com/@m4rr">Medium</a>
-        <a class="nav-link" href="tg://resolve?domain=CitoyenMarat">телеканал</a>
-      </div>
-    </div>
-
-    
+<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  <div class="navbar-nav">
+    <a class="nav-link" href="https://m4rr.ru/cv">CV</a>
+    <a class="nav-link" href="https://medium.com/@m4rr">Medium</a>
+    <a class="nav-link" href="tg://resolve?domain=CitoyenMarat">телеканал</a>
   </div>
-</nav>
+</div>

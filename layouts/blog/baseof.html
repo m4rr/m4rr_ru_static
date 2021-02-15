@@ -1,15 +1,35 @@
 <!doctype html>
 <html lang="{{.Site.Params.lang}}">
-  {{- partial "blog/head.html" . -}}
-  <body>
-    {{- partial "blog/header.html" . -}}
 
-    <div class="container  mt-4 align-items-center justify-content-center">
+{{- partial "blog/head.html" . -}}
 
-      {{- block "main" . }}{{- end }}
+<body>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+
+  <nav class="navbar navbar-expand navbar-dark bg-dark bg-gradient">
+    <div class="container">
+      <div class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-8 mx-auto">
+        <div class="d-flex flex-nowrap">
+          {{- partial "blog/header.html" . -}}
+        </div>
+      </div>
     </div>
+  </nav>
 
-    {{- partial "blog/footer.html" . -}}
-  </body>
+  <div class="container">
+    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 mx-auto pt-4">
+      {{- block "main" . }}{{- end }}
+    </div>
+  </div>
+
+  <div class="container my-4 ">
+    <div class=" border-top  pt-4 col-12 col-sm-11 col-md-10 col-lg-9 col-xl-8 mx-auto">
+      {{- partial "blog/footer.html" . -}}
+    </div>
+  </div>
+
+</body>
 </html>
