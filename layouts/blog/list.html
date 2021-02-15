@@ -1,12 +1,10 @@
 {{ define "main" }}
 
-<h1 class="display-1"><strong>{{ i18n "blog" }}</strong></h1>
+<h1 class="display-1"><strong>{{- i18n "blog" -}}</strong></h1>
 
-<p class="lead">{{ .Description | markdownify }}</p>
+<p class="lead">{{- .Description | markdownify -}}</p>
 
-<div>
-
-  {{ range (.Paginator 50).Pages }}  
+{{ range (.Paginator 50).Pages }}  
   <article class="py-2 card border-0">
 
     {{ with .Params.Summary_img}}
@@ -15,23 +13,17 @@
     </figure>
     {{ end }}
     
-    <h1 class="" style="font-family: 'Bitter', serif;"><strong>
-      <a href="{{ .RelPermalink }}" class="link-dark stretched-link">{{ .Title }}</a>
-    </strong></h1>
+    <h1 class=""><strong><a href="{{ .RelPermalink }}" class="link-dark stretched-link">{{- .Title -}}</a></strong></h1>
 
-    <p class="pb-0 mb-2 lh-lg">
-      {{ .Summary | safeHTML }} <!-- automatically takes the first paragraph in the .md article -->
-    </p>
+    {{- .Content -}}
 
-    <p class="">
+    <!-- <p class="mt-0 pt-0">
       <span title="{{.Date}}">
-        <small class="text-muted"><time>{{ .Date.Format "2.01.2006" }}</time> {{ if .Params.External }} — <span class="post-host">for {{ .Params.External.Host }}</span> {{ end }}</small>
+        <small class="text-muted"><time>{{ .Date.Format "2.01.2006" }}</time></small>
       </span>
-    </p>
+    </p> -->
 
   </article>
-  {{ end }}
-
-</div>
+{{ end }}
 
 {{ end }}
