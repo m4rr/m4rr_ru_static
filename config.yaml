@@ -1,18 +1,15 @@
-title: Marat Saytakov
-description: iOS && macOS Developer, Traveler
-DefaultContentLanguage: ru # cannot disable default language (i.e. en in blog)
-
+DefaultContentLanguage: ru # cannot disable default language (i.e. 'en' in blog)
+disableHugoGeneratorInject: true
 metaDataFormat: yaml
-disableKinds: section
+
+disableKinds:
   - taxonomy
   - taxonomyTerm
   - RSS
   # - sitemap
 
-disableHugoGeneratorInject: true
-
-# permalinks:
-  # blog: "/:section/:slug"
+permalinks:
+  blog: "/:section/:slug/"
 
 params:
   title: Marat Saytakov
@@ -39,12 +36,14 @@ languages:
       description: Go || JS || iOS && macOS Developer
       lang: en
       images:
-      - images/saytakov.com-redesign-x.png
+        - images/saytakov.com-redesign-x.png
 
   ru:
     baseURL: https://m4rr.ru/
     weight: 1 # lower weight comes first
     title: Марат Сайтаков
+    copyright: "© 2006...{year}"
+    blog: Блог Марата Сайтакова
     params:
       description: Программист iOS && macOS || Go || JS
       lang: ru

@@ -1,9 +1,15 @@
 <!doctype html>
-<html>
+<html lang="{{.Site.Params.lang}}">
   {{- partial "blog/head.html" . -}}
   <body>
     {{- partial "blog/header.html" . -}}
-    {{- block "blog" . }}{{- end }}
+
+    <div class="container  mt-4 align-items-center justify-content-center">
+
+      {{- block "main" . }}{{- end }}
+
+    </div>
+
     {{- partial "blog/footer.html" . -}}
   </body>
 </html>

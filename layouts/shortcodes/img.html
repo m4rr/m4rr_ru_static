@@ -1,0 +1,10 @@
+{{ $alt := (cond (.IsNamedParams) (.Get "alt") (.Get 1)) }}
+
+<figure class="figure pt-1 pb-0 img-fluid" >
+<img class="figure-img img-fluid rounded"
+     src="{{ if .IsNamedParams }}{{.Get "src" }}{{ else }}{{.Get 0}}{{ end }}" 
+     alt="{{ $alt }}">
+{{ if ne $alt "" }}
+    <figcaption class="figure-caption">{{$alt}}</figcaption>
+{{ end }}
+</figure>

@@ -1,5 +1,43 @@
-{{ define "blog" }}
-  <main>
-    <h1>{{ with .Site.GetPage "section" "blog" }}{{ .Title }}{{ end }}</h1>
-  </main>
+{{ define "main" }}
+
+<h1 class="display-1"><strong>{{ i18n "blog" }}</strong></h1>
+<p class="lead">{{ .Description | markdownify }}</p>
+
+<style>
+  article h1 a {
+    text-decoration: none;
+    border-bottom: 1px solid white;
+  }
+  article h1 a:hover {
+    color: var(--bs-secondary) !important;
+    border-bottom: 0.5px solid var(--bs-secondary);
+</style>
+
+<div>
+
+  {{ range (.Paginator 50).Pages }}  
+  <article class="py-2 card border-0">
+
+    {{ with .Params.Summary_img}}
+    <figure class="figure w-75 h-25 d-inline-block mb-1" >
+      <img src="{{ . }}" class="figure-img img-fluid rounded img-fluid  " >
+    </figure>
+    {{ end }}
+    
+    <h1 class="">
+      <a href="{{ .RelPermalink }}" class="link-dark stretched-link">{{ .Title }}</a>
+    </h1>
+
+    <p class="pb-0 mb-2">
+      {{ .Summary | safeHTML }} <!-- automatically takes the first paragraph in the .md article -->
+    </p>
+    <p class="">
+      <small class="text-muted"><time>{{ .Date.Format "2.01.2006" }}</time> {{ if .Params.External }} — <span class="post-host">for {{ .Params.External.Host }}</span> {{ end }}</small>
+    </p>
+
+  </article>
+  {{ end }}
+
+</div>
+
 {{ end }}

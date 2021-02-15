@@ -1,21 +1,10 @@
-{{ define "blog" }}
-<div class="container mt-4 align-items-center justify-content-center">
+{{ define "main" }}
 
-  <h1 class="">{{ .Title | markdownify }}</h1>
-  <h2 class="">{{ .Description }}</h2>
+<h1 class=""><strong>{{ .Title }}</strong></h1>
+<p class="lead">{{ .Description | markdownify }}</p>
 
   <article class="article mt-4">
     {{ .Content }}
-
-    {{ if ne .Site.Params.lang "en" }}
-
-    ru
-
-    {{ else }}
-
-    en
-    
-    {{ end }}
   </article>
 </div>
 {{ end }}
