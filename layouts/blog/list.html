@@ -1,6 +1,7 @@
 {{ define "main" }}
 
 <h1 class="display-1"><strong>{{ i18n "blog" }}</strong></h1>
+
 <p class="lead">{{ .Description | markdownify }}</p>
 
 <style>
@@ -11,6 +12,7 @@
   article h1 a:hover {
     color: var(--bs-secondary) !important;
     border-bottom-color: var(--bs-secondary);
+  }
 </style>
 
 <div>

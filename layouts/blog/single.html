@@ -1,10 +1,9 @@
 {{ define "main" }}
 
 <h1 class=""><strong>{{ .Title }}</strong></h1>
-<p class="lead">{{ .Description | markdownify }}</p>
 
-  <article class="article mt-4">
-    {{ .Content }}
-  </article>
-</div>
+<article class="article mt-4">
+  {{ .Content }}
+</article>
+
 {{ end }}
