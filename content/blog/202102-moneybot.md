@@ -7,7 +7,7 @@ slug: moneybot
 ---
 Пару лет назад удалил эту форму из парсера бота:
 
-{{< img "/blog/img/moneybot.png" "[t.me/moneybot](t.me/moneybot)" >}}
+{{< img "/blog/img/moneybot.png" "[@usdrub_bot](https://t.me/usdrub_bot)" >}}
 
 А раньше он понимал фразы типа "164990 деревянненьких". И "100 грина" убрал. Думал, что никто не пользуется.
 

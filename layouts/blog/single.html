@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<h1 class="hugo-single"><strong>
+<h1 class="hugo-single mt-3"><strong>
   {{- .Title -}}
 </strong></h1>
 
@@ -17,9 +17,7 @@
 </article>
 
 <p class="mt-2 mb-5">
-  <small class="text-muted">
-    <time>{{- .Date.Format "2.01.2006" -}}</time>
-  </small>
+  <small class="text-muted">{{- partial "blog/date.html" . -}}</small>
 </p>
 
 {{ end }}

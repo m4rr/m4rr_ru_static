@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<h1 class="display-1 mb-0 pb-0"><strong>{{- .Title -}}</strong></h1>
+<h1 class="display-1 mt-2 mb-0 pb-0"><strong>{{- .Title -}}</strong></h1>
 
 <p class="lead mt-0 pt-0">{{- .Description | markdownify -}}</p>
 
@@ -14,19 +14,19 @@
       </figure>
       {{ end }}
       
-      <h1 class=""><strong><a href="{{ .RelPermalink }}" class="text-decoration-none {{ if ne nil .Params.Summary_img }}stretched-link{{ end }}">
+      <h1 class="mb-3"><strong><a href="{{ .RelPermalink }}" class="text-decoration-none {{ if ne nil .Params.Summary_img }}stretched-link{{ end }}">
         {{- .Title -}}
       </a></strong></h1>
     </div>
 
-    <div class="hugo-content">
+    <div class="hugo-content mb-0 pb-0">
       {{- .Content -}}
     </div>
 
-    <p class="mt-0 pt-0">
-      <span title="{{.Date}}">
-        <small class="text-muted"><time>{{ .Date.Format "2.01.2006" }}</time></small>
-      </span>
+    <p class="mt-2">
+      <!-- <span title="{{.Date}}"> -->
+        <small class="text-muted">{{- partial "blog/date.html" . -}}</small>
+      <!-- </span> -->
     </p>
 
   </article>
