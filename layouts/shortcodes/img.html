@@ -2,9 +2,9 @@
 
 <figure class="figure pt-1 pb-0  " >
 <img class="figure-img img-fluid  full-width"
-     src="{{ if .IsNamedParams }}{{.Get "src" }}{{ else }}{{.Get 0}}{{ end }}" 
-     alt="{{ $alt }}">
-{{ if ne $alt "" }}
-    <figcaption class="figure-caption">{{$alt}}</figcaption>
-{{ end }}
+  src="{{ if .IsNamedParams }}{{.Get "src" }}{{ else }}{{.Get 0}}{{ end }}" 
+  alt="{{ $alt }}">
+  {{ if ne $alt "" }}
+  <figcaption class="figure-caption">{{- $alt | markdownify -}}</figcaption>
+  {{ end }}
 </figure>

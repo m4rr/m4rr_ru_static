@@ -21,9 +21,8 @@
   </div>
 
   <div class="container-fluid border-top  mt-4 ">
-
-    <div class="container py-5 col-sm-12 col-md-11 col-lg-8 col-xl-7">
-      <span class="copyright">{{ replace .Site.Copyright "{year}" now.Year }}</span>
+    <div class="container px-0 py-5 col-sm-12 col-md-11 col-lg-8 col-xl-7">
+      <span class="copyright">{{- replace .Site.Copyright "{year}" now.Year -}}</span>
     </div>
   </div>
 

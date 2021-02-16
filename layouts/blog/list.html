@@ -1,13 +1,11 @@
 {{ define "main" }}
 
-<h1 class="display-1"><strong>{{- i18n "blog" -}}</strong></h1>
+<h1 class="display-1 mb-0 pb-0"><strong>{{- .Title -}}</strong></h1>
 
-<p class="lead">{{- .Description | markdownify -}}</p>
+<p class="lead mt-0 pt-0">{{- .Description | markdownify -}}</p>
 
 {{ range (.Paginator 50).Pages }}  
-  <article class="py-4  hugo-list">
-
-
+  <article class="mt-1 mb-5 hugo-list">
 
     <div class="{{ if ne nil .Params.Summary_img }}card{{ end }} border-0 "> <!-- .card is for .stretched-link -->
       {{ with .Params.Summary_img }}
@@ -25,11 +23,11 @@
       {{- .Content -}}
     </div>
 
-    <!-- <p class="mt-0 pt-0">
+    <p class="mt-0 pt-0">
       <span title="{{.Date}}">
         <small class="text-muted"><time>{{ .Date.Format "2.01.2006" }}</time></small>
       </span>
-    </p> -->
+    </p>
 
   </article>
 {{ end }}

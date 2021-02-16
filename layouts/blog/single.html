@@ -1,10 +1,8 @@
 {{ define "main" }}
 
-<h1 class="hugo-single"><strong>{{- .Title -}}</strong></h1>
-
-<p class="">
-  <small class="text-muted"><time>{{ .Date.Format "2.01.2006" }}</time> {{ if .Params.External }} — <span class="post-host">for {{ .Params.External.Host }}</span> {{ end }}</small>
-</p>
+<h1 class="hugo-single"><strong>
+  {{- .Title -}}
+</strong></h1>
 
 {{ with .Params.Summary_img}}
 <div class="text-center">
@@ -14,8 +12,14 @@
 </div>
 {{ end }}
 
-<article class="hugo-article mt-2">
+<article class="hugo-article">
   {{ .Content }}
 </article>
+
+<p class="mt-2 mb-5">
+  <small class="text-muted">
+    <time>{{- .Date.Format "2.01.2006" -}}</time>
+  </small>
+</p>
 
 {{ end }}

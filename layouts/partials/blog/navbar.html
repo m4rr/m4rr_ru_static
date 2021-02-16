@@ -1,10 +1,11 @@
 {{ if eq .FirstSection . }}
-  <a class="navba_r-brand me-2 text-decoration-none link-dark" href="/">◂ {{ .Site.Title -}}</a>
+<a class="navba_r-brand me-2 text-decoration-none link-dark" href="/">◂ {{ .Site.Title -}}</a>
 {{else}}
-  <a class="navbar-brand text-decoration-none link-dark" href="/blog/">{{- .Site.Params.BlogTitle -}}</a>
+<a class="navbar-brand text-decoration-none link-dark" href="/blog/">{{- .Site.Params.BlogTitle -}}</a>
 {{ end }}
 
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+  aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
   <!-- <span class="navbar-toggler-icon"></span> -->
   <span class="" style="color: white;">🚀</span>
 </button>
@@ -14,7 +15,7 @@
     <a class="nav-link" href="https://m4rr.ru/cv">CV</a>
     <a class="nav-link" href="https://medium.com/@m4rr">Medium</a>
     <a class="nav-link" href="tg://resolve?domain=CitoyenMarat">телеканал</a>
-    
+
     <!-- <form class="d-flex">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success" type="submit">Search</button>
