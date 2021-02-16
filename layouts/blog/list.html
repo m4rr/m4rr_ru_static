@@ -5,17 +5,25 @@
 <p class="lead">{{- .Description | markdownify -}}</p>
 
 {{ range (.Paginator 50).Pages }}  
-  <article class="py-2 card border-0">
+  <article class="py-4  hugo-list">
 
-    {{ with .Params.Summary_img}}
-    <figure class="figure w-75 h-25 d-inline-block mb-1" >
-      <img src="{{ . }}" class="figure-img img-fluid rounded img-fluid  " >
-    </figure>
-    {{ end }}
-    
-    <h1 class=""><strong><a href="{{ .RelPermalink }}" class="link-dark stretched-link">{{- .Title -}}</a></strong></h1>
 
-    {{- .Content -}}
+
+    <div class="{{ if ne nil .Params.Summary_img }}card{{ end }} border-0 "> <!-- .card is for .stretched-link -->
+      {{ with .Params.Summary_img }}
+      <figure class="figure w-75 h-25 d-inline-block mb-1" >
+        <img src="{{ . }}" class="figure-img img-fluid rounded img-fluid  " >
+      </figure>
+      {{ end }}
+      
+      <h1 class=""><strong><a href="{{ .RelPermalink }}" class="text-decoration-none {{ if ne nil .Params.Summary_img }}stretched-link{{ end }}">
+        {{- .Title -}}
+      </a></strong></h1>
+    </div>
+
+    <div class="hugo-content">
+      {{- .Content -}}
+    </div>
 
     <!-- <p class="mt-0 pt-0">
       <span title="{{.Date}}">

@@ -1,9 +1,7 @@
 {{ if eq .FirstSection . }}
-  <a class="navbar-brand d-inline-block" href="/">◂ {{ .Site.Title }}</a>
+  <a class="navba_r-brand me-2 text-decoration-none link-dark" href="/">◂ {{ .Site.Title -}}</a>
 {{else}}
-  <a class="navbar-brand d-inline-block" href="/blog/">
-    <span class="navbar-brand mb-0 h1">{{ .Site.Params.Blog }}</span>
-  </a>
+  <a class="navbar-brand text-decoration-none link-dark" href="/blog/">{{- .Site.Params.BlogTitle -}}</a>
 {{ end }}
 
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

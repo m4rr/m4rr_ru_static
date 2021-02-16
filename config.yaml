@@ -43,7 +43,7 @@ languages:
     weight: 1 # lower weight comes first
     title: Марат Сайтаков
     copyright: "© 2006...{year}"
-    blog: Блог Марата Сайтакова
+    blogTitle: Блог Марата Сайтакова
     params:
       description: Программист iOS && macOS || Go || JS
       lang: ru
