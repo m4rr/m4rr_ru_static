@@ -54,7 +54,10 @@ languages:
           typegrapher: true
       blackfriday:
         angledQuotes: true
-    
+        fractions: true
+        Dashes: true
+        LatexDashes: false
+
 menu:
   main:
     - name: "Zero Width Joiner"
