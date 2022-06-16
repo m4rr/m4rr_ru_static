@@ -33,7 +33,7 @@ languages:
     weight: 2
     title: Marat Saytakov
     params:
-      description: Go || JS || iOS && macOS Developer
+      description: iOS && macOS Engineer @ Amsterdam
       lang: en
       images:
         - images/saytakov.com-redesign-x.png
@@ -45,7 +45,7 @@ languages:
     copyright: "© 2006...{year}"
     blogTitle: Блог Марата Сайтакова
     params:
-      description: Программист iOS && macOS || Go || JS
+      description: Программист iOS && macOS
       lang: ru
     markup:
       defaultMarkdownHandler: blackfriday

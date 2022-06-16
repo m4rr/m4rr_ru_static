@@ -14,6 +14,7 @@
 
   <link rel="author" type="text/plain" href="{{ relURL ($.Site.BaseURL) }}humans.txt" />
 
+  <!--
   {{/*  {{ $stylesheet := .Site.Data.webpack_assets.app }}
   {{ with $stylesheet.css }}
     <link href="{{ relURL (printf "%s%s" "dist/" .) }}" rel="stylesheet">
@@ -22,12 +23,13 @@
   {{/*  {{ range .Site.Params.custom_css }}
     <link rel="stylesheet" href="{{ relURL ($.Site.BaseURL) | permalink }}{{ . }}">
   {{ end }}  */}}
+  -->
 
   {{ range .Site.Params.custom_scss }}
-    {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "themes/simpleit/node_modules")) }}
-
-    {{ $style := resources.Get . | toCSS $options | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    {{/* $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "themes/simpleit/node_modules")) */}}
+    {{/* hugo-extended is needed for scss.ToCSS */}}
+    {{ $style := resources.Get . | resources.ToCSS | minify | fingerprint }} 
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
   {{ end }}
 
   {{ block "favicon" . }}

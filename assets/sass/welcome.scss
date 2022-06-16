@@ -301,6 +301,7 @@ span.travel-map {
   margin: 9px;
   padding: 0px;
   width: 70px;
+  height: 70px;
   border-radius: 50%;
   border: 1px solid var(--hr-color);
   float: right;
@@ -355,7 +356,7 @@ space {
     margin: 4px;
     padding: 3px;
 
-    clear: both;
+    //clear: both;
   }
 }
 
