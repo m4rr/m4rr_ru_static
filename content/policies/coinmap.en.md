@@ -1,5 +1,5 @@
 ---
-title: Bitcoin World Map (iOS & macOS)
+title: OnlyPubs (iOS & macOS)
 type: zwj
 # kind: zwj
 # disableLanguages: "en"
@@ -9,5 +9,5 @@ images:
 # type: "website"
 url: "/coin-map/privacy-policy/"
 # date: 2019-11-15T23:43:58+03:00
-appstore: #
+appstore: https://apps.apple.com/app/onlypubs/id1673166781
 ---
